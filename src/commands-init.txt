@@ -1,0 +1,26 @@
+ADD TYPESCRIPT
+yarn add typescript @types/node @types/react @types/react-dom @types/jest
+https://facebook.github.io/create-react-app/docs/adding-typescript
+
+ADD REDUX
+yarn add react-redux
+yarn add redux-thunk
+yarn add redux
+https://redux.js.org/basics/usage-with-react
+
+ADD OPTIONAL Bootstrap
+yarn add react-bootstrap
+yarn add bootstrap
+https://react-bootstrap.github.io/getting-started/introduction
+
+ADD OPTIONAL FIREBASE
+yarn add firebase 
+https://firebase.google.com/?hl=es-419
+
+ADD OPTIONAL SWEETALERT2
+yarn add sweetalert2
+yarn add sweetalert2-react-content
+https://sweetalert2.github.io/
+
+FINISH 
+yarn
