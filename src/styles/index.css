@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'tlozbotw';
+  src: url('./font/tlozbotw.otf');
+}
+
+@font-face {
+  font-family: 'aansa';
+  src: url('./font/aansa.ttf');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,3 +21,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.card-material {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-header {
+  background-image: url(https://raw.githubusercontent.com/ferisagaragu/TheLegendofZeldaBreathoftheWildguide/master/src/res/img/bar.png);
+  background-size: auto;
+  color: #BA9C66;
+  font-family: 'tlozbotw';
+  height: 90px;
+}
+
+.card-footer {
+  background-image: url(https://files.cults3d.com/uploaders/5998550/illustration-file/75316ade-1362-4120-984f-c1c2dff10742/ScreenPrint_large.png);
+  background-size: auto;
+}
+

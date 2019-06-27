@@ -1,3 +1,3 @@
 import * as react_redux from 'react-redux';
 
-export const { Provider } = react_redux;
+export const { Provider, connect } = react_redux;

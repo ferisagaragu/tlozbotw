@@ -3,15 +3,17 @@ export class MaterialModel {
   name: string;
   description: string;
   img: string;
-  uses: string;
+  uses: Array<string>;
   value: string;
+  life: Array<number>;
 
   constructor(data: any | MaterialModel) {
     this.name = '';
     this.description = '';
     this.img = '';
-    this.uses = '';
+    this.uses = [];
     this.value = '';
+    this.life = [];
     Object.assign(this, data);
   }
 }

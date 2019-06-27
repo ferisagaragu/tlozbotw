@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import { testData } from '../core/reducers/example.reducers';
+import { materials } from '../core/reducers/material.reducers';
 
 export const reducers = combineReducers({
-  testData
+  materials
 });
   
 export const initState = {
-  testData: null
+  materials: null
 };
