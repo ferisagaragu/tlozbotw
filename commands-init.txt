@@ -22,5 +22,22 @@ yarn add sweetalert2
 yarn add sweetalert2-react-content
 https://sweetalert2.github.io/
 
+ADD GITHUB PAGES DEPLOY
+yarn add gh-pages
+-----------------------
+package.json ADD 
+{
+  ....
+  "homepage": "YOUR GITHUB PAGE",
+  ....
+  "scripts": {
+    ....,
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"  
+  }
+}
+
+deploy -> yarn run deploy
+
 FINISH 
 yarn

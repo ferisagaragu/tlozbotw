@@ -55,7 +55,7 @@
   "uses" : [ "Aumenta la defensa cuando se cocina" ],
   "value" : "5"
 }, {
-  "description" : "Calcium deposits in the scales of this ancient fish make them as hard as armor. Cooking it into a dish will fortify your bones, temporarily increasing your defense.",
+  "description" : "Los depósitos de calcio en las escamas de este pez antiguo los hacen tan duros como una armadura. Cocinarlo en un plato fortalecerá tus huesos, aumentando temporalmente tu defensa.",
   "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/8/86/BotW_Armored_Carp_Icon.png/40px-BotW_Armored_Carp_Icon.png?version=f9b36aaa996c7ab1a257dc701d1e1d0d",
   "life" : [ 1 ],
   "name" : "Carpa Blindada",
