@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.e7961d53.chunk.css",
-    "main.js": "/static/js/main.96eccdfb.chunk.js",
-    "main.js.map": "/static/js/main.96eccdfb.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.510409cd.chunk.css": "/static/css/2.510409cd.chunk.css",
-    "static/js/2.0df1cfa7.chunk.js": "/static/js/2.0df1cfa7.chunk.js",
-    "static/js/2.0df1cfa7.chunk.js.map": "/static/js/2.0df1cfa7.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.09e52ecbd298301bbd43384d814e62a9.js": "/precache-manifest.09e52ecbd298301bbd43384d814e62a9.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.510409cd.chunk.css.map": "/static/css/2.510409cd.chunk.css.map",
-    "static/css/main.e7961d53.chunk.css.map": "/static/css/main.e7961d53.chunk.css.map",
-    "static/media/index.css": "/static/media/tlozbotw.a697f18e.otf"
+    "main.css": "/tlozbotw/static/css/main.ca3fff00.chunk.css",
+    "main.js": "/tlozbotw/static/js/main.2c094b6a.chunk.js",
+    "main.js.map": "/tlozbotw/static/js/main.2c094b6a.chunk.js.map",
+    "runtime~main.js": "/tlozbotw/static/js/runtime~main.155d1548.js",
+    "runtime~main.js.map": "/tlozbotw/static/js/runtime~main.155d1548.js.map",
+    "static/css/2.510409cd.chunk.css": "/tlozbotw/static/css/2.510409cd.chunk.css",
+    "static/js/2.121be210.chunk.js": "/tlozbotw/static/js/2.121be210.chunk.js",
+    "static/js/2.121be210.chunk.js.map": "/tlozbotw/static/js/2.121be210.chunk.js.map",
+    "index.html": "/tlozbotw/index.html",
+    "precache-manifest.338f1ee43b9275aadc9d68b39c52ae0d.js": "/tlozbotw/precache-manifest.338f1ee43b9275aadc9d68b39c52ae0d.js",
+    "service-worker.js": "/tlozbotw/service-worker.js",
+    "static/css/2.510409cd.chunk.css.map": "/tlozbotw/static/css/2.510409cd.chunk.css.map",
+    "static/css/main.ca3fff00.chunk.css.map": "/tlozbotw/static/css/main.ca3fff00.chunk.css.map",
+    "static/media/index.css": "/tlozbotw/static/media/tlozbotw.a697f18e.otf"
   }
 }
