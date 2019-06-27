@@ -3,7 +3,7 @@ import { Row, Col, ProgressBar } from 'react-bootstrap';
 import { MaterialModel } from '../../../core/models/material.model';
 import { connect } from '../../../imports/react-redux.import';
 import { getMaterials } from '../../../core/actions/material.actions';
-import ItemMaterialComponent from './item-materials/item-materials.component';
+import ItemMaterialComponent from './item-material/item-material.component';
 
 class MaterialComponent extends Component<any,any> {
   
