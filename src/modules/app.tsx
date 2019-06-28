@@ -3,7 +3,7 @@ import { Container, Navbar } from 'react-bootstrap';
 import Routing from '../core/routes/routing.routes';
 import { Route } from '../imports/react-router-dom.import';
 import SideNav, { NavItem, NavIcon, NavText } from '../imports/react-sidenav.import';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class App extends Component<any,{}> {
   render() {
@@ -24,7 +24,7 @@ class App extends Component<any,{}> {
           >
             <Navbar bg="dark" variant="dark" className="nav-bar">
               <Navbar.Brand>
-                The Legend of Zelda Breath of the Wild CheckList
+                The Legend of Zelda Breath of the Wild
               </Navbar.Brand>
             </Navbar>
 
@@ -32,25 +32,29 @@ class App extends Component<any,{}> {
             <SideNav.Nav defaultSelected="home">
                 <NavItem eventKey="home">
                     <NavIcon>
-                        <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                      <i style={{ fontSize: '1.75em' }}> 
+                        <FontAwesomeIcon icon="home" />
+                      </i>
                     </NavIcon>
 
                     <NavText>
-                        Home
+                      Inicio
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="inventory/materials">
+                <NavItem eventKey="inventory">
                     <NavIcon>
-                        <i className="fa fa-fw fa-device" style={{ fontSize: '1.75em' }} />
+                      <i style={{ fontSize: '1.75em' }} >
+                        <FontAwesomeIcon icon="suitcase" />
+                      </i>
                     </NavIcon>
 
                     <NavText>
-                        Devices
+                      Inventario
                     </NavText>
                 </NavItem>
             </SideNav.Nav>
           </SideNav>
-          <main>>
+          <main>
             <Container className="content">
               <Routing />     
             </Container>  

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import Page404View from '../page-404/page-404.view';
 
 class InventoryView extends Component {
   render() {
     return (
-      <>
-        inventory
-      </>
+      <Page404View />      
     );
   }
 }

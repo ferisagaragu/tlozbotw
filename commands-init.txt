@@ -17,6 +17,12 @@ yarn add react-bootstrap
 yarn add bootstrap
 https://react-bootstrap.github.io/getting-started/introduction
 
+ADD OPTIONAL FONT AWESOME
+yarn add @fortawesome/fontawesome-svg-core
+yarn add @fortawesome/free-solid-svg-icons
+yarn add @fortawesome/react-fontawesome
+https://fontawesome.com/v5.4.1/how-to-use/on-the-web/using-with/react
+
 ADD OPTIONAL SIDENAV
 yarn add @trendmicro/react-sidenav
 https://github.com/trendmicro-frontend/react-sidenav
