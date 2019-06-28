@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/tlozbotw/static/css/main.5335f3c7.chunk.css",
-    "main.js": "/tlozbotw/static/js/main.627a963f.chunk.js",
-    "main.js.map": "/tlozbotw/static/js/main.627a963f.chunk.js.map",
+    "main.css": "/tlozbotw/static/css/main.7aab0482.chunk.css",
+    "main.js": "/tlozbotw/static/js/main.ee4fbb2f.chunk.js",
+    "main.js.map": "/tlozbotw/static/js/main.ee4fbb2f.chunk.js.map",
     "runtime~main.js": "/tlozbotw/static/js/runtime~main.155d1548.js",
     "runtime~main.js.map": "/tlozbotw/static/js/runtime~main.155d1548.js.map",
-    "static/css/2.cb73d55c.chunk.css": "/tlozbotw/static/css/2.cb73d55c.chunk.css",
-    "static/js/2.671b2d56.chunk.js": "/tlozbotw/static/js/2.671b2d56.chunk.js",
-    "static/js/2.671b2d56.chunk.js.map": "/tlozbotw/static/js/2.671b2d56.chunk.js.map",
+    "static/css/2.a9759cd0.chunk.css": "/tlozbotw/static/css/2.a9759cd0.chunk.css",
+    "static/js/2.b7130156.chunk.js": "/tlozbotw/static/js/2.b7130156.chunk.js",
+    "static/js/2.b7130156.chunk.js.map": "/tlozbotw/static/js/2.b7130156.chunk.js.map",
     "index.html": "/tlozbotw/index.html",
-    "precache-manifest.8892342c0ef1900aef7505bd39bfc453.js": "/tlozbotw/precache-manifest.8892342c0ef1900aef7505bd39bfc453.js",
+    "precache-manifest.56aaa2cf3563bac9784f1e8a7e7964e2.js": "/tlozbotw/precache-manifest.56aaa2cf3563bac9784f1e8a7e7964e2.js",
     "service-worker.js": "/tlozbotw/service-worker.js",
-    "static/css/2.cb73d55c.chunk.css.map": "/tlozbotw/static/css/2.cb73d55c.chunk.css.map",
-    "static/css/main.5335f3c7.chunk.css.map": "/tlozbotw/static/css/main.5335f3c7.chunk.css.map",
+    "static/css/2.a9759cd0.chunk.css.map": "/tlozbotw/static/css/2.a9759cd0.chunk.css.map",
+    "static/css/main.7aab0482.chunk.css.map": "/tlozbotw/static/css/main.7aab0482.chunk.css.map",
     "static/media/item-material.css": "/tlozbotw/static/media/header-card.a3021fe3.png",
+    "static/media/page-404.png": "/tlozbotw/static/media/page-404.e4840f54.png",
     "static/media/index.css": "/tlozbotw/static/media/tlozbotw.a697f18e.otf"
   }
 }
