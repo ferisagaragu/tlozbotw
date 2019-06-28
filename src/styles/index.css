@@ -22,6 +22,10 @@ code {
     monospace;
 }
 
+h1 {
+  font-family: 'retganon';
+}
+
 .nav-bar {
   margin-left: 60px;
   position: fixed !important;
