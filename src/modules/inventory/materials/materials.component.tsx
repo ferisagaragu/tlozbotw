@@ -4,6 +4,7 @@ import { MaterialModel } from '../../../core/models/material.model';
 import { connect } from '../../../imports/react-redux.import';
 import { getMaterials } from '../../../core/actions/material.actions';
 import ItemMaterialComponent from './item-material/item-material.component';
+import TableEditMaterialComponent from './table-edit-material/table-edit-material.component';
 
 class MaterialComponent extends Component<any,any> {
   
@@ -33,6 +34,9 @@ class MaterialComponent extends Component<any,any> {
 
     return (
       <Row>
+        <TableEditMaterialComponent 
+          materials={ this.materials }
+        />
         { materials ? 
             this.renderData() 
           : 

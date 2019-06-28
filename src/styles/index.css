@@ -17,3 +17,20 @@ code {
     monospace;
 }
 
+.nav-bar {
+  margin-left: 60px;
+  position: fixed !important;
+  width: 100%;
+  height: 10.3%;
+}
+
+.side-bar {
+  position: fixed !important;
+  background-color: #343a40 !important;
+}
+
+.content {
+  margin-left: 10% !important;
+  margin-top: 5%;
+}
+

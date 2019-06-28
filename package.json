@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ferisagaragu.github.io/tlozbotw/",
   "dependencies": {
+    "@trendmicro/react-sidenav": "^0.4.5",
     "@types/jest": "^24.0.15",
     "@types/node": "^12.0.10",
     "@types/react": "^16.8.22",
@@ -15,6 +16,7 @@
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
