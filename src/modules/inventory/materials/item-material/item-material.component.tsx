@@ -5,7 +5,7 @@ import LifeIndicator from '../../../../shared/life-indicator.shared';
 import photo from '../../../../styles/img/photo.png';
 import './item-material.css';
 
-class ItemMaterialComponent extends Component<ItemMaterialInterface,any> {
+class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
 
   private keyUsages: number;
   private lifeIndicator: LifeIndicator;

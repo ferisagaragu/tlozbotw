@@ -9,7 +9,7 @@ class Page404View extends Component {
     return (
       <Row>
         <Col md={ 12 } xl={ 12 } className="text-center h1-404">
-          <h1>Esta pagína no esta disponible</h1>
+          <h1>Esta pagina no esta disponible</h1>
           <img src={ page404 } alt="link_dreams" className="mt-5 mb-5"/>
           <h1>Link se quedo dormido</h1>
         </Col>

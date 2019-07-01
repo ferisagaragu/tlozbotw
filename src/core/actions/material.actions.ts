@@ -19,3 +19,6 @@ export function getMaterials(): Function {
   };
 };
 
+export function isMaterialModal(payload: boolean): Action {
+  return {type: ExampleEnum.IS_MATERIALS_MODAL, payload}
+} 

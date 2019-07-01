@@ -41,7 +41,7 @@ class App extends Component<any,{}> {
                       Inicio
                     </NavText>
                 </NavItem>
-                <NavItem eventKey="inventory">
+                <NavItem>
                     <NavIcon>
                       <i style={{ fontSize: '1.75em' }} >
                         <FontAwesomeIcon icon="suitcase" />
@@ -51,6 +51,12 @@ class App extends Component<any,{}> {
                     <NavText>
                       Inventario
                     </NavText>
+
+                    <NavItem eventKey="inventory/materials" subnav={ true }>
+                      <NavText>
+                        Material
+                      </NavText>
+                    </NavItem>
                 </NavItem>
             </SideNav.Nav>
           </SideNav>

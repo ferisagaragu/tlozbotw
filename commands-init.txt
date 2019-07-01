@@ -6,6 +6,8 @@ ADD REDUX
 yarn add react-redux
 yarn add redux-thunk
 yarn add redux
+yarn add redux-form
+https://redux-form.com/6.1.1/examples/
 https://redux.js.org/basics/usage-with-react
 
 ADD REACT-ROUTE-RDOM 
