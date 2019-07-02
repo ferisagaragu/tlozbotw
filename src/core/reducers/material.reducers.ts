@@ -7,10 +7,3 @@ export const materials = (state = {}, action: Action) => {
     default: return state;
   }
 }
-
-export const materialsModal = (state = {}, action: Action) => {
-  switch(action.type) {
-    case ExampleEnum.IS_MATERIALS_MODAL: return action.payload;
-    default: return state;
-  }
-}

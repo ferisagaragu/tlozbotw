@@ -1,4 +1,5 @@
 export enum ExampleEnum {
   SET_MATERIALS = 'setMaterials',
-  IS_MATERIALS_MODAL = 'isMaterialsModal'
+  UPDATE_MATERIALS = 'updateMaterials',
+  SUBMIT_EDIT_MATERIAL_FORM = 'submitEditMaterialForm'
 }

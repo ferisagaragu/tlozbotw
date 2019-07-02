@@ -15,10 +15,11 @@ export interface TableEditMaterialInterface {
 }
 
 export interface FormEditMaterialInterface {
-  initialize(values: any): Function;
+  handleSubmit: Function;
+  reset: Function;
+  submitting: boolean;
+  valid: boolean;
+  initialize: Function;
   initialValues: MaterialModel;
-  handleSubmit: FormEventHandler;
-  pristine: any; 
-  reset: any;
-  submitting: any;
+  updateMaterials: Function;
 }

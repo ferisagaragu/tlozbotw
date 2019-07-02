@@ -1,9 +1,12 @@
 import React, { Component, ReactElement } from 'react'
-import { Field, reduxForm } from '../../../../imports/react-redux.import'
+import { Field, reduxForm, connect } from '../../../../imports/react-redux.import'
 import { Modal, Button } from 'react-bootstrap';
 import { MaterialModel } from '../../../../core/models/material.model';
+import { FormEditMaterialInterface } from '../../../../core/interfaces/material-component.interface';
+import { ExampleEnum } from '../../../../core/enums/material-reducer.enum';
+import { updateMaterials } from '../../../../core/actions/material.actions';
 
-class FormEditMaterialComponent extends Component<any,any> {
+class FormEditMaterialComponent extends Component<FormEditMaterialInterface,any> {
 
   constructor(props: any) {
     super(props);
@@ -72,9 +75,8 @@ class FormEditMaterialComponent extends Component<any,any> {
   }
 
   private submit(values: MaterialModel, reduxFuction: any, reduxForm: any): void {
-    const { reset } = reduxForm;
-    console.log(values);
-
+    const { reset, updateMaterials, id } = reduxForm;
+    updateMaterials(id, values);
     reset();
   }
 
@@ -100,7 +102,7 @@ class FormEditMaterialComponent extends Component<any,any> {
             </Modal.Title>
           </Modal.Header>
 
-          <form onSubmit={ handleSubmit(this.submit,submitting) }>
+          <form onSubmit={ handleSubmit(this.submit) }>
             <Modal.Body>
               <Field 
                 name="name" 
@@ -129,7 +131,7 @@ class FormEditMaterialComponent extends Component<any,any> {
                   variant="outline-info"
                   type="submit" 
                   disabled={ submitting }
-                  onClick={() => this.setState({ show: !valid }) }
+                  onClick={ () => { this.setState({ show: !valid }); } } 
                 >
                   Guardar
                 </Button>
@@ -180,8 +182,14 @@ const warn = (values: any) => {
   return warnings
 }
 
-export default reduxForm({
-  form: 'submitValidation',
+const mapDispatchToProps = (dispatch: Function) => ({
+  updateMaterials: (id: number, data: MaterialModel) => ( dispatch(updateMaterials(id, data)) )
+});
+
+const FormEditMaterialComponentConnect = connect(null,mapDispatchToProps)(
+reduxForm({
+  form: ExampleEnum.SUBMIT_EDIT_MATERIAL_FORM,
   validate,
   warn
-})(FormEditMaterialComponent);
+})(FormEditMaterialComponent));
+export default FormEditMaterialComponentConnect;

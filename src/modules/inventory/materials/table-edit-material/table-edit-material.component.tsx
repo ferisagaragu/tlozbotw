@@ -57,6 +57,7 @@ class TableEditMaterialComponent extends Component<TableEditMaterialInterface,an
         <td>{ this.renderUses(material.uses) }</td>
         <td>
           <FormEditMaterialComponent 
+            id= { index }
             initialValues={ material }
           />
         </td>

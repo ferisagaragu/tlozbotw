@@ -19,6 +19,10 @@ export function getMaterials(): Function {
   };
 };
 
-export function isMaterialModal(payload: boolean): Action {
-  return {type: ExampleEnum.IS_MATERIALS_MODAL, payload}
-} 
+export function updateMaterials(id: number, data: MaterialModel): Function {
+  return async (dispatch: Function) => {
+    materialService.updateMaterial(id, data, (error: any) => {
+      console.log(error);
+    });
+  };
+}

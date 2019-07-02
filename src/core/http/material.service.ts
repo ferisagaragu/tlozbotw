@@ -18,6 +18,12 @@ class MaterialService {
     });
   }
 
+  public updateMaterial(id: number,data: MaterialModel, errorFuction: Function): void {
+    this.firebase.update(`${this.pathBase}/${id}`, data, (error: any) => {
+      errorFuction(error);
+    });
+  }
+
 }
 
 export default MaterialService;
