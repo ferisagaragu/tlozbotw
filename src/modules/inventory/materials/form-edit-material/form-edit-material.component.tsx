@@ -5,15 +5,21 @@ import { MaterialModel } from '../../../../core/models/material.model';
 import { FormEditMaterialInterface } from '../../../../core/interfaces/material-component.interface';
 import { ExampleEnum } from '../../../../core/enums/material-reducer.enum';
 import { updateMaterials } from '../../../../core/actions/material.actions';
+import LifeIndicator from '../../../../shared/life-indicator.shared';
 
 class FormEditMaterialComponent extends Component<FormEditMaterialInterface,any> {
+
+  lifeIndicator: LifeIndicator;
 
   constructor(props: any) {
     super(props);
 
     this.state = {
-      show: false
+      show: false,
+      life: 0
     };
+
+    this.lifeIndicator = new LifeIndicator();
   }
 
   private renderTextField(metaData: any): ReactElement {
@@ -21,6 +27,7 @@ class FormEditMaterialComponent extends Component<FormEditMaterialInterface,any>
       input, 
       label, 
       type, 
+      onKeyUp,
       meta: { 
         touched, 
         error, 
@@ -33,9 +40,11 @@ class FormEditMaterialComponent extends Component<FormEditMaterialInterface,any>
         <div>
           <input
             className="form-control mb-3" 
-            {...input} 
-            placeholder={label} 
-            type={type}/>
+            { ...input } 
+            placeholder={ label } 
+            type={ type }
+            onKeyUp={ onKeyUp }
+          />
           {
             touched && ((error && <span className="text-danger" >{error}</span>) 
             || (warning && <span className="text-warning">{warning}</span>))
@@ -88,7 +97,10 @@ class FormEditMaterialComponent extends Component<FormEditMaterialInterface,any>
         <Button 
           variant="outline-info" 
           onClick={() => { 
-            this.setState({ show: true });
+            this.setState({ 
+              show: true,
+              life: this.props.initialValues.life
+            });
             this.props.initialize(this.props.initialValues); 
           }}
         >
@@ -119,10 +131,18 @@ class FormEditMaterialComponent extends Component<FormEditMaterialInterface,any>
 
               <Field 
                 name="life" 
-                type="text" 
+                type="number" 
                 component={ this.renderTextField } 
                 label="Vida"
+                onKeyUp={ (evt: any) => { 
+                    this.setState({
+                      life: evt.currentTarget.value
+                    });
+                  }
+                }
               />
+
+              { this.lifeIndicator.heartSymbol(this.state.life) }
             </Modal.Body>
 
             <Modal.Footer>
@@ -173,12 +193,12 @@ const validate = (values: any) => {
 
 const warn = (values: any) => {
   const warnings = {
-    life: 'Este campo podria no ir'
+    life: ''
   }
 
-  if (!values.life) {
+  /*if (!values.life) {
     warnings.life = 'La advertencia entro'
-  }
+  }*/
   return warnings
 }
 

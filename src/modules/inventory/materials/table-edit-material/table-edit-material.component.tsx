@@ -3,16 +3,19 @@ import { TableEditMaterialInterface } from '../../../../core/interfaces/material
 import { Table } from 'react-bootstrap';
 import { MaterialModel } from '../../../../core/models/material.model';
 import FormEditMaterialComponent from '../form-edit-material/form-edit-material.component';
+import LifeIndicator from '../../../../shared/life-indicator.shared';
 
 class TableEditMaterialComponent extends Component<TableEditMaterialInterface,any> {
 
   private keyUsages: number;
   private materials: Array<MaterialModel>;
+  private lifeIndicator: LifeIndicator;
 
   constructor(props: any) {
     super(props);
     this.keyUsages = -1;
     this.materials = [];
+    this.lifeIndicator = new LifeIndicator();
 
     this.state = {
       material: {},
@@ -53,8 +56,18 @@ class TableEditMaterialComponent extends Component<TableEditMaterialInterface,an
           />
         </td>
         <td>{ material.name }</td>
-        <td>{ material.life }</td>
+        <td>
+          { 
+            material.life !== 0 ?
+              this.lifeIndicator.heartSymbol(material.life) 
+            :
+              <label>
+                <b>Material</b>
+              </label>
+          }
+        </td>
         <td>{ this.renderUses(material.uses) }</td>
+        <td>{ material.description }</td>
         <td>
           <FormEditMaterialComponent 
             id= { index }
@@ -79,6 +92,7 @@ class TableEditMaterialComponent extends Component<TableEditMaterialInterface,an
               <th>Nombre</th>
               <th>Propiedades</th>
               <th>Uso</th>
+              <th>Descripcion</th>
               <th>Acciones</th>
             </tr>
           </thead>

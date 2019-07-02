@@ -58,7 +58,14 @@ class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
           <Card.Body>
             <ListGroup variant="flush">
               <ListGroup.Item>
-                { this.lifeIndicator.heartSymbol(material.life) }
+                { 
+                  material.life !== 0 ? 
+                    this.lifeIndicator.heartSymbol(material.life) 
+                  : 
+                    <label>
+                      <b>Material</b>
+                    </label>
+                }
               </ListGroup.Item>
               
               <ListGroup.Item>
@@ -73,7 +80,7 @@ class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
 
           <Card.Footer className="card-footer">
             {
-              material.life.length !== 0 &&
+              material.life !== 0 &&
               <>
                 <input type="checkbox" className="float-right" />
 

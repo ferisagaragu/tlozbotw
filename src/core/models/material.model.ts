@@ -5,7 +5,7 @@ export class MaterialModel {
   img: string;
   uses: Array<string>;
   value: string;
-  life: Array<number>;
+  life: number;
 
   constructor(data: any | MaterialModel) {
     this.name = '';
@@ -13,7 +13,7 @@ export class MaterialModel {
     this.img = '';
     this.uses = [];
     this.value = '';
-    this.life = [];
+    this.life = 0;
     Object.assign(this, data);
   }
 }

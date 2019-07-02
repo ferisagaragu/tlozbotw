@@ -1,13 +1,14 @@
 [ {
   "description" : "A menudo se encuentran en el suelo cerca de los árboles. Las ardillas adoran esta tuerca, por lo que puede tener competencia mientras se alimenta. Añadir uno a una comida para un condimento de nuez.",
   "img" : "https://firebasestorage.googleapis.com/v0/b/tlozbotw-240a7.appspot.com/o/core%2Fmaterial%2F40px-BotW_Acorn_Icon.png?alt=media&token=32f1786f-82fd-4cc5-9552-5c0417af8daf",
-  "life" : [ 0.25 ],
+  "life" : 0.25,
   "name" : "Bellota",
   "uses" : [ "Restaura vida", "Se puede vender", "Mejora algunas armaduras" ],
   "value" : "2"
 }, {
   "description" : "Una resina fosilizada con brillo caramelesco. Se ha valorado como un componente en decoraciones y artesanía desde la antigüedad.",
   "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/f/f1/BotW_Amber_Icon.png/40px-BotW_Amber_Icon.png?version=7a5583c829b75ff07bc70a4bc39fe2e4",
+  "life" : "",
   "name" : "Ámbar",
   "uses" : [ "Se puede vender", "Mejora algunas armaduras" ],
   "value" : "30"
@@ -57,7 +58,7 @@
 }, {
   "description" : "Los depósitos de calcio en las escamas de este pez antiguo los hacen tan duros como una armadura. Cocinarlo en un plato fortalecerá tus huesos, aumentando temporalmente tu defensa.",
   "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/8/86/BotW_Armored_Carp_Icon.png/40px-BotW_Armored_Carp_Icon.png?version=f9b36aaa996c7ab1a257dc701d1e1d0d",
-  "life" : [ 1 ],
+  "life" : 1,
   "name" : "Carpa Blindada",
   "uses" : [ "Restaura vida", "Aumenta la defensa cuando se cocina" ],
   "value" : "10"
@@ -70,21 +71,21 @@
 }, {
   "description" : "Este rábano abundante ha crecido mucho más grande que el rábano promedio. Es rico en compuestos analépticos que, cuando se cocinan en un plato, aumentan temporalmente sus corazones máximos.",
   "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/3/3a/BotW_Big_Hearty_Radish_Icon.png/40px-BotW_Big_Hearty_Radish_Icon.png?version=20a04127273c26e07f53a3bcd81b7f46",
-  "life" : [ 1, 1, 1, 1 ],
+  "life" : 4,
   "name" : "Rábano Caluroso Grande",
   "uses" : [ "Aumenta el máximo de corazones cuando se cocina" ],
   "value" : "15"
 }, {
   "description" : "Los años de no ser elegidos han permitido que esta trufa abundante crezca bastante. Está lleno de nutrientes. Cuando se cocina en un plato, aumenta temporalmente tus corazones máximos.",
   "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/6/69/BotW_Big_Hearty_Truffle_Icon.png/40px-BotW_Big_Hearty_Truffle_Icon.png?version=2a15612f6c9151a1bfaa9985e3053d62",
-  "life" : [ 1, 1, 1 ],
+  "life" : 3,
   "name" : "Gran Trufa Calurosa",
   "uses" : [ "Aumenta el máximo de corazones cuando se cocina" ],
   "value" : "15"
 }, {
   "description" : "Un huevo de ave fresco necesario para hacer platos como tortillas y crepes. Puedes engancharlos de los nidos de pájaros si eres astuto. Nutritiva y deliciosa, perfecta.",
   "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/7/75/BotW_Bird_Egg_Icon.png/40px-BotW_Bird_Egg_Icon.png?version=1b308f898f62f5827a518191c2215b63",
-  "life" : [ 1 ],
+  "life" : 1,
   "name" : "Huevo de ave",
   "uses" : [ "Restaura vida" ],
   "value" : "3"
