@@ -12,6 +12,7 @@ export interface MaterialInterface {
 
 export interface TableEditMaterialInterface {
   materials: Array<MaterialModel>;
+  updateMaterials: Function;
 }
 
 export interface FormEditMaterialInterface {

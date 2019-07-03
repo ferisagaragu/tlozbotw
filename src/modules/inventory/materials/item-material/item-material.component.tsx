@@ -69,7 +69,7 @@ class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
               </ListGroup.Item>
               
               <ListGroup.Item>
-                { this.renderUses(material.uses) }
+                {  }
               </ListGroup.Item>
 
               <ListGroup.Item>
