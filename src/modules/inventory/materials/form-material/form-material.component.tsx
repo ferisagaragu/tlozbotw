@@ -3,7 +3,7 @@ import { Field, reduxForm } from '../../../../imports/react-redux.import';
 import { MaterialUsesEnum } from '../../../../core/enums/material-uses.enum';
 import { Row, Col, Button, Modal } from 'react-bootstrap';
 import heartSymbol from '../../../../shared/life-indicator.shared';
-import { renderTextField, renderCheckBox, renderTextArea } from '../../../../shared/redux-render-fields';
+import { renderTextField, renderCheckBox, renderTextArea } from '../../../../shared/redux-render-fields.shared';
 import { FormMaterialInterface } from '../../../../core/interfaces/material-component.interface';
 
 

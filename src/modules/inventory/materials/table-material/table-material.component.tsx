@@ -6,15 +6,15 @@ import FormMaterialComponent from '../form-material/form-material.component';
 import { connect } from '../../../../imports/react-redux.import';
 import { updateMaterials } from '../../../../core/actions/material.actions';
 import heartSymbol from '../../../../shared/life-indicator.shared';
+import { materialUsesList } from '../../../../shared/material-uses.shared';
+import { tableRowKey } from '../../../../core/key/react-elements.key';
 
 class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
 
-  private keyUsages: number;
   private materials: Array<MaterialModel>;
 
   constructor(props: TableMaterialInterface) {
     super(props);
-    this.keyUsages = -1;
     this.materials = [];
 
     this.state = {
@@ -22,79 +22,76 @@ class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
     }
   }
 
-  private renderUses(uses: string[]): ReactElement {
-    return (
-      <ul>
-        { 
-          Array.isArray(uses) ?
-            uses.map((property: string) => {
-              this.keyUsages++;
-              return (
-                <li 
-                  key={ `uses-material-${this.keyUsages}` } 
-                >
-                  { property } 
-                </li>
-              );
-            })
-          : 
-            <li>{ uses }</li>
-        }
-      </ul>
-    );
-  }
-
-  private renderData(): Array<ReactElement> {
-    return this.materials.map((material: MaterialModel, index: number) => (
-      <tr key={ `table-${JSON.stringify(material)}` }>
-        <td>
-          { index }
-          { material.id = index }
-        </td>
-        <td>
-          <img 
-            alt= { material.name }
-            src= { material.img } 
-          />
-        </td>
-        <td>{ material.name }</td>
-        <td>
-          { 
-            material.life !== 0 ?
-              heartSymbol(material.life) 
-            :
-              <label>
-                <b>Material</b>
-              </label>
-          }
-        </td>
-        <td>{ }</td>
-        <td>{ material.description }</td>
-        <td>
-          <Button 
-            variant="outline-info" 
-            onClick={ () => this.selectedItem(material) } 
-          >
-            Editar
-          </Button>
-        </td>
-      </tr>
-    ));
-  }
-
+  //ACTIOS
   private selectedItem(material: MaterialModel) {
     this.setState({
-      material: material,
-      show: true
+      material: material
+    });
+    this.showModal(true);
+  }
+
+  private onSubmint(values: MaterialModel): void {
+    this.props.updateMaterials(values);
+    this.showModal(false);
+  }
+
+  private showModal(show: boolean) {
+    this.setState({
+      show
     });
   }
 
-  handleClose() {
-    this.setState({ show: false });
-  }
+  //RENDERS
+  private renderData(): Array<ReactElement> {
+    return this.materials.map((material: MaterialModel, index: number) => {
+      material.id = index;
+      return(
+        <tr key={ tableRowKey() }>
+          <td>
+            { index }
+          </td>
 
-  handleShow() {
-    this.setState({ show: true });
+          <td>
+            <img 
+              alt= { material.name }
+              src= { material.img } 
+            />
+          </td>
+
+          <td>
+            { material.name }
+          </td>
+
+          <td>
+            { 
+              material.life !== 0 ?
+                heartSymbol(material.life) 
+              :
+                <label>
+                  <b>Material</b>
+                </label>
+            }
+          </td>
+          
+          <td>
+            { materialUsesList(material) }
+          </td>
+          
+          <td>
+            { material.description }
+          </td>
+          
+          <td>
+            <Button 
+              variant="outline-info" 
+              onClick={ () => this.selectedItem(material) } 
+            >
+              Editar
+            </Button>
+          </td>
+        </tr>
+      );
+    });
   }
 
   render() {
@@ -118,13 +115,8 @@ class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
           <Modal.Body>
             <FormMaterialComponent 
               initialValues={ this.state.material }
-              submitActions={ (values: MaterialModel) => {
-                this.props.updateMaterials(values);
-                this.setState({
-                  show: false
-                });
-              }}
-              cancel={ () => this.setState({ show: false }) }
+              submitActions={ (values: MaterialModel) => this.onSubmint(values) }
+              cancel={ () => this.showModal(false) }
             />
           </Modal.Body>
         </Modal>
