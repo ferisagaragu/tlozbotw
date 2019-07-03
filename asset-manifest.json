@@ -1,19 +1,22 @@
 {
   "files": {
     "main.css": "/tlozbotw/static/css/main.967fc585.chunk.css",
-    "main.js": "/tlozbotw/static/js/main.87c06645.chunk.js",
-    "main.js.map": "/tlozbotw/static/js/main.87c06645.chunk.js.map",
+    "main.js": "/tlozbotw/static/js/main.c92d5644.chunk.js",
+    "main.js.map": "/tlozbotw/static/js/main.c92d5644.chunk.js.map",
     "runtime~main.js": "/tlozbotw/static/js/runtime~main.155d1548.js",
     "runtime~main.js.map": "/tlozbotw/static/js/runtime~main.155d1548.js.map",
-    "static/css/2.cb73d55c.chunk.css": "/tlozbotw/static/css/2.cb73d55c.chunk.css",
-    "static/js/2.ecd9affd.chunk.js": "/tlozbotw/static/js/2.ecd9affd.chunk.js",
-    "static/js/2.ecd9affd.chunk.js.map": "/tlozbotw/static/js/2.ecd9affd.chunk.js.map",
+    "static/css/2.a9759cd0.chunk.css": "/tlozbotw/static/css/2.a9759cd0.chunk.css",
+    "static/js/2.5bd38217.chunk.js": "/tlozbotw/static/js/2.5bd38217.chunk.js",
+    "static/js/2.5bd38217.chunk.js.map": "/tlozbotw/static/js/2.5bd38217.chunk.js.map",
     "index.html": "/tlozbotw/index.html",
-    "precache-manifest.9fe1b59e26a38288e5f33d2b0d9400dc.js": "/tlozbotw/precache-manifest.9fe1b59e26a38288e5f33d2b0d9400dc.js",
+    "precache-manifest.23dcbf26ffd907762dd6c6fdc49d67ad.js": "/tlozbotw/precache-manifest.23dcbf26ffd907762dd6c6fdc49d67ad.js",
     "service-worker.js": "/tlozbotw/service-worker.js",
-    "static/css/2.cb73d55c.chunk.css.map": "/tlozbotw/static/css/2.cb73d55c.chunk.css.map",
+    "static/css/2.a9759cd0.chunk.css.map": "/tlozbotw/static/css/2.a9759cd0.chunk.css.map",
     "static/css/main.967fc585.chunk.css.map": "/tlozbotw/static/css/main.967fc585.chunk.css.map",
     "static/media/item-material.css": "/tlozbotw/static/media/header-card.a3021fe3.png",
+    "static/media/heart.png": "/tlozbotw/static/media/heart.7792b2dc.png",
+    "static/media/heart_25.png": "/tlozbotw/static/media/heart_25.9b247d18.png",
+    "static/media/heart_50.png": "/tlozbotw/static/media/heart_50.2b9c47a7.png",
     "static/media/index.css": "/tlozbotw/static/media/tlozbotw.a697f18e.otf"
   }
 }
