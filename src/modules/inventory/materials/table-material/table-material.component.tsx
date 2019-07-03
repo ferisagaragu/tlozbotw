@@ -1,23 +1,21 @@
 import React, { Component, ReactElement } from 'react';
-import { TableEditMaterialInterface } from '../../../../core/interfaces/material-component.interface';
+import { TableMaterialInterface } from '../../../../core/interfaces/material-component.interface';
 import { Table, Modal, Button } from 'react-bootstrap';
 import { MaterialModel } from '../../../../core/models/material.model';
-import LifeIndicator from '../../../../shared/life-indicator.shared';
 import FormMaterialComponent from '../form-material/form-material.component';
 import { connect } from '../../../../imports/react-redux.import';
 import { updateMaterials } from '../../../../core/actions/material.actions';
+import heartSymbol from '../../../../shared/life-indicator.shared';
 
-class TableEditMaterialComponent extends Component<TableEditMaterialInterface,any> {
+class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
 
   private keyUsages: number;
   private materials: Array<MaterialModel>;
-  private lifeIndicator: LifeIndicator;
 
-  constructor(props: any) {
+  constructor(props: TableMaterialInterface) {
     super(props);
     this.keyUsages = -1;
     this.materials = [];
-    this.lifeIndicator = new LifeIndicator();
 
     this.state = {
       material: {}
@@ -63,7 +61,7 @@ class TableEditMaterialComponent extends Component<TableEditMaterialInterface,an
         <td>
           { 
             material.life !== 0 ?
-              this.lifeIndicator.heartSymbol(material.life) 
+              heartSymbol(material.life) 
             :
               <label>
                 <b>Material</b>

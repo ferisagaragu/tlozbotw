@@ -1,19 +1,17 @@
 import React, { Component, ReactElement } from 'react';
 import { ItemMaterialInterface } from '../../../../core/interfaces/material-component.interface';
 import { Col, Card, ListGroup } from 'react-bootstrap';
-import LifeIndicator from '../../../../shared/life-indicator.shared';
 import photo from '../../../../styles/img/photo.png';
 import './item-material.css';
+import heartSymbol from '../../../../shared/life-indicator.shared';
 
 class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
 
   private keyUsages: number;
-  private lifeIndicator: LifeIndicator;
 
   constructor(props: any) {
     super(props);
     this.keyUsages = -1;
-    this.lifeIndicator = new LifeIndicator();
   }
 
   private renderUses(uses: string[]): ReactElement {
@@ -60,7 +58,7 @@ class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
               <ListGroup.Item>
                 { 
                   material.life !== 0 ? 
-                    this.lifeIndicator.heartSymbol(material.life) 
+                    heartSymbol(material.life) 
                   : 
                     <label>
                       <b>Material</b>

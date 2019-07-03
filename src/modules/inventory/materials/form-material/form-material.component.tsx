@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from '../../../../imports/react-redux.import';
 import { MaterialUsesEnum } from '../../../../core/enums/material-uses.enum';
 import { Row, Col, Button, Modal } from 'react-bootstrap';
-import heartSymbol from '../../../../shared/life-indicator.shared copy';
+import heartSymbol from '../../../../shared/life-indicator.shared';
 import { renderTextField, renderCheckBox, renderTextArea } from '../../../../shared/redux-render-fields';
+import { FormMaterialInterface } from '../../../../core/interfaces/material-component.interface';
 
 
-class FormMaterialComponent extends Component<any,any> {
+class FormMaterialComponent extends Component<FormMaterialInterface,any> {
   
-  constructor(props: any) {
+  constructor(props: FormMaterialInterface) {
     super(props);
 
     this.state = {
@@ -16,6 +17,18 @@ class FormMaterialComponent extends Component<any,any> {
       lifeIndicator: this.props.initialValues.life
     };
   }
+
+  private setIcon(url: string): void {
+    this.setState({
+      urlIcon: url
+    });
+  } 
+
+  private setLifeIndicator(url: string): void {
+    this.setState({
+      lifeIndicator: url
+    });
+  } 
 
   render() {
     const { handleSubmit, cancel, submitting, submitActions, initialValues } = this.props;
@@ -38,11 +51,7 @@ class FormMaterialComponent extends Component<any,any> {
               type="text"
               component={ renderTextField }
               label="Icono"
-              onKeyUp={ (evt: any) => {
-                this.setState({
-                  urlIcon: evt.currentTarget.value
-                });
-              }}
+              onKeyUp={ (evt: any) => this.setIcon(evt.currentTarget.value) }
             />
 
             <Field 
@@ -67,11 +76,7 @@ class FormMaterialComponent extends Component<any,any> {
               type="number"
               component={ renderTextField }
               label="Vida"
-              onKeyUp={ (evt: any) => {
-                this.setState({
-                  lifeIndicator: evt.currentTarget.value
-                });
-              }}
+              onKeyUp={ (evt: any) => this.setLifeIndicator(evt.currentTarget.value) }
             />
 
             <div className="mb-3">
