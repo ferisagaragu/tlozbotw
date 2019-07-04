@@ -1,10 +1,10 @@
-
 import { 
   faGhost, 
   faHome,
-  faSuitcase
+  faSuitcase,
+  faCircleNotch
 } from '@fortawesome/free-solid-svg-icons';
 
-const icons = [faGhost, faHome, faSuitcase];
+const icons = [faGhost, faHome, faSuitcase, faCircleNotch];
 
 export default icons;

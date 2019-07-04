@@ -32,9 +32,7 @@ class App extends Component<any,{}> {
             <SideNav.Nav defaultSelected="home">
                 <NavItem eventKey="home">
                     <NavIcon>
-                      <i style={{ fontSize: '1.75em' }}> 
-                        <FontAwesomeIcon icon="home" />
-                      </i>
+                      <FontAwesomeIcon className="icon-awesome" icon="home" />
                     </NavIcon>
 
                     <NavText>
@@ -43,9 +41,7 @@ class App extends Component<any,{}> {
                 </NavItem>
                 <NavItem>
                     <NavIcon>
-                      <i style={{ fontSize: '1.75em' }} >
-                        <FontAwesomeIcon icon="suitcase" />
-                      </i>
+                      <FontAwesomeIcon className="icon-awesome" icon="suitcase" />
                     </NavIcon>
 
                     <NavText>

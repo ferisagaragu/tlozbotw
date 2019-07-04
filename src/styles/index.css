@@ -45,7 +45,21 @@ h1 {
   max-width: 85% !important;
 }
 
-.list-uses {
-  width: 300px;
+.icon-awesome {
+  font-size: 1.75em;
 }
 
+.loading {
+  animation: spin infinite 2s linear;
+  pointer-events: none;
+  text-align: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

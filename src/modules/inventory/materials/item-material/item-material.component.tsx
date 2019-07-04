@@ -1,40 +1,12 @@
-import React, { Component, ReactElement } from 'react';
+import React, { Component } from 'react';
 import { ItemMaterialInterface } from '../../../../core/interfaces/material-component.interface';
 import { Col, Card, ListGroup } from 'react-bootstrap';
 import photo from '../../../../styles/img/photo.png';
 import './item-material.css';
 import heartSymbol from '../../../../shared/life-indicator.shared';
+import { materialUsesList } from '../../../../shared/material-uses.shared';
 
 class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
-
-  private keyUsages: number;
-
-  constructor(props: any) {
-    super(props);
-    this.keyUsages = -1;
-  }
-
-  private renderUses(uses: string[]): ReactElement {
-    return (
-      <ul>
-        { 
-          Array.isArray(uses) ?
-            uses.map((property: string) => {
-              this.keyUsages++;
-              return (
-                <li 
-                  key={ `uses-material-${this.keyUsages}` } 
-                >
-                  { property } 
-                </li>
-              );
-            })
-          : 
-            <li>{ uses }</li>
-        }
-      </ul>
-    );
-  }
 
   render() {
     const { material } = this.props;
@@ -67,7 +39,7 @@ class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
               </ListGroup.Item>
               
               <ListGroup.Item>
-                {  }
+                { materialUsesList(material) }
               </ListGroup.Item>
 
               <ListGroup.Item>

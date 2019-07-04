@@ -1,5 +1,5 @@
 import React, { Component, ReactElement } from 'react';
-import { Row, Col, ProgressBar } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import { MaterialModel } from '../../../core/models/material.model';
 import { connect } from '../../../imports/react-redux.import';
 import { getMaterials } from '../../../core/actions/material.actions';
@@ -38,7 +38,7 @@ class MaterialComponent extends Component<MaterialInterface,{}> {
         <TableEditMaterialComponent 
           materials={ this.materials }
         />
-        { materials ? 
+        { /*materials ? 
             this.renderData() 
           : 
             <Col>
@@ -47,7 +47,7 @@ class MaterialComponent extends Component<MaterialInterface,{}> {
                 now={100} 
                 variant="warning" 
               />
-            </Col> 
+            </Col>*/ 
         }
       </Row>
     );

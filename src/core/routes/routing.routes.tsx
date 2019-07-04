@@ -12,7 +12,6 @@ const Routing = () => {
         <Route component={ HomeView } />
         <Redirect from="/" to="/home" />
       </Switch>
-      
     </>
   );
 }

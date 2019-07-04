@@ -40,6 +40,7 @@ class FormMaterialComponent extends Component<FormMaterialInterface,any> {
 
             <div className="text-center">
               <img 
+                className="img-icon"
                 alt={ initialValues.name } 
                 src={ this.state.urlIcon }
               />

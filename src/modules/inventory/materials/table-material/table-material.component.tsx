@@ -8,6 +8,8 @@ import { updateMaterials } from '../../../../core/actions/material.actions';
 import heartSymbol from '../../../../shared/life-indicator.shared';
 import { materialUsesList } from '../../../../shared/material-uses.shared';
 import key from '../../../../core/key/react-elements.key';
+import '../table-material/table-material.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
 
@@ -53,6 +55,7 @@ class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
 
           <td>
             <img 
+              className="img-icon"
               alt= { material.name }
               src= { material.img } 
             />
@@ -73,7 +76,7 @@ class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
             }
           </td>
           
-          <td>
+          <td className="list-uses">
             { materialUsesList(material) }
           </td>
           
@@ -133,10 +136,17 @@ class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
               <th>Acciones</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody>  
             { materials && this.renderData() }
           </tbody>
         </Table>
+
+        { 
+          !materials &&  
+            <div className="text-center load-symbol">
+              <FontAwesomeIcon className="loading" icon="circle-notch" />
+            </div>
+        }
       </>
     );
   }

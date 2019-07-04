@@ -4,7 +4,7 @@ import { MaterialUsesEnum } from '../core/enums/material-uses.enum';
 
 export const materialUsesList = (material: MaterialModel) => {
   return (
-    <ul className="list-uses">
+    <ul>
       { material.addLife && <li>{ MaterialUsesEnum.ADD_LIFE }</li> }
       { material.sell && <li>{ MaterialUsesEnum.SELL }</li> }
       { material.improveArmor && <li>{ MaterialUsesEnum.IMPROVE_ARMOR }</li> }
