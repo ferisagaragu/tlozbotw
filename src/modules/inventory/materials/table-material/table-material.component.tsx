@@ -7,7 +7,7 @@ import { connect } from '../../../../imports/react-redux.import';
 import { updateMaterials } from '../../../../core/actions/material.actions';
 import heartSymbol from '../../../../shared/life-indicator.shared';
 import { materialUsesList } from '../../../../shared/material-uses.shared';
-import { tableRowKey } from '../../../../core/key/react-elements.key';
+import key from '../../../../core/key/react-elements.key';
 
 class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
 
@@ -46,7 +46,7 @@ class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
     return this.materials.map((material: MaterialModel, index: number) => {
       material.id = index;
       return(
-        <tr key={ tableRowKey() }>
+        <tr key={ key() }>
           <td>
             { index }
           </td>

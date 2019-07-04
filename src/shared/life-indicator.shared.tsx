@@ -2,14 +2,14 @@ import React, { ReactElement } from 'react';
 import heart_25 from '../styles/img/heart_25.png';
 import heart_50 from '../styles/img/heart_50.png';
 import heart from '../styles/img/heart.png';
-import { heartKey } from '../core/key/react-elements.key';
+import key from '../core/key/react-elements.key';
  
 const heartHalve = (halve: number, htmlOut: Array<ReactElement>): void => {
   switch (halve) {
     case 25:
       htmlOut.push( 
         <img 
-          key={ heartKey() } 
+          key={ key() } 
           alt="heart" 
           src={ heart_25 } 
           width="18" 
@@ -22,7 +22,7 @@ const heartHalve = (halve: number, htmlOut: Array<ReactElement>): void => {
     case 50: 
       htmlOut.push( 
         <img 
-          key={ heartKey() } 
+          key={ key() } 
           alt="heart" 
           src={ heart_50 } 
           width="18" 
@@ -37,7 +37,7 @@ const heartComplete = (complete: number, htmlOut: Array<ReactElement>): void => 
   for (let i = 0; i < complete; i++) {
     htmlOut.push(
     <img 
-      key={ heartKey() } 
+      key={ key() } 
       alt="heart" 
       src={ heart }
       width="18" 
