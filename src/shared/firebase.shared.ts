@@ -57,7 +57,7 @@ class Firebase {
       onSignOut();
     }).catch(function(error) {
       if (onError) {
-        onError();
+        onError(error);
       }
     });
   }

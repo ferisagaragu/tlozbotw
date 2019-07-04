@@ -62,5 +62,4 @@ const mapStateToProps = (state: any) => ({
   materials: state.materials
 });
 
-const MaterialComponentConnect = connect(mapStateToProps,mapDispatchToProps)(MaterialComponent);
-export default MaterialComponentConnect;
+export default connect(mapStateToProps,mapDispatchToProps)(MaterialComponent);

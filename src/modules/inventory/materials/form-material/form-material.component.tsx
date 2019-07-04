@@ -5,6 +5,7 @@ import { Row, Col, Button, Modal } from 'react-bootstrap';
 import heartSymbol from '../../../../shared/life-indicator.shared';
 import { renderTextField, renderCheckBox, renderTextArea } from '../../../../shared/redux-render-fields.shared';
 import { FormMaterialInterface } from '../../../../core/interfaces/material-component.interface';
+import { MaterialReducerEnum } from '../../../../core/enums/material-reducer.enum';
 
 
 class FormMaterialComponent extends Component<FormMaterialInterface,any> {
@@ -233,6 +234,6 @@ const validate = (values: any) => {
 }
 
 export default reduxForm({
-  form: 'syncValidation',
+  form: MaterialReducerEnum.SUBMIT_MATERIAL_FORM,
   validate
 })(FormMaterialComponent);

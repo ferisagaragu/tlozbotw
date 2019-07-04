@@ -1,71 +1,112 @@
 import React, { Component } from 'react';
-import { Container, Navbar } from 'react-bootstrap';
+import { Container, Navbar, FormControl, Button, Form, Nav, NavDropdown } from 'react-bootstrap';
 import Routing from '../core/routes/routing.routes';
 import { Route } from '../imports/react-router-dom.import';
 import SideNav, { NavItem, NavIcon, NavText } from '../imports/react-sidenav.import';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import LoginView from './login/login.view';
+import { connect } from '../imports/react-redux.import';
+import { logout } from '../core/actions/login.actions';
 
 class App extends Component<any,{}> {
   render() {
     return (
-      <Route render={({ location, history }: any) => (
-        <React.Fragment>
-          <SideNav
-            className="side-bar"
-            onSelect=
-            {
-              (selected: any) => {
-                const to = '/' + selected;
-                if (location.pathname !== to) {
-                  history.push(to);
-                }
-              }
-            }
-          >
-            <Navbar bg="dark" variant="dark" className="nav-bar">
-              <Navbar.Brand>
-                The Legend of Zelda Breath of the Wild
-              </Navbar.Brand>
-            </Navbar>
+      <>
+        { 
+          !this.props.userData ?
+            <LoginView />
+          :
+            <Route render={({ location, history }: any) => (
+              <React.Fragment>
+                <SideNav
+                  className="side-bar"
+                  onSelect=
+                  {
+                    (selected: any) => {
+                      const to = '/' + selected;
+                      if (location.pathname !== to) {
+                        history.push(to);
+                      }
+                    }
+                  }
+                >
+                  <Navbar bg="dark" variant="dark" className="nav-bar">
+                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                      <Nav className="mr-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#link">Link</Nav.Link>
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                          <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                          <NavDropdown.Divider />
+                          <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                        </NavDropdown>
+                      </Nav>
 
-            <SideNav.Toggle />
-            <SideNav.Nav defaultSelected="home">
-                <NavItem eventKey="home">
-                    <NavIcon>
-                      <FontAwesomeIcon className="icon-awesome" icon="home" />
-                    </NavIcon>
+                      <Form inline className="form-nav">
+                        <img alt="userImage" src={ this.props.userData.photo } className="rounded-circle mr-3" width="40px" height="40px"/>
+                        <Button variant="outline-success"
+                          onClick={() => {
+                            this.props.logout();
+                          }}
+                        >
+                          { this.props.userData.name }
+                        </Button>
+                      </Form>
+                    </Navbar.Collapse>
+                  </Navbar>
 
-                    <NavText>
-                      Inicio
-                    </NavText>
-                </NavItem>
-                <NavItem>
-                    <NavIcon>
-                      <FontAwesomeIcon className="icon-awesome" icon="suitcase" />
-                    </NavIcon>
+                  <SideNav.Toggle />
+                  <SideNav.Nav defaultSelected="home">
+                      <NavItem eventKey="home">
+                          <NavIcon>
+                            <FontAwesomeIcon className="icon-awesome" icon="home" />
+                          </NavIcon>
 
-                    <NavText>
-                      Inventario
-                    </NavText>
+                          <NavText>
+                            Inicio
+                          </NavText>
+                      </NavItem>
+                      <NavItem>
+                          <NavIcon>
+                            <FontAwesomeIcon className="icon-awesome" icon="suitcase" />
+                          </NavIcon>
 
-                    <NavItem eventKey="inventory/materials" subnav={ true }>
-                      <NavText>
-                        Material
-                      </NavText>
-                    </NavItem>
-                </NavItem>
-            </SideNav.Nav>
-          </SideNav>
-          <main>
-            <Container className="content">
-              <Routing />     
-            </Container>  
-          </main>
-        </React.Fragment>
-        )}
-      />
+                          <NavText>
+                            Inventario
+                          </NavText>
+
+                          <NavItem eventKey="inventory/materials" subnav={ true }>
+                            <NavText>
+                              Material
+                            </NavText>
+                          </NavItem>
+                      </NavItem>
+                  </SideNav.Nav>
+                </SideNav>
+                <main>
+                  <Container className="content">
+                    <Routing />     
+                  </Container>  
+                </main>
+              </React.Fragment>
+              )}
+            />
+        }
+      </>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state: any) => ({ 
+  userData: state.userData
+});
+
+const mapDispatchToProps = (dispatch: Function) => ({
+  logout: () => dispatch(logout())
+});
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);

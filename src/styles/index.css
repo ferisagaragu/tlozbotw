@@ -49,6 +49,10 @@ h1 {
   font-size: 1.75em;
 }
 
+.form-nav {
+  padding-right: 60px;
+}
+
 .loading {
   animation: spin infinite 2s linear;
   pointer-events: none;

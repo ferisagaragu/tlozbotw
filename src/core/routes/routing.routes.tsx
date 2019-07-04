@@ -5,14 +5,12 @@ import HomeView from '../../modules/home/home.view';
 
 const Routing = () => {
   return (
-    <>
-      <Switch>
-        <Route path="/home/" exact component={ HomeView }/>
-        <Route path="/inventory/materials/" exact component={ MaterialComponentConnect } />
-        <Route component={ HomeView } />
-        <Redirect from="/" to="/home" />
-      </Switch>
-    </>
+    <Switch>
+      <Route path="/home/" exact component={ HomeView }/>
+      <Route path="/inventory/materials/" exact component={ MaterialComponentConnect } />
+      <Route component={ HomeView } />
+      <Redirect from="/" to="/home" />
+    </Switch>
   );
 }
 
