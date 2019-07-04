@@ -3,12 +3,21 @@ import firebase from 'firebase';
 class Firebase {
 
   //REGIST AND LOGIN WHIT EMAIL
-  public createUserWithEmailAndPassword(email: string, password: string, errorFunction?: Function | undefined): void {
+  public createUserWithEmailAndPassword(email: string, password: string, onRegist: Function, onError?: Function | undefined): void {
+    let errorCode: string = '';
+    let errorMessage: string = '';
+
     firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      if (errorFunction) {
-        errorFunction(errorCode, errorMessage);
+      errorCode = error.code;
+      errorMessage = error.message;
+
+      if (onError) {
+        onError(errorCode, errorMessage);
+      }
+    }).then(() => {
+      if (!errorCode) {
+        const user = { email };
+        onRegist(user);
       }
     });
   }

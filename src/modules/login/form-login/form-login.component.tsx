@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from '../../../imports/react-redux.import';
 import { renderTextField } from '../../../shared/redux-render-fields.shared';
 import { Button } from 'react-bootstrap';
+import { LoginReducerEnum } from '../../../core/enums/login-reducer.enum';
 
 class FormLoginComponent extends Component<any> {
   
-  
   render() {
-    const { handleSubmit, submitActions, cancel, submitting } = this.props;
+    const { handleSubmit, submitting, submitActions, cancel } = this.props;
 
     return (
       <form onSubmit={ handleSubmit(submitActions) }>
         <Field 
+          className="form-control"
           name="username"
           type="email"
           component={ renderTextField }
@@ -19,17 +20,20 @@ class FormLoginComponent extends Component<any> {
         />
         
         <Field 
-          name="userpassword"
+          className="form-control"
+          name="password"
           type="password"
           component={ renderTextField }
           label="Contraseña"
         />
-        <div>
+
+        <div className="text-center mt-4">
           <Button 
-            variant="outline-dark" 
+            className="mr-3"
+            variant="outline-info"
             onClick={ cancel }
           >
-            Cancelar
+            Registrarse
           </Button>
 
           <Button 
@@ -37,7 +41,7 @@ class FormLoginComponent extends Component<any> {
             type="submit" 
             disabled={ submitting }
           >
-            Guardar
+            Iniciar sesión
           </Button>
         </div>
       </form>
@@ -63,6 +67,6 @@ const validate = (values: any) => {
 }
 
 export default reduxForm({
-  form: 'loginForm',
+  form: LoginReducerEnum.SUBMIT_LOGIN_FORM,
   validate
 })(FormLoginComponent);

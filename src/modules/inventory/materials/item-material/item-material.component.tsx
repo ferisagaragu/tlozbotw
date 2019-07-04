@@ -13,7 +13,7 @@ class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
 
     return (
       <Col md={ 3 } className="mt-5">
-        <Card className="card-material">
+        <Card className="card-shadow">
           <Card.Header className="card-header">
             <h3>
               { material.name }

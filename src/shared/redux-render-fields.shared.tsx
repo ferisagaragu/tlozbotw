@@ -9,7 +9,8 @@ export const renderTextField = (metaData: any) => {
     onKeyUp,
     meta: { 
       error, 
-      warning 
+      warning,
+      touched 
     }
   } = metaData;
 
@@ -29,8 +30,9 @@ export const renderTextField = (metaData: any) => {
           onKeyUp={ onKeyUp } 
         />
         {
-          ((error && <div className="text-danger">{error}</div>) ||
-          (warning && <div>{warning}</div>))
+          touched &&
+            ((error && <div className="text-danger">{error}</div>) ||
+            (warning && <div>{warning}</div>))
         }
       </div>
     </div>

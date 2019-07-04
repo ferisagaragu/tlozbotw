@@ -1,5 +1,6 @@
 ADD TYPESCRIPT
 yarn add typescript @types/node @types/react @types/react-dom @types/jest
+yarn add typescript@4.0.x --save-dev --save-exact
 https://facebook.github.io/create-react-app/docs/adding-typescript
 
 ADD REDUX
