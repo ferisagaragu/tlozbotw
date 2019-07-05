@@ -9,13 +9,13 @@ class LoginService {
   }
 
   public getUsersData(onFunction: Function) {
-    this.firebase.on('users',(snapshot: any) => {
+    this.firebase.once('users',(snapshot: any) => {
       onFunction(snapshot.val());
     });
   }
 
-  public registerUserData(data: any, errorFunction: Function): void {
-    this.firebase.set(`users`,data,errorFunction);
+  public registerUserData(id: string, data: any, errorFunction: Function): void {
+    this.firebase.update(`users/${id}`,data,errorFunction);
   } 
 
   public createUser(email: string, password: string, onLogIn: Function, onError: Function): void {

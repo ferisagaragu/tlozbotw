@@ -78,6 +78,12 @@ class Firebase {
     });
   }
 
+  public once(path: string, onFunction: Function): void {
+    firebase.database().ref().child(path).once('value',(snapshot: any) => {
+      onFunction(snapshot);
+    });
+  }
+
   public remove(path: string, errorFunction?: Function | undefined): void {
     firebase.database().ref().child(path).remove((error) => {
       if (errorFunction) {
