@@ -3,11 +3,20 @@ import { Row, Container, Button, Col, Card } from 'react-bootstrap';
 import FormLoginComponent from './form-login/form-login.component';
 import { connect } from '../../imports/react-redux.import';
 import { loginWhitGoogle, createUser, login } from '../../core/actions/login.actions';
+import FormRegisterUserComponent from './form-register-user/form-register-user.component';
+import { UserDataModel } from '../../core/models/user-data.model';
 
 class LoginView extends Component<any> {
   render() {
     return (
       <Container>
+        <FormRegisterUserComponent
+          submitActions={(values: any) => this.props.createUser(values) } 
+          cancel={ () => {
+            console.log('cancelado');
+          }}
+        />
+
         <Row className="justify-content-md-center mt-5">
           <Col md={ 4 }>
             <Card className="card-shadow">
@@ -23,9 +32,7 @@ class LoginView extends Component<any> {
                 </div>
 
                 <FormLoginComponent
-                  submitActions={(data: any,) => {
-                    this.props.login(data);
-                  }}
+                  submitActions={(data: any) => this.props.login(data) }
 
                   cancel={() => {
                     console.log('Hola mundo');
@@ -58,8 +65,8 @@ class LoginView extends Component<any> {
 
 const mapDispatchToProps = (dispatch: Function) => ({
   loginWhitGoogle: () => dispatch(loginWhitGoogle()),
-  login: ({username, password}: any) => dispatch(login(username,password)), 
-  createUser: ({username, password}: any) => dispatch(createUser(username,password))
+  login: ({ username, password }: any) => dispatch(login(username,password)), 
+  createUser: (data: UserDataModel) => dispatch(createUser(data))
 });
 
 export default connect(null,mapDispatchToProps)(LoginView);

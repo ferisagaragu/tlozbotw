@@ -5,6 +5,7 @@ export class UserDataModel {
   email: string;
   phoneNumber: string;
   photo: string;
+  role: number;
 
   constructor(data: any | UserDataModel) {
     this.id = '';
@@ -12,6 +13,7 @@ export class UserDataModel {
     this.email = '';
     this.phoneNumber = '';
     this.photo = '';
+    this.role = 0;
 
     Object.assign(this, data);
   }

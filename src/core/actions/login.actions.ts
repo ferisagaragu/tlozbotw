@@ -16,13 +16,29 @@ export function logoutUser(): Action {
 }
 
 
-export function createUser(username: string, password: string): Function {
-  return async (dispatch: Function) => {
-    loginService.createUser(username, password,
+export function createUser(data: any): Function {
+  return async () => {
+    loginService.createUser(data.email, data.password,
       (user: any) =>{
-        toast('success', `Usuario registrado con el correo ${user.email}`);
+        loginService.loginUser(data.email,data.password,
+          (loginData: any) => {
+            userData = new UserDataModel({
+              id: loginData.uid,
+              name: data.name,
+              email: data.email,
+              phoneNumber: data.phoneNumber === undefined ? '' : data.phoneNumber,
+              photo: data.photo === undefined ? '' : data.photo,
+              role: 0
+            });
+            
+            loginService.registerUserData(userData.id,userData,() => {});
+            toast('success', `Usuario registrado con el correo ${user.email}`);
+          }, () => {
+            toast('error', `Error al registrar el nuevo usuario`);
+          }
+        );  
       },(error: any)=>{
-        toast('error', `Error al registrar el nuevo usuario`);
+        toast('error', `El usuario que has ingresado ya existe`);
       }
     );
   };
@@ -78,21 +94,23 @@ function registUserData(user: any, dispatch: Function) {
         name: user.displayName,
         email: user.email,
         phoneNumber: user.phoneNumber,
-        photo: user.photoURL
+        photo: user.photoURL,
+        role: 0
       });
 
       loginService.registerUserData(userData.id,userData,() => {});
       dispatch(loginUser(userData));
       toast('success', `Bienvenid@ ${userData.name}`);
     } else {
-      const { id, name, email, phoneNumber, photo } = data[user.uid];
+      const { id, name, email, phoneNumber, photo, role } = data[user.uid];
 
       userData = new UserDataModel({
         id,
         name,
         email,
         phoneNumber,
-        photo
+        photo,
+        role
       });
   
       dispatch(loginUser(userData));
