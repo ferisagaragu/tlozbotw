@@ -19,16 +19,18 @@ export function createUser(data: any): Function {
   return async () => {
     loginService.createUser(data.email, data.password,
       (user: any) => {
-        const userData = {
-          uid: user.uid,
-          displayName: data.name,
-          email: user.email,
-          phoneNumber: data.phoneNumber === undefined ? '' : data.phoneNumber,
-          photoURL: data.photo === undefined ? '' : data.photo,
-          role: 0
-        };
-
-        registUserInformation(userData);
+        if (user) {
+          const userData = {
+            uid: user.uid,
+            displayName: data.name,
+            email: user.email,
+            phoneNumber: data.phoneNumber === undefined ? '' : data.phoneNumber,
+            photoURL: data.photo === undefined ? '' : data.photo,
+            role: 0
+          };
+  
+          registUserInformation(userData);
+        }
       },(error: any)=>{
         toast('error', `El usuario que has ingresado ya existe`);
       }

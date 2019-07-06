@@ -13,7 +13,7 @@ class FormRegisterUserComponent extends Component<any> {
         
         <Field 
           className="form-control"
-          name="patho"
+          name="photo"
           type="text"
           component={ renderTextField }
           label="Foto URL"
@@ -66,7 +66,28 @@ class FormRegisterUserComponent extends Component<any> {
 }
 
 const validate = (values: any) => {
-  const errors = {} 
+  const errors = {
+    photo: '',
+    name: '',
+    email: '',
+    password: ''
+  } 
+
+  if (!values.photo) {
+    errors.photo = 'La URL de una foto es requerido'
+  }
+
+  if (!values.name) {
+    errors.name = 'El nombre es requerido'
+  }
+
+  if (!values.email) {
+    errors.email = 'El correo electronico es requerido'
+  }
+
+  if (!values.password) {
+    errors.password = 'La contraseña es requerida'
+  }
 
   return errors;
 }

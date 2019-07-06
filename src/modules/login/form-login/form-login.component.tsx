@@ -52,15 +52,15 @@ class FormLoginComponent extends Component<any> {
 const validate = (values: any) => {
   const errors = {
     username: '',
-    userpassword: ''
+    password: ''
   };
 
   if (!values.username) {
     errors.username = 'El nombre de usuario es requerido';
   }
 
-  if (!values.userpassword) {
-    errors.userpassword = 'La contraseña es requerida';
+  if (!values.password) {
+    errors.password = 'La contraseña es requerida';
   }
 
   return errors;

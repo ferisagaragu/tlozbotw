@@ -6,17 +6,24 @@ import { loginWhitGoogle, createUser, login } from '../../core/actions/login.act
 import FormRegisterUserComponent from './form-register-user/form-register-user.component';
 import { UserDataModel } from '../../core/models/user-data.model';
 
-class LoginView extends Component<any> {
+class LoginView extends Component<any,any> {
+  
+  constructor(props: any) {
+    super(props);
+    
+    this.state = {
+      edit: false
+    }
+  }
+  
+  private submitRegistUser(values: any): void {
+    this.props.createUser(values); 
+    this.setState({ edit: false })
+  }
+
   render() {
     return (
       <Container>
-        <FormRegisterUserComponent
-          submitActions={(values: any) => this.props.createUser(values) } 
-          cancel={ () => {
-            console.log('cancelado');
-          }}
-        />
-
         <Row className="justify-content-md-center mt-5">
           <Col md={ 4 }>
             <Card className="card-shadow">
@@ -31,29 +38,36 @@ class LoginView extends Component<any> {
                   />
                 </div>
 
-                <FormLoginComponent
-                  submitActions={(data: any) => this.props.login(data) }
+                {
+                  !this.state.edit ?
+                    <>
+                      <FormLoginComponent
+                        submitActions={ (data: any) => this.props.login(data) }
+                        cancel={ () => this.setState({ edit: true }) }
+                      />
 
-                  cancel={() => {
-                    console.log('Hola mundo');
-                  }}
-                />
-
-                <div className="text-center">
-                  <Button 
-                    className="mt-3"
-                    variant="outline-dark" 
-                    onClick={ () => this.props.loginWhitGoogle() }
-                  >
-                    <img 
-                      alt="googleIcon"
-                      src="https://img.icons8.com/bubbles/2x/google-logo.png" 
-                      width="40px" 
-                      height="40px"
+                      <div className="text-center">
+                        <Button 
+                          className="mt-3"
+                          variant="outline-dark" 
+                          onClick={ () => this.props.loginWhitGoogle() }
+                        >
+                          <img 
+                            alt="googleIcon"
+                            src="https://img.icons8.com/bubbles/2x/google-logo.png" 
+                            width="40px" 
+                            height="40px"
+                          />
+                          Iniciar con Google
+                        </Button>
+                      </div>
+                    </>  
+                  :
+                    <FormRegisterUserComponent
+                      submitActions={(values: any) => this.submitRegistUser(values) } 
+                      cancel={ () => this.setState({ edit: false }) }
                     />
-                    Iniciar con Google
-                  </Button>
-                </div>
+                }
               </Card.Body>
             </Card>  
           </Col>
