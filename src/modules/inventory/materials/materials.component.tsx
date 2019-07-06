@@ -5,7 +5,7 @@ import { connect } from '../../../imports/react-redux.import';
 import { getMaterials } from '../../../core/actions/material.actions';
 import ItemMaterialComponent from './item-material/item-material.component';
 import TableEditMaterialComponent from './table-material/table-material.component';
-import { MaterialInterface } from '../../../core/interfaces/material-component.interface';
+import { MaterialInterface } from '../../../core/interfaces/inventory.interface';
 
 class MaterialComponent extends Component<MaterialInterface,{}> {
   

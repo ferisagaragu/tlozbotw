@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ItemMaterialInterface } from '../../../../core/interfaces/material-component.interface';
+import { ItemMaterialInterface } from '../../../../core/interfaces/inventory.interface';
 import { Col, Card, ListGroup } from 'react-bootstrap';
 import photo from '../../../../styles/img/photo.png';
 import './item-material.css';

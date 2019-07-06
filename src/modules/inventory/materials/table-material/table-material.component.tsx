@@ -1,5 +1,5 @@
 import React, { Component, ReactElement } from 'react';
-import { TableMaterialInterface } from '../../../../core/interfaces/material-component.interface';
+import { TableMaterialInterface } from '../../../../core/interfaces/inventory.interface';
 import { Table, Modal, Button } from 'react-bootstrap';
 import { MaterialModel } from '../../../../core/models/material.model';
 import FormMaterialComponent from '../form-material/form-material.component';

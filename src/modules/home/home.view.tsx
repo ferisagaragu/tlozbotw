@@ -7,7 +7,7 @@ class HomeView extends Component {
     return (
       <Row>
         <Col md={ 12 } className="text-center">
-          <h1>Bienvenido</h1>
+          <h1>Bienvenído</h1>
         </Col>
       </Row>
     );
