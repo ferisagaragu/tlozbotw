@@ -16,8 +16,19 @@ class Firebase {
       }
     }).then(() => {
       if (!errorCode) {
-        const user = { email };
-        onRegist(user);
+        firebase.auth().onAuthStateChanged((user: any) => {
+          if (user) {
+            onRegist(user);
+          } else {
+            onRegist(null);
+          }
+
+          firebase.auth().signOut().then(
+            () => {}
+          ).catch(
+            (error) => {}
+          );
+        });
       }
     });
   }
