@@ -9,7 +9,6 @@ import { connect } from '../../imports/react-redux.import';
 import { NavBarInterface } from '../../core/interfaces/layout.interface';
 
 class NavBarView extends Component<NavBarInterface,any> {
-  
   render() {
     const { photo, name, role } = this.props.userData;
 

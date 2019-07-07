@@ -1,0 +1,54 @@
+CODIGO
+___________________________________________________________
+  Si un <tag></tag> sobrepasa 2 atributos se aliniara así:
+    <tag
+      atributo1=""
+      atributo2=""
+      atributo3=""
+      ...
+    >
+    </tag>
+  si no 
+    <tag atributo1="" atributo2=""></tag>
+  ////////////////////////////////////////////////////////
+
+  Si un componente usa [props] y tambien [state] este 
+  necesitara interfaces tanto de las porpiedades como
+  del estado 
+    Component<PropsInterface,StateInterface>
+  ////////////////////////////////////////////////////////
+
+  Los elementos que se importen de css o imagenes en componentes
+  tendran su import en la parte mas baja
+    ...
+    import loginLogo from '../../../styles/img/login_logo.gif';
+    import './logo-login.css';
+  ////////////////////////////////////////////////////////
+  
+    
+-------------------------------------------------------------
+
+CARPETAS
+
+_____________________________________________________________
+  En la carpeta ./core/interfaces/ se creara una interface
+  por cada una de las vistas y este se llamara como la vista
+  con la terminacion .interface.ts.   Dentro de esta se acomodara
+  asi el archivo
+
+    export interface MyComponentPropsInterface {
+      data: any
+      ...............
+    }
+
+    export interface MyComponentStateInterface {
+      data: any
+      .................
+    }
+
+-------------------------------------------------------------
+
+NOMBRES
+
+_____________________________________________________________
+-------------------------------------------------------------

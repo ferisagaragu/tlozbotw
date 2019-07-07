@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import { Row, Container, Button, Col, Card } from 'react-bootstrap';
+import { Row, Container, Col, Card } from 'react-bootstrap';
 import FormLoginComponent from './form-login/form-login.component';
 import { connect } from '../../imports/react-redux.import';
 import { loginWhitGoogle, createUser, login } from '../../core/actions/login.actions';
 import FormRegisterUserComponent from './form-register-user/form-register-user.component';
 import { UserDataModel } from '../../core/models/user-data.model';
+import { LoginPropsInterface, LoginStateInterface } from '../../core/interfaces/login.interfaces';
+import LogoLoginComponent from './logo-login/logo-login.component';
+import DashboardExternalLoginComponent from './dashboard-external-login/dashboard-external-login.component';
 
-class LoginView extends Component<any,any> {
+class LoginView extends Component<LoginPropsInterface,LoginStateInterface> {
   
   constructor(props: any) {
     super(props);
@@ -18,49 +21,31 @@ class LoginView extends Component<any,any> {
   
   private submitRegistUser(values: any): void {
     this.props.createUser(values); 
-    this.setState({ edit: false })
+    this.setState({ edit: false });
   }
 
   render() {
+    const { edit } = this.state;
+    const { login, loginWhitGoogle } = this.props;
+
     return (
       <Container>
         <Row className="justify-content-md-center mt-5">
           <Col md={ 4 }>
             <Card className="card-shadow">
               <Card.Body>
-                <div className="text-center">
-                  <img 
-                    className="rounded-circle"
-                    alt="iconLogin"
-                    src="https://cdn.dribbble.com/users/1055986/screenshots/3282734/zelda-gif-dribbble.gif"
-                    width="250px"
-                    height="180px"
-                  />
-                </div>
-
+                <LogoLoginComponent />
                 {
-                  !this.state.edit ?
+                  !edit ?
                     <>
                       <FormLoginComponent
-                        submitActions={ (data: any) => this.props.login(data) }
+                        submitActions={ (data: any) => login(data) }
                         cancel={ () => this.setState({ edit: true }) }
                       />
 
-                      <div className="text-center">
-                        <Button 
-                          className="mt-3"
-                          variant="outline-dark" 
-                          onClick={ () => this.props.loginWhitGoogle() }
-                        >
-                          <img 
-                            alt="googleIcon"
-                            src="https://img.icons8.com/bubbles/2x/google-logo.png" 
-                            width="40px" 
-                            height="40px"
-                          />
-                          Iniciar con Google
-                        </Button>
-                      </div>
+                      <DashboardExternalLoginComponent 
+                        onLoginWhitGoogle={ () => loginWhitGoogle() }
+                      />                     
                     </>  
                   :
                     <FormRegisterUserComponent

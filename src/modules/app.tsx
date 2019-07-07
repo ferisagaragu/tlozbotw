@@ -5,14 +5,14 @@ import { connect } from '../imports/react-redux.import';
 import NavBarView from './layout/nav-bar.view';
 import AppInterface from '../core/interfaces/app.interface';
 
-class App extends Component<AppInterface,any> {
+class App extends Component<AppInterface> {
   render() {
     const userData = this.props.userData;
 
     return (
       <>
         { 
-          !this.props.userData ?
+          !userData ?
             <LoginView />
           :
             <NavBarView 
