@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-
 import LoginView from './login/login.view';
 import { connect } from '../imports/react-redux.import';
-import NavBarView from './layout/nav-bar.view';
 import AppInterface from '../core/interfaces/app.interface';
+import LayoutView from './layout/layout.view';
 
 class App extends Component<AppInterface> {
   render() {
@@ -15,7 +14,7 @@ class App extends Component<AppInterface> {
           !userData ?
             <LoginView />
           :
-            <NavBarView 
+            <LayoutView 
               userData={ userData }
             />
         }
