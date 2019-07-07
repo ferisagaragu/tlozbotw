@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from '../../../imports/react-redux.import';
 import { Button } from 'react-bootstrap';
 import { renderTextField } from '../../../shared/redux-render-fields.shared';
+import { LoginReducerEnum } from '../../../core/enums/login-reducer.enum';
 
 class FormRegisterUserComponent extends Component<any> {
   
@@ -93,6 +94,6 @@ const validate = (values: any) => {
 }
 
 export default reduxForm({
-  form: 'syncValidation',
+  form: LoginReducerEnum.SUBMIT_LOGIN_REGISTER_FORM,
   validate
 })(FormRegisterUserComponent);

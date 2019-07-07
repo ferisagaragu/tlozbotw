@@ -7,7 +7,7 @@ import ItemMaterialComponent from './item-material/item-material.component';
 import TableEditMaterialComponent from './table-material/table-material.component';
 import { MaterialInterface } from '../../../core/interfaces/inventory.interface';
 
-class MaterialComponent extends Component<MaterialInterface,{}> {
+class MaterialView extends Component<MaterialInterface> {
   
   private materials: Array<MaterialModel>;
 
@@ -62,4 +62,4 @@ const mapStateToProps = (state: any) => ({
   materials: state.materials
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(MaterialComponent);
+export default connect(mapStateToProps,mapDispatchToProps)(MaterialView);
