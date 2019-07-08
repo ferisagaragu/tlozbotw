@@ -4,13 +4,13 @@ import { MaterialUsesEnum } from '../../../../core/enums/material-uses.enum';
 import { Row, Col, Button, Modal } from 'react-bootstrap';
 import heartSymbol from '../../../../shared/life-indicator.shared';
 import { renderTextField, renderCheckBox, renderTextArea } from '../../../../shared/redux-render-fields.shared';
-import { FormMaterialInterface } from '../../../../core/interfaces/inventory.interface';
+import { FormMaterialPropsInterface, FormMaterialStateInterface } from '../../../../core/interfaces/inventory.interface';
 import { MaterialReducerEnum } from '../../../../core/enums/material-reducer.enum';
 
 
-class FormMaterialComponent extends Component<FormMaterialInterface,any> {
+class FormMaterialComponent extends Component<FormMaterialPropsInterface,FormMaterialStateInterface> {
   
-  constructor(props: FormMaterialInterface) {
+  constructor(props: FormMaterialPropsInterface) {
     super(props);
 
     this.state = {
@@ -25,7 +25,7 @@ class FormMaterialComponent extends Component<FormMaterialInterface,any> {
     });
   } 
 
-  private setLifeIndicator(url: string): void {
+  private setLifeIndicator(url: number): void {
     this.setState({
       lifeIndicator: url
     });

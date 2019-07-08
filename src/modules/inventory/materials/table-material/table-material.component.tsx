@@ -1,5 +1,5 @@
 import React, { Component, ReactElement } from 'react';
-import { TableMaterialInterface } from '../../../../core/interfaces/inventory.interface';
+import { TableMaterialPropsInterface, TableMaterialStateInterface } from '../../../../core/interfaces/inventory.interface';
 import { Table, Modal, Button } from 'react-bootstrap';
 import { MaterialModel } from '../../../../core/models/material.model';
 import FormMaterialComponent from '../form-material/form-material.component';
@@ -11,16 +11,17 @@ import key from '../../../../core/key/react-elements.key';
 import '../table-material/table-material.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-class TableEditMaterialComponent extends Component<TableMaterialInterface,any> {
+class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,TableMaterialStateInterface> {
 
   private materials: Array<MaterialModel>;
 
-  constructor(props: TableMaterialInterface) {
+  constructor(props: TableMaterialPropsInterface) {
     super(props);
     this.materials = [];
 
     this.state = {
-      material: {}
+      material: new MaterialModel({}),
+      show: false
     }
   }
 

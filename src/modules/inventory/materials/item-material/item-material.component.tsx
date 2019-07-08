@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { ItemMaterialInterface } from '../../../../core/interfaces/inventory.interface';
+import { ItemMaterialPropsInterface } from '../../../../core/interfaces/inventory.interface';
 import { Col, Card, ListGroup } from 'react-bootstrap';
 import photo from '../../../../styles/img/photo.png';
 import './item-material.css';
 import heartSymbol from '../../../../shared/life-indicator.shared';
 import { materialUsesList } from '../../../../shared/material-uses.shared';
 
-class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
+class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
 
   render() {
     const { material } = this.props;
