@@ -1,5 +1,5 @@
 import React, { Component, ReactElement } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Col, ProgressBar } from 'react-bootstrap';
 import { MaterialModel } from '../../../core/models/material.model';
 import { connect } from '../../../imports/react-redux.import';
 import { getMaterials } from '../../../core/actions/material.actions';
@@ -30,24 +30,30 @@ class MaterialView extends Component<MaterialPropsInterface> {
   }
   
   render() {
-    const { materials } = this.props;
+    const { materials, userData } = this.props;
     this.materials = materials;
 
     return (
       <Row>
-        <TableEditMaterialComponent 
-          materials={ this.materials }
-        />
-        { /*materials ? 
-            this.renderData() 
-          : 
-            <Col>
-              <ProgressBar 
-                animated 
-                now={100} 
-                variant="warning" 
-              />
-            </Col>*/ 
+        {
+          userData.role === 1 ? 
+            <TableEditMaterialComponent 
+              materials={ this.materials }
+            />
+          :
+            <>
+              { materials ? 
+                this.renderData() 
+              : 
+                <Col>
+                  <ProgressBar 
+                    animated 
+                    now={100} 
+                    variant="warning" 
+                  />
+                </Col> 
+              }
+            </>
         }
       </Row>
     );
@@ -59,6 +65,7 @@ const mapDispatchToProps = (dispatch: Function) => ({
 });
 
 const mapStateToProps = (state: any) => ({ 
+  userData: state.userData,
   materials: state.materials
 });
 

@@ -1,4 +1,5 @@
 import { MaterialModel } from "../models/material.model";
+import { UserDataModel } from "../models/user-data.model";
 
 export interface ItemMaterialPropsInterface {
   material: MaterialModel
@@ -7,6 +8,7 @@ export interface ItemMaterialPropsInterface {
 export interface MaterialPropsInterface {
   getMaterials: Function;
   materials: Array<MaterialModel>;
+  userData: UserDataModel;
 }
 
 export interface TableMaterialPropsInterface {
