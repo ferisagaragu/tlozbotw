@@ -7,6 +7,7 @@ export interface ItemMaterialPropsInterface {
 
 export interface MaterialPropsInterface {
   getMaterials: Function;
+  updateMaterials: Function;
   materials: Array<MaterialModel>;
   userData: UserDataModel;
 }

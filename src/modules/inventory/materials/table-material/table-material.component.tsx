@@ -3,8 +3,6 @@ import { TableMaterialPropsInterface, TableMaterialStateInterface } from '../../
 import { Table, Modal, Button } from 'react-bootstrap';
 import { MaterialModel } from '../../../../core/models/material.model';
 import FormMaterialComponent from '../form-material/form-material.component';
-import { connect } from '../../../../imports/react-redux.import';
-import { updateMaterials } from '../../../../core/actions/material.actions';
 import heartSymbol from '../../../../shared/life-indicator.shared';
 import { materialUsesList } from '../../../../shared/material-uses.shared';
 import key from '../../../../core/key/react-elements.key';
@@ -99,7 +97,9 @@ class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,T
   }
 
   render() {
-    const { materials }  = this.props
+    const { materials }  = this.props;
+    const { material } = this.state;
+    const { id, name } = material;
     this.materials = materials;
 
     return (
@@ -112,13 +112,13 @@ class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,T
         >
           <Modal.Header>
             <Modal.Title>
-              { `#${this.state.material.id} ${this.state.material.name}` } 
+              { `#${id} ${name}` } 
             </Modal.Title>
           </Modal.Header>
           
           <Modal.Body>
             <FormMaterialComponent 
-              initialValues={ this.state.material }
+              initialValues={ material }
               submitActions={ (values: MaterialModel) => this.onSubmint(values) }
               cancel={ () => this.showModal(false) }
             />
@@ -154,10 +154,4 @@ class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,T
 
 }
 
-const mapDispatchToProps = (dispatch: Function) => ({
-  updateMaterials: (data: MaterialModel) => (dispatch(updateMaterials(data)) )
-});
-
-const TableEditMaterialComponentConnect = connect(null,mapDispatchToProps)(TableEditMaterialComponent);
-
-export default TableEditMaterialComponentConnect;
+export default TableEditMaterialComponent;

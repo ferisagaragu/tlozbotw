@@ -2,7 +2,7 @@ import React, { Component, ReactElement } from 'react';
 import { Row, Col, ProgressBar } from 'react-bootstrap';
 import { MaterialModel } from '../../../core/models/material.model';
 import { connect } from '../../../imports/react-redux.import';
-import { getMaterials } from '../../../core/actions/material.actions';
+import { getMaterials, updateMaterials } from '../../../core/actions/material.actions';
 import ItemMaterialComponent from './item-material/item-material.component';
 import TableEditMaterialComponent from './table-material/table-material.component';
 import { MaterialPropsInterface } from '../../../core/interfaces/inventory.interface';
@@ -39,6 +39,7 @@ class MaterialView extends Component<MaterialPropsInterface> {
           userData.role === 1 ? 
             <TableEditMaterialComponent 
               materials={ this.materials }
+              updateMaterials={ this.props.updateMaterials }
             />
           :
             <>
@@ -48,7 +49,7 @@ class MaterialView extends Component<MaterialPropsInterface> {
                 <Col>
                   <ProgressBar 
                     animated 
-                    now={100} 
+                    now={ 100 } 
                     variant="warning" 
                   />
                 </Col> 
@@ -61,7 +62,8 @@ class MaterialView extends Component<MaterialPropsInterface> {
 }
 
 const mapDispatchToProps = (dispatch: Function) => ({
-  getMaterials: () => dispatch(getMaterials())
+  getMaterials: () => dispatch(getMaterials()),
+  updateMaterials: (data: MaterialModel) => dispatch(updateMaterials(data))
 });
 
 const mapStateToProps = (state: any) => ({ 
