@@ -46,7 +46,7 @@ class LayoutView extends Component<LayoutPropsInterface> {
                 </NavText>
               </NavItem>
 
-              <NavItem>
+              <NavItem eventKey="inventory">
                 <NavIcon>
                   <FontAwesomeIcon className="icon-awesome" icon="suitcase" />
                 </NavIcon>
