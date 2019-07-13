@@ -8,6 +8,7 @@ const Routing = () => {
     <Switch>
       <Route path="/home/" exact component={ HomeView }/>
       <Route path="/inventory/materials/" exact component={ MaterialsView } />
+      <Route component={ HomeView } />
     </Switch>
   );
 }
