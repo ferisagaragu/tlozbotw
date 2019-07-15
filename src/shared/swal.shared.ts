@@ -6,7 +6,7 @@ const swal = withReactContent(Swal);
 export const toast = (iconType: "success" | "error" | "warning" | "info" | "question" , title: string) => {
   const Toast = swal.mixin({
     toast: true,
-    position: 'top-end',
+    position: 'bottom-end',
     showConfirmButton: false,
     timer: 3000
   });

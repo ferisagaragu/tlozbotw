@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "C:\\Qualtop-Sye\\qs-18-sepomex-clasificarfrontend"
+		},
+		{
+			"path": "C:\\Qualtop-Sye\\qs-18-sepomex-transportar-frontend"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "C:\\ReactApp\\firstapp - WeatherApp"
+		},
+		{
+			"path": "C:\\Qualtop-Sye\\qs-18-sepomex-seguridadfrontend"
+		}
+	],
+	"settings": {
+		"tslint.alwaysShowRuleFailuresAsWarnings": false
+	}
+}

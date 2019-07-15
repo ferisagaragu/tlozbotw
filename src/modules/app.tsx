@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
-import { Container, Navbar } from 'react-bootstrap';
-import InventoryView from './inventory/inventory.view';
+import LoginView from './login/login.view';
+import { connect } from '../imports/react-redux.import';
+import AppInterface from '../core/interfaces/app.interface';
+import LayoutView from './layout/layout.view';
 
-class App extends Component<any,{}> {
+class App extends Component<AppInterface> {
   render() {
+    const userData = this.props.userData;
+
     return (
       <>
-        <Navbar bg="dark" variant="dark">
-          <Navbar.Brand>The Legend of Zelda Breath of the Wild CheckList</Navbar.Brand>
-        </Navbar>
-        
-        <Container>
-          <InventoryView />
-        </Container>
+        { 
+          !userData ?
+            <LoginView />
+          :
+            <LayoutView 
+              userData={ userData }
+            />
+        }
       </>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state: any) => ({ 
+  userData: state.userData
+});
+
+export default connect(mapStateToProps,null)(App);

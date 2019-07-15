@@ -3,6 +3,11 @@
   src: url('./font/tlozbotw.otf');
 }
 
+@font-face {
+  font-family: 'retganon';
+  src: url('./font/retganon.ttf');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -17,3 +22,54 @@ code {
     monospace;
 }
 
+h1 {
+  font-family: 'retganon';
+}
+
+.nav-bar {
+  margin-left: 60px;
+  position: fixed !important;
+  width: 100%;
+  height: 65px;
+  font-family: 'tlozbotw';
+}
+
+.side-bar {
+  position: fixed !important;
+  background-color: #343a40 !important;
+}
+
+.content {
+  margin-top: 100px !important;
+  margin-left: 10% !important;
+  max-width: 85% !important;
+}
+
+.icon-awesome {
+  font-size: 1.75em;
+}
+
+.form-nav {
+  padding-right: 60px;
+}
+
+.card-shadow {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.loading {
+  animation: spin infinite 2s linear;
+  pointer-events: none;
+  text-align: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

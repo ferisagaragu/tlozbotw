@@ -1,14 +1,36 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firebase-auth';
+import 'firebase/firebase-database';
 
 class Firebase {
 
   //REGIST AND LOGIN WHIT EMAIL
-  public createUserWithEmailAndPassword(email: string, password: string, errorFunction?: Function | undefined): void {
+  public createUserWithEmailAndPassword(email: string, password: string, onRegist: Function, onError?: Function | undefined): void {
+    let errorCode: string = '';
+    let errorMessage: string = '';
+
     firebase.auth().createUserWithEmailAndPassword(email, password).catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      if (errorFunction) {
-        errorFunction(errorCode, errorMessage);
+      errorCode = error.code;
+      errorMessage = error.message;
+
+      if (onError) {
+        onError(errorCode, errorMessage);
+      }
+    }).then(() => {
+      if (!errorCode) {
+        firebase.auth().onAuthStateChanged((user: any) => {
+          if (user) {
+            onRegist(user);
+          } else {
+            onRegist(null);
+          }
+
+          firebase.auth().signOut().then(
+            () => {}
+          ).catch(
+            (error) => {}
+          );
+        });
       }
     });
   }
@@ -57,7 +79,7 @@ class Firebase {
       onSignOut();
     }).catch(function(error) {
       if (onError) {
-        onError();
+        onError(error);
       }
     });
   }
@@ -65,6 +87,12 @@ class Firebase {
   //CALL DATA
   public on(path: string, onFunction: Function): void {
     firebase.database().ref().child(path).on('value',(snapshot: any) => {
+      onFunction(snapshot);
+    });
+  }
+
+  public once(path: string, onFunction: Function): void {
+    firebase.database().ref().child(path).once('value',(snapshot: any) => {
       onFunction(snapshot);
     });
   }

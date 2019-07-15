@@ -1,49 +1,19 @@
-import React, { Component, ReactElement } from 'react';
-import { ItemMaterialInterface } from '../../../../core/interfaces/material-component.interface';
+import React, { Component } from 'react';
+import { ItemMaterialPropsInterface } from '../../../../core/interfaces/inventory.interface';
 import { Col, Card, ListGroup } from 'react-bootstrap';
-import LifeIndicator from '../../../../shared/life-indicator.shared';
 import photo from '../../../../styles/img/photo.png';
 import './item-material.css';
+import heartSymbol from '../../../../shared/life-indicator.shared';
+import { materialUsesList } from '../../../../shared/material-uses.shared';
 
-class ItemMaterialComponent extends Component<ItemMaterialInterface,any> {
-
-  private keyUsages: number;
-  private lifeIndicator: LifeIndicator;
-
-  constructor(props: any) {
-    super(props);
-    this.keyUsages = -1;
-    this.lifeIndicator = new LifeIndicator();
-  }
-
-  private renderUses(uses: string[]): ReactElement {
-    return (
-      <ul>
-        { 
-          Array.isArray(uses) ?
-            uses.map((property: string) => {
-              this.keyUsages++;
-              return (
-                <li 
-                  key={ `uses-material-${this.keyUsages}` } 
-                >
-                  { property } 
-                </li>
-              );
-            })
-          : 
-            <li>{ uses }</li>
-        }
-      </ul>
-    );
-  }
+class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
 
   render() {
     const { material } = this.props;
 
     return (
       <Col md={ 3 } className="mt-5">
-        <Card className="card-material">
+        <Card className="card-shadow">
           <Card.Header className="card-header">
             <h3>
               { material.name }
@@ -58,11 +28,18 @@ class ItemMaterialComponent extends Component<ItemMaterialInterface,any> {
           <Card.Body>
             <ListGroup variant="flush">
               <ListGroup.Item>
-                { this.lifeIndicator.heartSymbol(material.life) }
+                { 
+                  material.life !== 0 ? 
+                    heartSymbol(material.life) 
+                  : 
+                    <label>
+                      <b>Material</b>
+                    </label>
+                }
               </ListGroup.Item>
               
               <ListGroup.Item>
-                { this.renderUses(material.uses) }
+                { materialUsesList(material) }
               </ListGroup.Item>
 
               <ListGroup.Item>
@@ -73,7 +50,7 @@ class ItemMaterialComponent extends Component<ItemMaterialInterface,any> {
 
           <Card.Footer className="card-footer">
             {
-              material.life.length !== 0 &&
+              material.life !== 0 &&
               <>
                 <input type="checkbox" className="float-right" />
 
