@@ -13,8 +13,8 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
 
     return (
       <Col md={ 3 } className="mt-5">
-        <Card className="card-shadow">
-          <Card.Header className="card-header">
+        <Card className="card-shadow card-size">
+          <Card.Header className="item-header">
             <h3>
               { material.name }
               <img 
@@ -48,7 +48,7 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
             </ListGroup>
           </Card.Body>
 
-          <Card.Footer className="card-footer">
+          <Card.Footer className="item-footer">
             {
               material.life !== 0 &&
               <>

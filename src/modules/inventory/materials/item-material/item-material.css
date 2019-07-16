@@ -1,4 +1,4 @@
-.card-header {
+.item-header {
   background-image: url('../../../../styles/img/header-card.png');
   background-size: auto;
   color: #BA9C66;
@@ -6,8 +6,13 @@
   height: 90px;
 }
 
-.card-footer {
+.item-footer {
   background-image: url('../../../../styles/img/footer-card.png');
   background-size: auto;
   height: 80px;
+}
+
+.card-size {
+  width: 100%;
+  height: 100%;
 }

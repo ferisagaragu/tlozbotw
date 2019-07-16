@@ -31,8 +31,8 @@ export const renderTextField = (metaData: any) => {
         />
         {
           touched &&
-            ((error && <div className="text-danger">{error}</div>) ||
-            (warning && <div>{warning}</div>))
+            ((error && <div className="text-danger">{ error }</div>) ||
+            (warning && <div>{ warning }</div>))
         }
       </div>
     </div>
@@ -46,7 +46,8 @@ export const renderTextArea = (metaData: any) => {
     className,
     meta: { 
       error, 
-      warning 
+      warning,
+      touched 
     }
   } = metaData;
 
@@ -64,8 +65,9 @@ export const renderTextArea = (metaData: any) => {
           placeholder={ label } 
         />
         {
-          ((error && <div className="text-danger">{error}</div>) ||
-          (warning && <div>{warning}</div>))
+          touched &&
+            ((error && <div className="text-danger">{ error }</div>) ||
+            (warning && <div>{ warning }</div>))
         }
       </div>
     </div>
@@ -80,7 +82,8 @@ export const renderCheckBox = (metaData: any) => {
     className,
     meta: { 
       error, 
-      warning 
+      warning,
+      touched
     }
   } = metaData;
 
@@ -96,8 +99,9 @@ export const renderCheckBox = (metaData: any) => {
       </label>
       <br />
       {
-        ((error && <div className="text-danger">{error}</div>) ||
-        (warning && <div>{warning}</div>))
+        touched &&
+          ((error && <div className="text-danger">{ error }</div>) ||
+          (warning && <div>{ warning }</div>))
       }
     </div>
   );

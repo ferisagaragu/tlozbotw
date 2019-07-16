@@ -14,7 +14,6 @@ export function logoutUser(): Action {
   return {type: LoginReducerEnum.LOGOUT, payload: null};
 }
 
-
 export function createUser(data: any): Function {
   return async () => {
     loginService.createUser(data.email, data.password,
@@ -41,7 +40,7 @@ export function createUser(data: any): Function {
 export function loginWhitGoogle(): Function {
   return async (dispatch: Function) => {
     loginService.loginUserWhitGoogle(
-      (token: any, user: any)=>{
+      (token: any, user: any)=> {
         if (user) {
           registUserInformation(user, dispatch);
         }

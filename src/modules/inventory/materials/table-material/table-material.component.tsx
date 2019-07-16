@@ -105,7 +105,7 @@ class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,T
     return (
       <>
         <Modal 
-          show={this.state.show}
+          show={ this.state.show }
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
           centered

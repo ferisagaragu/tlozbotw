@@ -34,6 +34,10 @@ ADD OPTIONAL FIREBASE
 yarn add firebase 
 https://firebase.google.com/?hl=es-419
 
+ADD OPTIONAL COOKIES
+yarn add js-cookie
+https://www.npmjs.com/package/js-cookie
+
 ADD OPTIONAL SWEETALERT2
 yarn add sweetalert2
 yarn add sweetalert2-react-content
