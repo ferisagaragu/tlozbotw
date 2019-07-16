@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/tlozbotw/static/css/main.ba2362f8.chunk.css",
-    "main.js": "/tlozbotw/static/js/main.f65faa4d.chunk.js",
-    "main.js.map": "/tlozbotw/static/js/main.f65faa4d.chunk.js.map",
+    "main.css": "/tlozbotw/static/css/main.4ce73e83.chunk.css",
+    "main.js": "/tlozbotw/static/js/main.f10431cb.chunk.js",
+    "main.js.map": "/tlozbotw/static/js/main.f10431cb.chunk.js.map",
     "runtime~main.js": "/tlozbotw/static/js/runtime~main.155d1548.js",
     "runtime~main.js.map": "/tlozbotw/static/js/runtime~main.155d1548.js.map",
     "static/css/2.cb73d55c.chunk.css": "/tlozbotw/static/css/2.cb73d55c.chunk.css",
-    "static/js/2.b2fa3975.chunk.js": "/tlozbotw/static/js/2.b2fa3975.chunk.js",
-    "static/js/2.b2fa3975.chunk.js.map": "/tlozbotw/static/js/2.b2fa3975.chunk.js.map",
+    "static/js/2.dd229842.chunk.js": "/tlozbotw/static/js/2.dd229842.chunk.js",
+    "static/js/2.dd229842.chunk.js.map": "/tlozbotw/static/js/2.dd229842.chunk.js.map",
     "index.html": "/tlozbotw/index.html",
-    "precache-manifest.22dff08e05c9b0866f83f2d8e0bcecaf.js": "/tlozbotw/precache-manifest.22dff08e05c9b0866f83f2d8e0bcecaf.js",
+    "precache-manifest.095e96024ce388f4a5e9f07b46d1aa51.js": "/tlozbotw/precache-manifest.095e96024ce388f4a5e9f07b46d1aa51.js",
     "service-worker.js": "/tlozbotw/service-worker.js",
     "static/css/2.cb73d55c.chunk.css.map": "/tlozbotw/static/css/2.cb73d55c.chunk.css.map",
-    "static/css/main.ba2362f8.chunk.css.map": "/tlozbotw/static/css/main.ba2362f8.chunk.css.map",
+    "static/css/main.4ce73e83.chunk.css.map": "/tlozbotw/static/css/main.4ce73e83.chunk.css.map",
     "static/media/item-material.css": "/tlozbotw/static/media/header-card.a3021fe3.png",
     "static/media/heart.png": "/tlozbotw/static/media/heart.7792b2dc.png",
     "static/media/heart_25.png": "/tlozbotw/static/media/heart_25.9b247d18.png",
     "static/media/heart_50.png": "/tlozbotw/static/media/heart_50.2b9c47a7.png",
     "static/media/login_logo.gif": "/tlozbotw/static/media/login_logo.64d794b6.gif",
-    "static/media/index.css": "/tlozbotw/static/media/tlozbotw.a697f18e.otf"
+    "static/media/index.css": "/tlozbotw/static/media/tlozbotw.a697f18e.otf",
+    "static/media/test_avatar.png": "/tlozbotw/static/media/test_avatar.df04bee5.png"
   }
 }

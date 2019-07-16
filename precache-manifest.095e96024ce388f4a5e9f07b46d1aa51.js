@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f3a6d60886ff86f07db8929232ad38d3",
+    "revision": "ef70b8063f1f9c7e5679ff5f567b768a",
     "url": "/tlozbotw/index.html"
   },
   {
-    "revision": "cd9f46de8b591f2964a1",
+    "revision": "f29092065da37997eb58",
     "url": "/tlozbotw/static/css/2.cb73d55c.chunk.css"
   },
   {
-    "revision": "1b881304a98722bce4f5",
-    "url": "/tlozbotw/static/css/main.ba2362f8.chunk.css"
+    "revision": "52c4610d5bbb99802149",
+    "url": "/tlozbotw/static/css/main.4ce73e83.chunk.css"
   },
   {
-    "revision": "cd9f46de8b591f2964a1",
-    "url": "/tlozbotw/static/js/2.b2fa3975.chunk.js"
+    "revision": "f29092065da37997eb58",
+    "url": "/tlozbotw/static/js/2.dd229842.chunk.js"
   },
   {
-    "revision": "1b881304a98722bce4f5",
-    "url": "/tlozbotw/static/js/main.f65faa4d.chunk.js"
+    "revision": "52c4610d5bbb99802149",
+    "url": "/tlozbotw/static/js/main.f10431cb.chunk.js"
   },
   {
     "revision": "3fc152dd9035204be695",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7dee01351f62748557d93521aee7c82c",
     "url": "/tlozbotw/static/media/retganon.7dee0135.ttf"
+  },
+  {
+    "revision": "df04bee5e992aa3b46ecd79b98ab9a90",
+    "url": "/tlozbotw/static/media/test_avatar.df04bee5.png"
   },
   {
     "revision": "a697f18e69af7d6715889fc9b990861c",
