@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b553607d4b3c5b42d8fd179e53dd0832",
+    "revision": "69e732ffcf95ed85a1a25f97fef84c1b",
     "url": "/tlozbotw/index.html"
   },
   {
-    "revision": "93829bdac03429487890",
+    "revision": "907f2f2c2eda47fcb0ee",
     "url": "/tlozbotw/static/css/2.a9759cd0.chunk.css"
   },
   {
-    "revision": "7c3a8151148bcafaf0f2",
-    "url": "/tlozbotw/static/css/main.7dff5e1b.chunk.css"
+    "revision": "03401a8eeef67be52b31",
+    "url": "/tlozbotw/static/css/main.a47e6f86.chunk.css"
   },
   {
-    "revision": "93829bdac03429487890",
-    "url": "/tlozbotw/static/js/2.ae6a17c8.chunk.js"
+    "revision": "907f2f2c2eda47fcb0ee",
+    "url": "/tlozbotw/static/js/2.22c9d3a5.chunk.js"
   },
   {
-    "revision": "7c3a8151148bcafaf0f2",
-    "url": "/tlozbotw/static/js/main.b37d1cca.chunk.js"
+    "revision": "03401a8eeef67be52b31",
+    "url": "/tlozbotw/static/js/main.43f90592.chunk.js"
   },
   {
     "revision": "3fc152dd9035204be695",
@@ -50,10 +50,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7dee01351f62748557d93521aee7c82c",
     "url": "/tlozbotw/static/media/retganon.7dee0135.ttf"
-  },
-  {
-    "revision": "df04bee5e992aa3b46ecd79b98ab9a90",
-    "url": "/tlozbotw/static/media/test_avatar.df04bee5.png"
   },
   {
     "revision": "a697f18e69af7d6715889fc9b990861c",
