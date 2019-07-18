@@ -20,7 +20,7 @@ export const initState = {
     email:'zelda@test.com',
     phoneNumber:'3381457712',
     photo: testAvatar,
-    role: 1
+    role: 0
   }),
   materials: null,
   news: null

@@ -1,6 +1,6 @@
 export class NewsModel {
 
-  id: number;
+  id: string;
   title: string;
   information: string;
   like: number;
@@ -8,7 +8,7 @@ export class NewsModel {
   img: string;
 
   constructor(data: any | NewsModel) {
-    this.id = 0;
+    this.id = "";
     this.title = "";
     this.information = "";
     this.like = 0;

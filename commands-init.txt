@@ -43,6 +43,10 @@ yarn add sweetalert2
 yarn add sweetalert2-react-content
 https://sweetalert2.github.io/
 
+ADD MOMENT JS
+yarn add moment
+https://www.npmjs.com/package/moment
+
 ADD GITHUB PAGES DEPLOY
 yarn add gh-pages
 -----------------------

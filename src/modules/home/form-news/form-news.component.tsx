@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from '../../../imports/react-redux.import';
-import { Row, Col, Modal, Button, Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { renderTextField, renderTextArea } from '../../../shared/redux-render-fields.shared';
 import { NewsReducerEnum } from '../../../core/enums/news-reducer.enum';
-import prenews from '../../../styles/img/prenews.png';
 import './form-news.css';
 
 class FormNewsComponent extends Component<any,any> {
@@ -12,7 +11,7 @@ class FormNewsComponent extends Component<any,any> {
     super(props);
 
     this.state = {
-      shake: false
+      urlIcon: this.props.initialValues.img
     }
   }
 
@@ -22,14 +21,9 @@ class FormNewsComponent extends Component<any,any> {
     });
   } 
 
-  private shakeError(): boolean {
-    console.log(this.props);
-
-    return false;
-  }
-
   render() {
     const { handleSubmit, cancel, submitting, submitActions, initialValues } = this.props;
+    const { urlIcon } = this.state;
 
     return (
       <form onSubmit={ handleSubmit(submitActions) }>
@@ -37,7 +31,7 @@ class FormNewsComponent extends Component<any,any> {
           <Card.Img 
             className="card-img"
             variant="top" 
-            src={ prenews }
+            src={ urlIcon }
             alt="img-card" 
           />
 
