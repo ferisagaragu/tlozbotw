@@ -37,6 +37,13 @@ export function createNews(data: NewsModel): Function {
 
 export function like(data: NewsModel,userData: UserDataModel): Function {
   return async (dispatch: Function) => {
-    
+    newsService.likeNews(userData, data);
+  };
+}
+
+export function deleteNews(data: NewsModel): Function {
+  return async (dispatch: Function) => {
+    newsService.deleteNews(data, (error: any) => {});
+    toast('success', `${data.title} fue eliminado.`);
   };
 }

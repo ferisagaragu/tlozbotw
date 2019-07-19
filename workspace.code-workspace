@@ -1,13 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "C:\\ReactApp\\tlozbotw-backend"
-		}
-	],
-	"settings": {
-		"tslint.alwaysShowRuleFailuresAsWarnings": false
-	}
+  "folders": [
+    {
+      "path": "."
+    }
+  ]
 }

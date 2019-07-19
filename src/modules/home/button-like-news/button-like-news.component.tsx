@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { ButtonLikeNewsPropsInterface, ButtonLikeNewsStateInterface } from '../../../core/interfaces/home.interface';
 import './button-like-news.css';
 
-class ButtonLikeNewsComponent extends Component<any,any> {
+class ButtonLikeNewsComponent extends Component<ButtonLikeNewsPropsInterface, ButtonLikeNewsStateInterface> {
   
   constructor(props: any) {
     super(props);

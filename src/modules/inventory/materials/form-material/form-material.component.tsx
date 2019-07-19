@@ -4,7 +4,7 @@ import { MaterialUsesEnum } from '../../../../core/enums/material-uses.enum';
 import { Row, Col, Button, Modal } from 'react-bootstrap';
 import heartSymbol from '../../../../shared/life-indicator.shared';
 import { renderTextField, renderCheckBox, renderTextArea } from '../../../../shared/redux-render-fields.shared';
-import { FormMaterialPropsInterface, FormMaterialStateInterface } from '../../../../core/interfaces/inventory.interface';
+import { FormMaterialPropsInterface, FormMaterialStateInterface } from '../../../../core/interfaces/inventory-materials.interface';
 import { MaterialReducerEnum } from '../../../../core/enums/material-reducer.enum';
 
 

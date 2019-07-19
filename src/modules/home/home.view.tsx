@@ -2,19 +2,21 @@ import React, { Component } from 'react';
 import { Row, Col, Modal, Button } from 'react-bootstrap';
 import CardNewsComponent from './card-news/card-news.component';
 import { connect } from '../../imports/react-redux.import';
-import { getNews, updateNews, createNews, like } from '../../core/actions/news.actions';
+import { getNews, updateNews, createNews, like, deleteNews } from '../../core/actions/news.actions';
 import FormNewsComponent from './form-news/form-news.component';
 import { NewsModel } from '../../core/models/news.model';
 import { UserDataModel } from '../../core/models/user-data.model';
+import { HomePropsIterface, HomeStateIterface } from '../../core/interfaces/home.interface';
+import swal from '../../shared/swal.shared';
 
-class HomeView extends Component<any,any> {
+class HomeView extends Component<HomePropsIterface,HomeStateIterface> {
     
   constructor(props: any) {
     super(props);
 
     this.state = {
       show: false,
-      selectedNew: { }
+      selectedNew: new NewsModel({})
     };
   }
 
@@ -38,6 +40,20 @@ class HomeView extends Component<any,any> {
     this.setState({ 
       show: true,
       selectedNew
+    });
+  }
+
+  private confirmDelete(selectedNew: NewsModel): void {
+    swal.fire({
+      title: '¿Deseas eliminar la publicacion?',
+      text: "El registro se eliminara perpetuamente",
+      type: 'error',
+      showCancelButton: true,
+      confirmButtonText: 'Si',
+      cancelButtonText: 'Cancelar',
+      cancelButtonColor: '#d33'
+    }).then((result) => {
+      this.props.deleteNews(selectedNew);
     });
   }
 
@@ -79,8 +95,8 @@ class HomeView extends Component<any,any> {
               userData={ userData }
               news={ news }
               onEditNews={ (selectedNew: NewsModel) => this.onShowModal(selectedNew) }
-              onDeleteNews={ (selectedNew: NewsModel) => { console.log(selectedNew) } }
-              onLike={ like }
+              onDeleteNews={ (selectedNew: NewsModel) => this.confirmDelete(selectedNew) }
+              onLike={ (element: any, userData: any) => like(element,userData) }
             />
           </Col>
         </Row>
@@ -93,6 +109,7 @@ const mapDispatchToProps = (dispatch: Function) => ({
   getNews: (data: UserDataModel) => dispatch(getNews(data)),
   updateNews: (data: NewsModel) => dispatch(updateNews(data)),
   createNews: (data: NewsModel) => dispatch(createNews(data)),
+  deleteNews: (data: NewsModel) => dispatch(deleteNews(data)),
   like: (data: NewsModel, userData: UserDataModel) => dispatch(like(data,userData)),
 });
 

@@ -1,11 +1,12 @@
-import React, { Component, ReactElement, useRef } from 'react';
+import React, { Component, ReactElement } from 'react';
 import { Card, Button, Row } from 'react-bootstrap';
 import key from '../../../core/key/react-elements.key';
 import { NewsModel } from '../../../core/models/news.model';
-import './card-news.css';
 import ButtonLikeNewsComponent from '../button-like-news/button-like-news.component';
+import { CardNewsPropsIterface } from '../../../core/interfaces/home.interface';
+import './card-news.css';
 
-class CardNewsComponent extends Component<any,any> {
+class CardNewsComponent extends Component<CardNewsPropsIterface> {
   
   private renderNews(): Array<ReactElement> | void {
     const { news, userData, onEditNews, onDeleteNews, onLike } = this.props;

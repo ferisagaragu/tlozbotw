@@ -5,7 +5,7 @@ import { connect } from '../../../imports/react-redux.import';
 import { getMaterials, updateMaterials } from '../../../core/actions/material.actions';
 import ItemMaterialComponent from './item-material/item-material.component';
 import TableEditMaterialComponent from './table-material/table-material.component';
-import { MaterialPropsInterface } from '../../../core/interfaces/inventory.interface';
+import { MaterialPropsInterface } from '../../../core/interfaces/inventory-materials.interface';
 
 class MaterialView extends Component<MaterialPropsInterface> {
   

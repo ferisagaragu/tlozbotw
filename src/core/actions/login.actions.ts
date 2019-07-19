@@ -3,6 +3,7 @@ import LoginService from '../http/login.service';
 import { LoginReducerEnum } from '../enums/login-reducer.enum';
 import { toast } from '../../shared/swal.shared';
 import { UserDataModel } from '../models/user-data.model';
+import Cookies from '../../imports/js-cookie.import';
 
 const loginService: LoginService = new LoginService();
 
@@ -57,6 +58,7 @@ export function login(username: string, password: string): Function {
       (user: any) =>{
         if (user) {
           registUserInformation(user, dispatch);
+          Cookies.set('userData', { username, password });
         }
       },(error: any)=>{
         toast('error', `Error al iniciar sesión`);

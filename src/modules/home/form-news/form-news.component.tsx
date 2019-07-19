@@ -3,9 +3,10 @@ import { reduxForm, Field } from '../../../imports/react-redux.import';
 import { Button, Card } from 'react-bootstrap';
 import { renderTextField, renderTextArea } from '../../../shared/redux-render-fields.shared';
 import { NewsReducerEnum } from '../../../core/enums/news-reducer.enum';
+import { FormNewsPropsIterface, FormNewsStateIterface } from '../../../core/interfaces/home.interface';
 import './form-news.css';
 
-class FormNewsComponent extends Component<any,any> {
+class FormNewsComponent extends Component<FormNewsPropsIterface,FormNewsStateIterface> {
 
   constructor(props: any) {
     super(props);
@@ -22,7 +23,7 @@ class FormNewsComponent extends Component<any,any> {
   } 
 
   render() {
-    const { handleSubmit, cancel, submitting, submitActions, initialValues } = this.props;
+    const { handleSubmit, cancel, submitting, submitActions } = this.props;
     const { urlIcon } = this.state;
 
     return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import './../styles/shake-form.css';
 
 export const renderTextField = (metaData: any) => {
   const {
@@ -14,6 +15,8 @@ export const renderTextField = (metaData: any) => {
     }
   } = metaData;
 
+  const errorClass = touched && error ? 'error' : '';
+
   return (
     <div className="mb-3">
       <label>
@@ -23,7 +26,7 @@ export const renderTextField = (metaData: any) => {
       </label>
       <div>
         <input 
-          className={ className }
+          className={ `${className} ${errorClass}` }
           { ...input } 
           placeholder={ label } 
           type={ type }
@@ -51,6 +54,8 @@ export const renderTextArea = (metaData: any) => {
     }
   } = metaData;
 
+  const errorClass = touched && error ? 'error' : '';
+
   return (
     <div className="mb-3">
       <label>
@@ -60,7 +65,7 @@ export const renderTextArea = (metaData: any) => {
       </label>
       <div>
         <textarea 
-          className={ className }
+          className={ `${className} ${errorClass}` }
           {...input} 
           placeholder={ label } 
         />

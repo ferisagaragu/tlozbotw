@@ -71,8 +71,36 @@ class NewsService {
     });
   }
 
-  public likeNews(userData: UserDataModel, data: NewsModel, errorFuction: Function) {
-    
+  public likeNews(userData: UserDataModel, data: NewsModel) {
+    this.firebase.once(`users/${userData.id}/${this.pathUser}/${data.id}`, (snapshotResp: any) => { 
+      const respUser = snapshotResp.val();
+      let { id, img, information, like, title } = data;
+
+      if (respUser.like) {
+        like = like - 1;
+        respUser.like = false;
+      } else {
+        like = like + 1;
+        respUser.like = true;
+      }
+      
+      let newsData = {
+        id,
+        img,
+        information,
+        like,
+        title
+      };
+
+      this.firebase.update(`users/${userData.id}/${this.pathUser}/${data.id}`, respUser,(error: any) => {});
+      this.firebase.update(`/core/home/${data.id}`, newsData,(error: any) => {});
+    });
+  }
+
+  public deleteNews(data: NewsModel, errorFuction: Function) {
+    this.firebase.remove(`${this.pathBase}/${data.id}`, (error: any) => {
+      errorFuction(error);
+    });
   }
 
 }
