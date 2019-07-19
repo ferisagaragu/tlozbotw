@@ -1,71 +1,44 @@
 import React, { Component } from 'react';
-import { Container, Navbar } from 'react-bootstrap';
-import Routing from '../core/routes/routing.routes';
-import { Route } from '../imports/react-router-dom.import';
-import SideNav, { NavItem, NavIcon, NavText } from '../imports/react-sidenav.import';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import LoginView from './login/login.view';
+import { connect } from '../imports/react-redux.import';
+import AppInterface from '../core/interfaces/app.interface';
+import LayoutView from './layout/layout.view';
+import { login } from '../core/actions/login.actions';
+import Cookies from '../imports/js-cookie.import';
 
-class App extends Component<any,{}> {
+class App extends Component<AppInterface> {
+  
+  componentDidMount() {
+    console.log(Cookies.get('userData'));
+    if (Cookies.get('userData')) {
+      this.props.login(JSON.parse(Cookies.get('userData')));
+    }
+  }
+
   render() {
+    const userData = this.props.userData;
+
     return (
-      <Route render={({ location, history }: any) => (
-        <React.Fragment>
-          <SideNav
-            className="side-bar"
-            onSelect=
-            {
-              (selected: any) => {
-                const to = '/' + selected;
-                if (location.pathname !== to) {
-                  history.push(to);
-                }
-              }
-            }
-          >
-            <Navbar bg="dark" variant="dark" className="nav-bar">
-              <Navbar.Brand>
-                The Legend of Zelda Breath of the Wild
-              </Navbar.Brand>
-            </Navbar>
-
-            <SideNav.Toggle />
-            <SideNav.Nav defaultSelected="home">
-                <NavItem eventKey="home">
-                    <NavIcon>
-                      <FontAwesomeIcon className="icon-awesome" icon="home" />
-                    </NavIcon>
-
-                    <NavText>
-                      Inicio
-                    </NavText>
-                </NavItem>
-                <NavItem>
-                    <NavIcon>
-                      <FontAwesomeIcon className="icon-awesome" icon="suitcase" />
-                    </NavIcon>
-
-                    <NavText>
-                      Inventario
-                    </NavText>
-
-                    <NavItem eventKey="inventory/materials" subnav={ true }>
-                      <NavText>
-                        Material
-                      </NavText>
-                    </NavItem>
-                </NavItem>
-            </SideNav.Nav>
-          </SideNav>
-          <main>
-            <Container className="content">
-              <Routing />     
-            </Container>  
-          </main>
-        </React.Fragment>
-        )}
-      />
+      <>
+        { 
+          !userData ?
+            <LoginView />
+          :
+            <LayoutView 
+              userData={ userData }
+            />
+        }
+      </>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state: any) => ({ 
+  userData: state.userData
+});
+
+const mapDispatchToProps = (dispatch: Function) => ({
+  login: ({ username, password }: any) => dispatch(login(username,password))
+});
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);

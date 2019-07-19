@@ -14,7 +14,6 @@ export function getMaterials(): Function {
   return async (dispatch: Function) => {
     materialService.getMaterials((materials: Array<MaterialModel>) => {
       dispatch(setMaterials(materials));
-      toast('warning', 'Datos actualizados desde Firebase');
     });
   };
 };
@@ -22,5 +21,6 @@ export function getMaterials(): Function {
 export function updateMaterials(data: MaterialModel): Function {
   return async (dispatch: Function) => {
     materialService.updateMaterial(data.id, data, (error: any) => {});
+    toast('info', `${data.name} actualizado.`);
   };
 }

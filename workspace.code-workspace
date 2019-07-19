@@ -1,16 +1,7 @@
 {
-	"folders": [
-		{
-			"path": "C:\\Qualtop-Sye\\qs-18-sepomex-clasificarfrontend"
-		},
-		{
-			"path": "C:\\Qualtop-Sye\\qs-18-sepomex-transportar-frontend"
-		},
-		{
-			"path": "."
-		},
-		{
-			"path": "C:\\ReactApp\\firstapp - WeatherApp"
-		}
-	]
+  "folders": [
+    {
+      "path": "."
+    }
+  ]
 }

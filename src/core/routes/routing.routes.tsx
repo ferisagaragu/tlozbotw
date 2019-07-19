@@ -1,18 +1,15 @@
 import React from 'react';
-import { Route, Redirect, Switch } from "../../imports/react-router-dom.import";
-import MaterialComponentConnect from '../../modules/inventory/materials/materials.component';
+import { Route, Switch } from "../../imports/react-router-dom.import";
 import HomeView from '../../modules/home/home.view';
+import MaterialsView from '../../modules/inventory/materials/materials.view';
 
 const Routing = () => {
   return (
-    <>
-      <Switch>
-        <Route path="/home/" exact component={ HomeView }/>
-        <Route path="/inventory/materials/" exact component={ MaterialComponentConnect } />
-        <Route component={ HomeView } />
-        <Redirect from="/" to="/home" />
-      </Switch>
-    </>
+    <Switch>
+      <Route path="/home/" exact component={ HomeView }/>
+      <Route path="/inventory/materials/" exact component={ MaterialsView } />
+      <Route component={ HomeView } />
+    </Switch>
   );
 }
 

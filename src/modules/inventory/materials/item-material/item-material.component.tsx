@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import { ItemMaterialInterface } from '../../../../core/interfaces/material-component.interface';
+import { ItemMaterialPropsInterface } from '../../../../core/interfaces/inventory-materials.interface';
 import { Col, Card, ListGroup } from 'react-bootstrap';
 import photo from '../../../../styles/img/photo.png';
 import './item-material.css';
 import heartSymbol from '../../../../shared/life-indicator.shared';
 import { materialUsesList } from '../../../../shared/material-uses.shared';
 
-class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
+class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
 
   render() {
     const { material } = this.props;
 
     return (
       <Col md={ 3 } className="mt-5">
-        <Card className="card-material">
-          <Card.Header className="card-header">
+        <Card className="card-shadow card-size">
+          <Card.Header className="item-header">
             <h3>
               { material.name }
               <img 
@@ -48,7 +48,7 @@ class ItemMaterialComponent extends Component<ItemMaterialInterface,{}> {
             </ListGroup>
           </Card.Body>
 
-          <Card.Footer className="card-footer">
+          <Card.Footer className="item-footer">
             {
               material.life !== 0 &&
               <>

@@ -23,11 +23,11 @@ export class MaterialModel {
     this.value = '';
     this.life = 0;
 
-    this.addLife = true;
-    this.sell = true;
+    this.addLife = false;
+    this.sell = false;
     this.improveArmor = false;
-    this.elixir = true;
-    this.defenseCooking = true;
+    this.elixir = false;
+    this.defenseCooking = false;
     this.heartsCooking = false;
     this.ancestralWeapons = false;
     this.specificRecipes = false;
