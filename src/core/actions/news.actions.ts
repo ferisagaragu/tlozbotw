@@ -4,6 +4,7 @@ import NewsService from '../http/news.service';
 import { NewsReducerEnum } from '../enums/news-reducer.enum';
 import { toast } from '../../shared/swal.shared';
 import key from '../key/react-elements.key';
+import { UserDataModel } from '../models/user-data.model';
 
 const newsService: NewsService = new NewsService();
 
@@ -11,9 +12,9 @@ export function setNews(payload: Array<NewsModel>): Action {
   return {type: NewsReducerEnum.SET_NEWS, payload};
 }
 
-export function getNews(): Function {
+export function getNews(userData: UserDataModel): Function {
   return async (dispatch: Function) => {
-    newsService.getNews((news: Array<NewsModel>) => {
+    newsService.getNews(userData,(news: Array<NewsModel>) => {
       dispatch(setNews(news));
     });
   };
@@ -34,11 +35,8 @@ export function createNews(data: NewsModel): Function {
   };
 }
 
-export function like(data: NewsModel): Function {
+export function like(data: NewsModel,userData: UserDataModel): Function {
   return async (dispatch: Function) => {
-    console.log(data);
-    /*data.like++;
-    newsService.updateNews(data.id, data, (error: any) => {});
-    newsService.likeNews('FNfi3a5O8sNOI7B3v1HOoCBckOE2',data.id);*/
+    
   };
 }

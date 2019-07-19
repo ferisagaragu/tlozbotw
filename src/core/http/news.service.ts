@@ -1,5 +1,6 @@
 import Firebase from "../../shared/firebase.shared";
 import { NewsModel } from "../models/news.model";
+import { UserDataModel } from "../models/user-data.model";
 
 class NewsService {
 
@@ -9,20 +10,58 @@ class NewsService {
 
   constructor() {
     this.pathBase = 'core/home';
-    this.pathUser = 'users/';
+    this.pathUser = 'data/home/';
     this.firebase = new Firebase();
   }
 
-  public getNews(on: Function): void {
-    this.firebase.on(this.pathBase,(snapshot: any) => {
-      const data = [];
-      const resp = snapshot.val();
+  public getNews(userData: UserDataModel, on: Function): void {
+    this.firebase.on(this.pathBase,(snapshot: any) => { 
 
-      for (let key in resp) {
-        data.push(resp[key]);
+      if (userData.role !== 1) {
+        this.firebase.on(`users/${userData.id}/${this.pathUser}`, (snapshotResp: any) => {
+          const data: any = [];
+          const userDataJson: any = { };
+          const resp = snapshot.val();
+          const userResp = snapshotResp.val();
+  
+          if (!userResp) {
+            for (let key in resp) {
+              const jsonResp = resp[key];
+              data.push(new NewsModel(jsonResp));
+              userDataJson[jsonResp.id] = { like: false, newsId: jsonResp.id };
+            }
+  
+            this.firebase.update(`users/${userData.id}/${this.pathUser}`, userDataJson,(error: any) => {});
+          } else {
+            for (let key in resp) {
+              let jsonResp = resp[key];
+
+              if (!userResp[key]) {
+                userDataJson[jsonResp.id] = { like: false, newsId: jsonResp.id };
+                jsonResp.isLike = false;
+              } else {
+                jsonResp.isLike = userResp[key].like;
+              }
+                
+              data.push(new NewsModel(jsonResp));
+            }
+            
+            this.firebase.update(`users/${userData.id}/${this.pathUser}`, userDataJson,(error: any) => {});
+          }
+  
+          on(data.reverse());
+        });
+      } else {
+        const data: any = [];
+        const resp = snapshot.val();
+
+        for (let key in resp) {
+          const jsonResp = resp[key];
+          data.push(jsonResp);
+        }
+
+        on(data.reverse());
       }
-
-      on(data.reverse().map((dataModel: any) => (new NewsModel(dataModel))));
     });
   }
 
@@ -32,42 +71,10 @@ class NewsService {
     });
   }
 
-  public likeNews(id: string, newsId: string): void {
-    this.firebase.once(`${this.pathUser}${id}/data/home/${newsId}`,(snapshot: any) => {
-      const resp = snapshot.val();
-      let data: any = { };
-
-      if (resp) {
-        data = {
-          [newsId]: {
-            like: !resp.like,
-            dislike: false,
-            newsId: newsId
-          }
-        }
-      } else {
-        data = {
-          [newsId]: {
-            like: true,
-            dislike: false,
-            newsId: newsId
-          }
-        }
-      }
-
-      this.firebase.update(`${this.pathUser}${id}/data/home/`, data, (error: any) => {
-        console.log(error);
-      });
-
-      let dataLike = {
-        like: 0
-      }
-
-      this.firebase.update(`${this.pathBase}/${newsId}`, dataLike, (error: any) => {
-        console.log(error);
-      });
-    });
+  public likeNews(userData: UserDataModel, data: NewsModel, errorFuction: Function) {
+    
   }
+
 }
 
 export default NewsService;

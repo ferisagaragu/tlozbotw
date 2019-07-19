@@ -4,7 +4,7 @@ export class NewsModel {
   title: string;
   information: string;
   like: number;
-  dislike: number;
+  isLike: boolean;
   img: string;
 
   constructor(data: any | NewsModel) {
@@ -12,7 +12,7 @@ export class NewsModel {
     this.title = "";
     this.information = "";
     this.like = 0;
-    this.dislike = 0;
+    this.isLike = false;
     this.img = "";
 
     Object.assign(this, data);

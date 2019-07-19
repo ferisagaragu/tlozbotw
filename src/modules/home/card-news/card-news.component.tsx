@@ -1,30 +1,14 @@
 import React, { Component, ReactElement, useRef } from 'react';
-import { Card, Button, Row, Col } from 'react-bootstrap';
+import { Card, Button, Row } from 'react-bootstrap';
 import key from '../../../core/key/react-elements.key';
 import { NewsModel } from '../../../core/models/news.model';
 import './card-news.css';
+import ButtonLikeNewsComponent from '../button-like-news/button-like-news.component';
 
 class CardNewsComponent extends Component<any,any> {
   
-  constructor(props: any) {
-    super(props);
-
-    this.state = {
-      likeAnimation: 'heart'
-    };
-  }
-
-  private onLikeAnimation(element: NewsModel) {
-    if (this.state.likeAnimation.includes("selected-like")) {
-      this.setState({ likeAnimation: 'heart is_animating-dislike selected-dislike' });
-    } else {
-      this.setState({ likeAnimation: 'heart is_animating-like selected-like' });
-    }
-    this.props.onLike(element);
-  }
-
   private renderNews(): Array<ReactElement> | void {
-    const { news, role, onEditNews, onDeleteNews } = this.props;
+    const { news, userData, onEditNews, onDeleteNews, onLike } = this.props;
 
     if (news) {
       return news.map((element: NewsModel) => (
@@ -45,7 +29,7 @@ class CardNewsComponent extends Component<any,any> {
 
           <Card.Footer className="text-right">
             {
-              role === 1 ?
+              userData.role === 1 ?
                 <>
                   <Button 
                     className="mr-2" 
@@ -66,19 +50,17 @@ class CardNewsComponent extends Component<any,any> {
                 <Row
                   className="justify-content-end mr-3"
                 >
-                  <div
-                    onClick={ () => this.onLikeAnimation(element) }
-                    className={ this.state.likeAnimation }
-                  > 
-                    <b>{ element.like }</b>
-                  </div>
+                  <ButtonLikeNewsComponent 
+                    likeCount={ element.like }
+                    onLike={ () => onLike(element, userData) }
+                    isLike={ element.isLike }
+                  />
                 </Row>
             }          
           </Card.Footer>
         </Card>
       ));
     }
-
   }
 
   render() {

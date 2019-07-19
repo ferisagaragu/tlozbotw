@@ -72,7 +72,6 @@ export function logout(): Function {
         dispatch(logoutUser());
         toast('success', `Sesión cerrada`);
       },(error: any) => { 
-        console.log(error);
         toast('error', 'Error al cerrar sesión');
       }
     );

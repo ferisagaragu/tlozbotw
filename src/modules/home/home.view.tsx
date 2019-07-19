@@ -5,6 +5,7 @@ import { connect } from '../../imports/react-redux.import';
 import { getNews, updateNews, createNews, like } from '../../core/actions/news.actions';
 import FormNewsComponent from './form-news/form-news.component';
 import { NewsModel } from '../../core/models/news.model';
+import { UserDataModel } from '../../core/models/user-data.model';
 
 class HomeView extends Component<any,any> {
     
@@ -18,7 +19,7 @@ class HomeView extends Component<any,any> {
   }
 
   componentDidMount() {
-    this.props.getNews();
+    this.props.getNews(this.props.userData);
   }
 
   private onSubmitForm(formData: NewsModel): void {
@@ -75,7 +76,7 @@ class HomeView extends Component<any,any> {
         <Row>
           <Col md={ 12 } className="text-center">
             <CardNewsComponent 
-              role={ userData.role }
+              userData={ userData }
               news={ news }
               onEditNews={ (selectedNew: NewsModel) => this.onShowModal(selectedNew) }
               onDeleteNews={ (selectedNew: NewsModel) => { console.log(selectedNew) } }
@@ -89,10 +90,10 @@ class HomeView extends Component<any,any> {
 }
 
 const mapDispatchToProps = (dispatch: Function) => ({
-  getNews: () => dispatch(getNews()),
+  getNews: (data: UserDataModel) => dispatch(getNews(data)),
   updateNews: (data: NewsModel) => dispatch(updateNews(data)),
   createNews: (data: NewsModel) => dispatch(createNews(data)),
-  like: (data: NewsModel) => dispatch(like(data)),
+  like: (data: NewsModel, userData: UserDataModel) => dispatch(like(data,userData)),
 });
 
 const mapStateToProps = (state: any) => ({ 
