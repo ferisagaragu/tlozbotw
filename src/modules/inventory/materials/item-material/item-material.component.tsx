@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 import { ItemMaterialPropsInterface } from '../../../../core/interfaces/inventory-materials.interface';
 import { Col, Card, ListGroup } from 'react-bootstrap';
-import photo from '../../../../styles/img/photo.png';
-import './item-material.css';
 import heartSymbol from '../../../../shared/life-indicator.shared';
 import { materialUsesList } from '../../../../shared/material-uses.shared';
+import IndicatorPhotoMaterialComponent from '../indicator-photo-material/indicator-photo-material.component';
+import photoNo from '../../../../styles/img/photo-no.png';
+import './item-material.css';
 
 class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
+
+  private onCheck(check: boolean): void {
+    const { material, selectMaterial } = this.props;
+    material.check = check;
+    selectMaterial(material);
+  }
 
   render() {
     const { material } = this.props;
@@ -29,7 +36,7 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
             <ListGroup variant="flush">
               <ListGroup.Item>
                 { 
-                  material.life !== 0 ? 
+                  +material.life !== 0 ? 
                     heartSymbol(material.life) 
                   : 
                     <label>
@@ -50,18 +57,17 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
 
           <Card.Footer className="item-footer">
             {
-              material.life !== 0 &&
-              <>
-                <input type="checkbox" className="float-right" />
-
+              +material.life !== 0 ?
+                <IndicatorPhotoMaterialComponent 
+                  check={ material.check }
+                  onCheck={ (check: boolean) => this.onCheck(check) }
+                />
+              :
                 <img 
                   className="float-right"
-                  width="50px"
-                  height="50px"
-                  alt="camera"
-                  src={ photo } 
+                  alt="noPhoto" 
+                  src={ photoNo } 
                 />
-              </> 
             }
           </Card.Footer>
         </Card>

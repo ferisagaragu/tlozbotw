@@ -1,6 +1,6 @@
 export class MaterialModel {
 
-  id: number;
+  id: string;
   name: string;
   description: string;
   img: string;
@@ -11,12 +11,19 @@ export class MaterialModel {
   improveArmor: boolean;
   elixir: boolean;
   defenseCooking: boolean;
+  atackCooking: boolean;
   heartsCooking: boolean;
   ancestralWeapons: boolean;
   specificRecipes: boolean;
+  heatResistanceCooking: boolean;
+  resistanceCooking: boolean;
+  championWeapons: boolean;
+  resistanceHorse: boolean;
+  resistanceCold: boolean;
+  check: boolean;
 
   constructor(data: any | MaterialModel) {
-    this.id = -1;
+    this.id = '';
     this.name = '';
     this.description = '';
     this.img = '';
@@ -28,9 +35,16 @@ export class MaterialModel {
     this.improveArmor = false;
     this.elixir = false;
     this.defenseCooking = false;
+    this.atackCooking = false;
     this.heartsCooking = false;
     this.ancestralWeapons = false;
     this.specificRecipes = false;
+    this.heatResistanceCooking = false;
+    this.resistanceCooking = false;
+    this.championWeapons = false;
+    this.resistanceHorse = false;
+    this.resistanceCold = false;
+    this.check = true;
 
     Object.assign(this, data);
   }

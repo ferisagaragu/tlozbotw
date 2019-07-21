@@ -57,7 +57,7 @@ class NewsService {
 
         for (let key in resp) {
           const jsonResp = resp[key];
-          data.push(jsonResp);
+          data.push(new NewsModel(jsonResp));
         }
 
         on(data.reverse());
