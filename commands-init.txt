@@ -47,6 +47,10 @@ ADD MOMENT JS
 yarn add moment
 https://www.npmjs.com/package/moment
 
+ADD REACT SELECT
+yarn add react-selecy
+https://react-select.com/home
+
 ADD GITHUB PAGES DEPLOY
 yarn add gh-pages
 -----------------------

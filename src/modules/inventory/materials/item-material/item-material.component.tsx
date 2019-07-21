@@ -16,7 +16,7 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
   }
 
   render() {
-    const { material, selectMaterial } = this.props;
+    const { material } = this.props;
 
     return (
       <Col md={ 3 } className="mt-5">

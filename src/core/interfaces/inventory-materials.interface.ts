@@ -14,6 +14,10 @@ export interface MaterialPropsInterface {
   selectMaterial: Function;
 }
 
+export interface MaterialStateInterface {
+  selectedMaterials: Array<MaterialModel>;
+}
+
 export interface TableMaterialPropsInterface {
   materials: Array<MaterialModel>;
   updateMaterials: Function;
