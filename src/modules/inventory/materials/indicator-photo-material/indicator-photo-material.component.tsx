@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import photo from '../../../../styles/img/photo.png';
 import photoOff from '../../../../styles/img/photo-off.png';
+import { IndicatorPhotoMaterialStateInterface, IndicatorPhotoMaterialPropsInterface } from '../../../../core/interfaces/inventory-materials.interface';
 import './indicator-photo-material.css';
 
-class IndicatorPhotoMaterialComponent extends Component<any,any> {
+class IndicatorPhotoMaterialComponent extends Component<IndicatorPhotoMaterialPropsInterface,IndicatorPhotoMaterialStateInterface> {
   
   constructor(props: any) {
     super(props);

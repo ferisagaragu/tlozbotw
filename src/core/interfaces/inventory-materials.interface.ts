@@ -36,3 +36,12 @@ export interface FormMaterialStateInterface {
   urlIcon: string;
   lifeIndicator: number;
 }
+
+export interface IndicatorPhotoMaterialPropsInterface {
+  onCheck: Function;
+  check: boolean;
+}
+
+export interface IndicatorPhotoMaterialStateInterface {
+  selected: boolean;
+}
