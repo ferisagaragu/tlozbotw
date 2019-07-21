@@ -9,10 +9,9 @@ import Cookies from '../imports/js-cookie.import';
 class App extends Component<AppInterface> {
   
   componentDidMount() {
-    console.log(Cookies.get('userData'));
-    if (Cookies.get('userData')) {
+    /*if (Cookies.get('userData')) {
       this.props.login(JSON.parse(Cookies.get('userData')));
-    }
+    }*/
   }
 
   render() {

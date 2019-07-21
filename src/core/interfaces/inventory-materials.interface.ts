@@ -2,7 +2,8 @@ import { MaterialModel } from "../models/material.model";
 import { UserDataModel } from "../models/user-data.model";
 
 export interface ItemMaterialPropsInterface {
-  material: MaterialModel
+  material: MaterialModel,
+  selectMaterial: Function
 }
 
 export interface MaterialPropsInterface {
@@ -10,6 +11,7 @@ export interface MaterialPropsInterface {
   updateMaterials: Function;
   materials: Array<MaterialModel>;
   userData: UserDataModel;
+  selectMaterial: Function;
 }
 
 export interface TableMaterialPropsInterface {

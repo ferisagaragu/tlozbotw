@@ -48,7 +48,7 @@ class LayoutView extends Component<LayoutPropsInterface> {
 
               <NavItem eventKey="inventory">
                 <NavIcon>
-                  <FontAwesomeIcon className="icon-awesome" icon="suitcase" />
+                  <img width="30px" height="30px"  src="https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/a/ae/BotW_Materials_Icon.png/50px-BotW_Materials_Icon.png?version=3ff337cb5a7a7672c082c8115eaf3f82" ></img>
                 </NavIcon>
 
                 <NavText>

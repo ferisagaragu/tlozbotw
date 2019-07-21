@@ -2,10 +2,11 @@ import React, { Component, ReactElement } from 'react';
 import { Row, Col, ProgressBar } from 'react-bootstrap';
 import { MaterialModel } from '../../../core/models/material.model';
 import { connect } from '../../../imports/react-redux.import';
-import { getMaterials, updateMaterials } from '../../../core/actions/material.actions';
+import { getMaterials, updateMaterials, selectMaterial } from '../../../core/actions/material.actions';
 import ItemMaterialComponent from './item-material/item-material.component';
 import TableEditMaterialComponent from './table-material/table-material.component';
 import { MaterialPropsInterface } from '../../../core/interfaces/inventory-materials.interface';
+import { UserDataModel } from '../../../core/models/user-data.model';
 
 class MaterialView extends Component<MaterialPropsInterface> {
   
@@ -17,14 +18,18 @@ class MaterialView extends Component<MaterialPropsInterface> {
   }
 
   componentDidMount() {
-    this.props.getMaterials();
+    const { userData, getMaterials } = this.props;
+    getMaterials(userData);
   }
 
   private renderData(): Array<ReactElement> {
+    const { userData ,selectMaterial } = this.props;
+
     return this.materials.map((material: MaterialModel) => (
       <ItemMaterialComponent 
         key={ JSON.stringify(material) }
         material={ material }
+        selectMaterial={ (material: MaterialModel) => selectMaterial(userData, material) }
       />
     ));
   }
@@ -62,8 +67,9 @@ class MaterialView extends Component<MaterialPropsInterface> {
 }
 
 const mapDispatchToProps = (dispatch: Function) => ({
-  getMaterials: () => dispatch(getMaterials()),
-  updateMaterials: (data: MaterialModel) => dispatch(updateMaterials(data))
+  getMaterials: (userData: UserDataModel) => dispatch(getMaterials(userData)),
+  updateMaterials: (data: MaterialModel) => dispatch(updateMaterials(data)),
+  selectMaterial: (userData: UserDataModel, data: MaterialModel) => dispatch(selectMaterial(userData ,data)),
 });
 
 const mapStateToProps = (state: any) => ({ 

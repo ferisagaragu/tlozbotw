@@ -113,6 +113,27 @@ class FormMaterialComponent extends Component<FormMaterialPropsInterface,FormMat
             />
 
             <Field 
+              name="ancestralWeapons"
+              type="checkbox"
+              component={ renderCheckBox }
+              label={ MaterialUsesEnum.ANCESTRAL_WEAPONS }
+            />
+
+            <Field 
+              name="resistanceCooking"
+              type="checkbox"
+              component={ renderCheckBox }
+              label={ MaterialUsesEnum.RESISTANCE_COOKING }
+            />
+
+            <Field 
+              name="resistanceHorse"
+              type="checkbox"
+              component={ renderCheckBox }
+              label={ MaterialUsesEnum.RESISTANCE_HORSE }
+            />
+
+            <Field 
               name="elixir"
               type="checkbox"
               component={ renderCheckBox }
@@ -129,6 +150,13 @@ class FormMaterialComponent extends Component<FormMaterialPropsInterface,FormMat
             />
 
             <Field 
+              name="resistanceCold"
+              type="checkbox"
+              component={ renderCheckBox }
+              label={ MaterialUsesEnum.RESISTANCE_COLD }
+            />
+
+            <Field 
               name="heartsCooking"
               type="checkbox"
               component={ renderCheckBox }
@@ -136,12 +164,26 @@ class FormMaterialComponent extends Component<FormMaterialPropsInterface,FormMat
             />
 
             <Field 
-              name="ancestralWeapons"
+              name="heatResistanceCooking"
               type="checkbox"
               component={ renderCheckBox }
-              label={ MaterialUsesEnum.ANCESTRAL_WEAPONS }
+              label={ MaterialUsesEnum.HEAT_RESISTANCE_COOKING }
+            />  
+
+            <Field 
+              name="championWeapons"
+              type="checkbox"
+              component={ renderCheckBox }
+              label={ MaterialUsesEnum.CHAMPION_WEAPONS }
+            />  
+
+            <Field 
+              name="atackCooking"
+              type="checkbox"
+              component={ renderCheckBox }
+              label={ MaterialUsesEnum.ATACK_COOKING }
             />
-            
+
             <Field 
               name="specificRecipes"
               type="checkbox"
@@ -221,7 +263,13 @@ const validate = (values: any) => {
     values.defenseCooking ||
     values.heartsCooking ||
     values.ancestralWeapons ||
-    values.specificRecipes
+    values.specificRecipes ||
+    values.atackCooking ||
+    values.heatResistanceCooking ||
+    values.resistanceCooking ||
+    values.championWeapons ||
+    values.resistanceHorse ||
+    values.resistanceCold
   )) {
     errors.elixir = 'Seleccionada al menos una propiedad';
   }
