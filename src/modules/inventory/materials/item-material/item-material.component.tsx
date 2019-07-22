@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { ItemMaterialPropsInterface } from '../../../../core/interfaces/inventory-materials.interface';
 import { Col, Card, ListGroup } from 'react-bootstrap';
 import heartSymbol from '../../../../shared/life-indicator.shared';
-import { materialUsesList } from '../../../../shared/material-uses.shared';
-import IndicatorPhotoMaterialComponent from '../indicator-photo-material/indicator-photo-material.component';
 import photoNo from '../../../../styles/img/photo-no.png';
 import './item-material.css';
+import IndicatorPhoto from '../../../../shared/indicator-photo.shared';
+import ListUsesMaterial from '../list-uses-material/list-uses-material';
 
 class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
 
@@ -46,7 +46,9 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
               </ListGroup.Item>
               
               <ListGroup.Item>
-                { materialUsesList(material) }
+                <ListUsesMaterial 
+                  material={ material }
+                />
               </ListGroup.Item>
 
               <ListGroup.Item>
@@ -58,7 +60,7 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
           <Card.Footer className="item-footer">
             {
               +material.life !== 0 ?
-                <IndicatorPhotoMaterialComponent 
+                <IndicatorPhoto
                   check={ material.check }
                   onCheck={ (check: boolean) => this.onCheck(check) }
                 />

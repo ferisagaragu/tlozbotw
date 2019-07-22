@@ -9,7 +9,7 @@ import { MaterialPropsInterface, MaterialStateInterface } from '../../../core/in
 import { UserDataModel } from '../../../core/models/user-data.model';
 import key from '../../../core/key/react-elements.key';
 import Select, { makeAnimated } from '../../../imports/react-select.import';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import LoadingIndicatior from '../../../shared/loading-indicator.shared';
 
 class MaterialView extends Component<MaterialPropsInterface,MaterialStateInterface> {
   
@@ -99,9 +99,7 @@ class MaterialView extends Component<MaterialPropsInterface,MaterialStateInterfa
                 }
               </>
             : 
-              <div className="text-center load-symbol">
-                <FontAwesomeIcon className="loading" icon="circle-notch" />
-              </div>
+              <LoadingIndicatior />
         }
       </Row>
     );
@@ -111,7 +109,7 @@ class MaterialView extends Component<MaterialPropsInterface,MaterialStateInterfa
 const mapDispatchToProps = (dispatch: Function) => ({
   getMaterials: (userData: UserDataModel) => dispatch(getMaterials(userData)),
   updateMaterials: (data: MaterialModel) => dispatch(updateMaterials(data)),
-  selectMaterial: (userData: UserDataModel, data: MaterialModel) => dispatch(selectMaterial(userData ,data)),
+  selectMaterial: (userData: UserDataModel, data: MaterialModel) => dispatch(selectMaterial(userData ,data))
 });
 
 const mapStateToProps = (state: any) => ({ 
