@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import photo from '../../../../styles/img/photo.png';
-import photoOff from '../../../../styles/img/photo-off.png';
-import { IndicatorPhotoMaterialStateInterface, IndicatorPhotoMaterialPropsInterface } from '../../../../core/interfaces/inventory-materials.interface';
-import './indicator-photo-material.css';
+import photo from '../styles/img/photo.png';
+import photoOff from '../styles/img/photo-off.png';
 
-class IndicatorPhotoMaterialComponent extends Component<IndicatorPhotoMaterialPropsInterface,IndicatorPhotoMaterialStateInterface> {
+interface props {
+  check: boolean;
+  onCheck: Function;
+}
+
+interface state {
+  selected: boolean;
+}
+
+class IndicatorPhoto extends Component<props,state> {
   
   constructor(props: any) {
     super(props);
@@ -46,4 +53,4 @@ class IndicatorPhotoMaterialComponent extends Component<IndicatorPhotoMaterialPr
 
 }
 
-export default IndicatorPhotoMaterialComponent;
+export default IndicatorPhoto;

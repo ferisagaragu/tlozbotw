@@ -1,10 +1,13 @@
-import React from 'react';
-import { MaterialModel } from '../core/models/material.model';
-import { MaterialUsesEnum } from '../core/enums/material-uses.enum';
+import React, { Component } from 'react';
+import { MaterialUsesEnum } from '../../../../core/enums/material-uses.enum';
+import { ListUsesPropsInterface } from '../../../../core/interfaces/inventory-materials.interface';
 
-export const materialUsesList = (material: MaterialModel) => {
-  return (
-    <ul>
+class ListUsesMaterial extends Component<ListUsesPropsInterface> {
+  render() {
+    const { material } = this.props;
+
+    return (
+      <ul>
       { material.addLife && <li>{ MaterialUsesEnum.ADD_LIFE }</li> }
       { material.sell && <li>{ MaterialUsesEnum.SELL }</li> }
       { material.improveArmor && <li>{ MaterialUsesEnum.IMPROVE_ARMOR }</li> }
@@ -20,5 +23,8 @@ export const materialUsesList = (material: MaterialModel) => {
       { material.resistanceHorse && <li>{ MaterialUsesEnum.RESISTANCE_HORSE }</li> }
       { material.resistanceCold && <li>{ MaterialUsesEnum.RESISTANCE_COLD }</li> }
     </ul>
-  );
+    );
+  }
 }
+
+export default ListUsesMaterial;

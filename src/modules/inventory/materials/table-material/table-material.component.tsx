@@ -4,12 +4,12 @@ import { Table, Modal, Button } from 'react-bootstrap';
 import { MaterialModel } from '../../../../core/models/material.model';
 import FormMaterialComponent from '../form-material/form-material.component';
 import heartSymbol from '../../../../shared/life-indicator.shared';
-import { materialUsesList } from '../../../../shared/material-uses.shared';
 import key from '../../../../core/key/react-elements.key';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Select from '../../../../imports/react-select.import';
 import rupee from '../../../../styles/img/rupe.png';
+import ListUsesMaterial from '../list-uses-material/list-uses-material';
 import '../table-material/table-material.css';
+import LoadingIndicatior from '../../../../shared/loading-indicator.shared';
 
 class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,any> {
 
@@ -100,7 +100,9 @@ class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,a
           </td>
           
           <td className="list-uses">
-            { materialUsesList(material) }
+            <ListUsesMaterial 
+              material={ material }
+            />
           </td>
           
           <td>
@@ -123,7 +125,7 @@ class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,a
   render() {
     const { materials }  = this.props;
     const { material } = this.state;
-    const { id, name } = material;
+    const { name } = material;
     this.materials = materials;
 
     return (
@@ -136,7 +138,7 @@ class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,a
         >
           <Modal.Header>
             <Modal.Title>
-              { `#${id} ${name}` } 
+              { `${name}` } 
             </Modal.Title>
           </Modal.Header>
           
@@ -149,37 +151,37 @@ class TableEditMaterialComponent extends Component<TableMaterialPropsInterface,a
           </Modal.Body>
         </Modal>
 
-        <Select
-          className="col-md-12 mb-3"
-          noOptionsMessage={ () => 'No se encontraron conicidencias con ese Material' }
-          placeholder="Busca un Material"
-          value={this.state.selectedOption}
-          onChange={(data: any) => this.onChangeSelect(data.value) }
-          options={ this.loadOptions() }
-        />
+        {
+          materials ?
+            <> 
+              <Select
+                className="col-md-12 mb-3"
+                noOptionsMessage={ () => 'No se encontraron conicidencias con ese Material' }
+                placeholder="Busca un Material"
+                value={this.state.selectedOption}
+                onChange={(data: any) => this.onChangeSelect(data.value) }
+                options={ this.loadOptions() }
+              />
 
-        <Table responsive>
-          <thead>
-            <tr>
-              <th>Foto</th>
-              <th>Nombre</th>
-              <th>Propiedades</th>
-              <th>Valor</th>
-              <th>Uso</th>
-              <th>Descripcion</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody>  
-            { materials && this.renderData() }
-          </tbody>
-        </Table>
-
-        { 
-          !materials &&  
-            <div className="text-center load-symbol">
-              <FontAwesomeIcon className="loading" icon="circle-notch" />
-            </div>
+              <Table responsive>
+                <thead>
+                  <tr>
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Propiedades</th>
+                    <th>Valor</th>
+                    <th>Uso</th>
+                    <th>Descripcion</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>  
+                  { materials && this.renderData() }
+                </tbody>
+              </Table>
+            </>  
+          :
+            <LoadingIndicatior />
         }
       </>
     );
