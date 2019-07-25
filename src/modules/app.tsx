@@ -4,7 +4,7 @@ import { connect } from '../imports/react-redux.import';
 import AppInterface from '../core/interfaces/app.interface';
 import LayoutView from './layout/layout.view';
 import { login } from '../core/actions/login.actions';
-import Cookies from '../imports/js-cookie.import';
+//import Cookies from '../imports/js-cookie.import';
 
 class App extends Component<AppInterface> {
   

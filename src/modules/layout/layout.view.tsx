@@ -46,6 +46,16 @@ class LayoutView extends Component<LayoutPropsInterface> {
                 </NavText>
               </NavItem>
 
+              <NavItem eventKey="seed">
+                <NavIcon>
+                  <FontAwesomeIcon className="icon-awesome" icon="home" />
+                </NavIcon>
+
+                <NavText>
+                  Semillas
+                </NavText>
+              </NavItem>
+
               <NavItem eventKey="inventory">
                 <NavIcon>
                   <FontAwesomeIcon className="icon-awesome" icon="suitcase" />

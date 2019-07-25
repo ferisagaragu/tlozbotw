@@ -5,15 +5,11 @@ import Select, { makeAnimated } from '../../../../imports/react-select.import';
 import { ListBowsPropsInterface, ListBowsStateInterface } from '../../../../core/interfaces/inventory-bows.interface';
 import key from '../../../../core/key/react-elements.key';
 import { Row } from 'react-bootstrap';
-import LoadingIndicatior from '../../../../shared/loading-indicator.shared';
 
 class ListBowsComponent extends Component<ListBowsPropsInterface,ListBowsStateInterface> {
-  
-  bowsModel: Array<BowModel>;
 
   constructor(props: any) {
     super(props);
-    this.bowsModel = [];
 
     this.state = {
       selectedBows: []
@@ -21,10 +17,11 @@ class ListBowsComponent extends Component<ListBowsPropsInterface,ListBowsStateIn
   }
   
   private searchData(): Array<any> {
+    const { bows } = this.props;
     const optionsOut: Array<any> = [];
 
-    if (this.bowsModel) {
-      this.bowsModel.forEach(element => {
+    if (bows) {
+      bows.forEach(element => {
         optionsOut.push({ value: element.id, label: element.name, bow: element });
       });
     }
@@ -61,12 +58,11 @@ class ListBowsComponent extends Component<ListBowsPropsInterface,ListBowsStateIn
   render() {
     const { bows } = this.props;
     const { selectedBows } = this.state;
-    this.bowsModel = bows;
 
     return (
       <>
         {
-          this.bowsModel ?
+          bows &&
             <>
               <Select
                 className="basic-multi-select col-md-12"
@@ -81,14 +77,12 @@ class ListBowsComponent extends Component<ListBowsPropsInterface,ListBowsStateIn
               <Row>
                 { 
                   selectedBows.length === 0 ?
-                    this.renderData(this.bowsModel) 
+                    this.renderData(bows) 
                   :
                     this.renderData(selectedBows)  
                 }
               </Row>
             </>
-          :
-            <LoadingIndicatior />
         }
       </>
     );
