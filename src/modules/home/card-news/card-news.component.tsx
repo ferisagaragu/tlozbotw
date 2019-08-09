@@ -4,8 +4,8 @@ import key from '../../../core/key/react-elements.key';
 import { NewsModel } from '../../../core/models/news.model';
 import ButtonLikeNewsComponent from '../button-like-news/button-like-news.component';
 import { CardNewsPropsIterface } from '../../../core/interfaces/home.interface';
-import './card-news.css';
 import LoadingIndicatior from '../../../shared/loading-indicator.shared';
+import './card-news.css';
 
 class CardNewsComponent extends Component<CardNewsPropsIterface> {
   

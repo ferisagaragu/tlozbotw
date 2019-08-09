@@ -6,15 +6,6 @@ class VideoPlayerComponent extends Component<any,any> {
   
   player: any;
 
-  constructor(props: any, context: any) {
-    super(props, context);
-
-    this.state = {
-      source: props.urlVideo
-    };
-
-  }
-
   componentDidMount() {
     this.player.subscribeToStateChange(this.handleStateChange.bind(this));
   }
@@ -31,14 +22,14 @@ class VideoPlayerComponent extends Component<any,any> {
   }
 
   render() {
-    const { onRef } = this.props;
+    const { onRef, urlVideo } = this.props;
 
     return (
       <Col className="col-md-8">
         <Player
           ref={ (player: any) => this.onRef(player, onRef) }
         >
-          <source src={ this.state.source } />
+          <source src={ urlVideo } />
           <ControlBar autoHide={ true } />
         </Player>
       </Col>
