@@ -1,0 +1,18 @@
+.item-header {
+  background-image: url('../../../../styles/img/header-card.png');
+  background-size: auto;
+  color: #BA9C66;
+  font-family: 'tlozbotw';
+  height: 90px;
+}
+
+.item-footer {
+  background-image: url('../../../../styles/img/footer-card.png');
+  background-size: auto;
+  height: 80px;
+}
+
+.card-size {
+  width: 100%;
+  height: 100%;
+}

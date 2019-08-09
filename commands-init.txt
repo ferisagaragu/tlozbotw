@@ -1,26 +1,60 @@
 ADD TYPESCRIPT
+npx create-react-app my-app --typescript
 yarn add typescript @types/node @types/react @types/react-dom @types/jest
+yarn add typescript@4.0.x --save-dev --save-exact
 https://facebook.github.io/create-react-app/docs/adding-typescript
 
 ADD REDUX
 yarn add react-redux
 yarn add redux-thunk
 yarn add redux
+yarn add redux-form
+https://redux-form.com/6.1.1/examples/
 https://redux.js.org/basics/usage-with-react
 
-ADD OPTIONAL Bootstrap
+ADD REACT-ROUTE-RDOM 
+yarn add react-router-dom
+https://reacttraining.com/react-router/web/guides/quick-start
+
+ADD OPTIONAL BOOTSTRAP
 yarn add react-bootstrap
 yarn add bootstrap
 https://react-bootstrap.github.io/getting-started/introduction
+
+ADD OPTIONAL FONT AWESOME
+yarn add @fortawesome/fontawesome-svg-core
+yarn add @fortawesome/free-solid-svg-icons
+yarn add @fortawesome/react-fontawesome
+https://fontawesome.com/v5.4.1/how-to-use/on-the-web/using-with/react
+
+ADD OPTIONAL SIDENAV
+yarn add @trendmicro/react-sidenav
+https://github.com/trendmicro-frontend/react-sidenav
 
 ADD OPTIONAL FIREBASE
 yarn add firebase 
 https://firebase.google.com/?hl=es-419
 
+ADD OPTIONAL COOKIES
+yarn add js-cookie
+https://www.npmjs.com/package/js-cookie
+
 ADD OPTIONAL SWEETALERT2
 yarn add sweetalert2
 yarn add sweetalert2-react-content
 https://sweetalert2.github.io/
+
+ADD OPTIONAL MOMENT JS
+yarn add moment
+https://www.npmjs.com/package/moment
+
+ADD OPTIONAL REACT SELECT
+yarn add react-select
+https://react-select.com/home
+
+ADD OPTIONAL REACT SPINNERS
+yarn add react-spinners
+https://www.react-spinners.com/
 
 ADD GITHUB PAGES DEPLOY
 yarn add gh-pages
