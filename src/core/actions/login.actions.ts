@@ -3,6 +3,7 @@ import LoginService from '../http/login.service';
 import { LoginReducerEnum } from '../enums/login-reducer.enum';
 import { toast } from '../../shared/swal.shared';
 import { UserDataModel } from '../models/user-data.model';
+import Cookies from '../../imports/js-cookie.import';
 
 const loginService: LoginService = new LoginService();
 
@@ -13,7 +14,6 @@ export function loginUser(payload: any): Action {
 export function logoutUser(): Action {
   return {type: LoginReducerEnum.LOGOUT, payload: null};
 }
-
 
 export function createUser(data: any): Function {
   return async () => {
@@ -41,7 +41,7 @@ export function createUser(data: any): Function {
 export function loginWhitGoogle(): Function {
   return async (dispatch: Function) => {
     loginService.loginUserWhitGoogle(
-      (token: any, user: any)=>{
+      (token: any, user: any)=> {
         if (user) {
           registUserInformation(user, dispatch);
         }
@@ -58,6 +58,7 @@ export function login(username: string, password: string): Function {
       (user: any) =>{
         if (user) {
           registUserInformation(user, dispatch);
+          Cookies.set('userData', { username, password });
         }
       },(error: any)=>{
         toast('error', `Error al iniciar sesión`);
@@ -73,7 +74,6 @@ export function logout(): Function {
         dispatch(logoutUser());
         toast('success', `Sesión cerrada`);
       },(error: any) => { 
-        console.log(error);
         toast('error', 'Error al cerrar sesión');
       }
     );

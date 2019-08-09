@@ -1,20 +1,27 @@
 import React, { Component } from 'react';
-import { ItemMaterialPropsInterface } from '../../../../core/interfaces/inventory.interface';
+import { ItemMaterialPropsInterface } from '../../../../core/interfaces/inventory-materials.interface';
 import { Col, Card, ListGroup } from 'react-bootstrap';
-import photo from '../../../../styles/img/photo.png';
-import './item-material.css';
 import heartSymbol from '../../../../shared/life-indicator.shared';
-import { materialUsesList } from '../../../../shared/material-uses.shared';
+import photoNo from '../../../../styles/img/photo-no.png';
+import './item-material.css';
+import IndicatorPhoto from '../../../../shared/indicator-photo.shared';
+import ListUsesMaterial from '../list-uses-material/list-uses-material';
 
 class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
+
+  private onCheck(check: boolean): void {
+    const { material, selectMaterial } = this.props;
+    material.check = check;
+    selectMaterial(material);
+  }
 
   render() {
     const { material } = this.props;
 
     return (
       <Col md={ 3 } className="mt-5">
-        <Card className="card-shadow">
-          <Card.Header className="card-header">
+        <Card className="card-shadow card-size">
+          <Card.Header className="item-header">
             <h3>
               { material.name }
               <img 
@@ -29,7 +36,7 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
             <ListGroup variant="flush">
               <ListGroup.Item>
                 { 
-                  material.life !== 0 ? 
+                  +material.life !== 0 ? 
                     heartSymbol(material.life) 
                   : 
                     <label>
@@ -39,7 +46,9 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
               </ListGroup.Item>
               
               <ListGroup.Item>
-                { materialUsesList(material) }
+                <ListUsesMaterial 
+                  material={ material }
+                />
               </ListGroup.Item>
 
               <ListGroup.Item>
@@ -48,20 +57,19 @@ class ItemMaterialComponent extends Component<ItemMaterialPropsInterface> {
             </ListGroup>
           </Card.Body>
 
-          <Card.Footer className="card-footer">
+          <Card.Footer className="item-footer">
             {
-              material.life !== 0 &&
-              <>
-                <input type="checkbox" className="float-right" />
-
+              +material.life !== 0 ?
+                <IndicatorPhoto
+                  check={ material.check }
+                  onCheck={ (check: boolean) => this.onCheck(check) }
+                />
+              :
                 <img 
                   className="float-right"
-                  width="50px"
-                  height="50px"
-                  alt="camera"
-                  src={ photo } 
+                  alt="noPhoto" 
+                  src={ photoNo } 
                 />
-              </> 
             }
           </Card.Footer>
         </Card>

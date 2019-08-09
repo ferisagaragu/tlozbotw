@@ -46,6 +46,16 @@ class LayoutView extends Component<LayoutPropsInterface> {
                 </NavText>
               </NavItem>
 
+              <NavItem eventKey="seed">
+                <NavIcon>
+                  <FontAwesomeIcon className="icon-awesome" icon="home" />
+                </NavIcon>
+
+                <NavText>
+                  Semillas
+                </NavText>
+              </NavItem>
+
               <NavItem eventKey="inventory">
                 <NavIcon>
                   <FontAwesomeIcon className="icon-awesome" icon="suitcase" />
@@ -55,9 +65,51 @@ class LayoutView extends Component<LayoutPropsInterface> {
                   Inventario
                 </NavText>
 
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Armas
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="inventory/bows" subnav={ true }>
+                  <NavText>
+                    Arcos
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Flechas
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Escudos
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Vestimenta
+                  </NavText>
+                </NavItem>
+
                 <NavItem eventKey="inventory/materials" subnav={ true }>
                   <NavText>
-                    Material
+                    Materiales
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Alimentos
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Importante
                   </NavText>
                 </NavItem>
               </NavItem>

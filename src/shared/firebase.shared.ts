@@ -105,7 +105,7 @@ class Firebase {
     });
   }
 
-  public update(path: string,data: any, errorFunction?: Function | undefined): void {
+  public update(path: string, data: any, errorFunction?: Function | undefined): void {
     firebase.database().ref(path).update(data,(error) => {
       if (errorFunction) {
         errorFunction(error);

@@ -1,4 +1,5 @@
 import React from 'react';
+import './../styles/shake-form.css';
 
 export const renderTextField = (metaData: any) => {
   const {
@@ -14,6 +15,8 @@ export const renderTextField = (metaData: any) => {
     }
   } = metaData;
 
+  const errorClass = touched && error ? 'error' : '';
+
   return (
     <div className="mb-3">
       <label>
@@ -23,7 +26,7 @@ export const renderTextField = (metaData: any) => {
       </label>
       <div>
         <input 
-          className={ className }
+          className={ `${className} ${errorClass}` }
           { ...input } 
           placeholder={ label } 
           type={ type }
@@ -31,8 +34,8 @@ export const renderTextField = (metaData: any) => {
         />
         {
           touched &&
-            ((error && <div className="text-danger">{error}</div>) ||
-            (warning && <div>{warning}</div>))
+            ((error && <div className="text-danger">{ error }</div>) ||
+            (warning && <div>{ warning }</div>))
         }
       </div>
     </div>
@@ -46,9 +49,12 @@ export const renderTextArea = (metaData: any) => {
     className,
     meta: { 
       error, 
-      warning 
+      warning,
+      touched 
     }
   } = metaData;
+
+  const errorClass = touched && error ? 'error' : '';
 
   return (
     <div className="mb-3">
@@ -59,13 +65,14 @@ export const renderTextArea = (metaData: any) => {
       </label>
       <div>
         <textarea 
-          className={ className }
+          className={ `${className} ${errorClass}` }
           {...input} 
           placeholder={ label } 
         />
         {
-          ((error && <div className="text-danger">{error}</div>) ||
-          (warning && <div>{warning}</div>))
+          touched &&
+            ((error && <div className="text-danger">{ error }</div>) ||
+            (warning && <div>{ warning }</div>))
         }
       </div>
     </div>
@@ -80,7 +87,8 @@ export const renderCheckBox = (metaData: any) => {
     className,
     meta: { 
       error, 
-      warning 
+      warning,
+      touched
     }
   } = metaData;
 
@@ -96,8 +104,9 @@ export const renderCheckBox = (metaData: any) => {
       </label>
       <br />
       {
-        ((error && <div className="text-danger">{error}</div>) ||
-        (warning && <div>{warning}</div>))
+        touched &&
+          ((error && <div className="text-danger">{ error }</div>) ||
+          (warning && <div>{ warning }</div>))
       }
     </div>
   );

@@ -1,0 +1,50 @@
+.heart {
+  cursor: pointer;
+  height: 75px;
+  width: 75px;
+  background-image:url( '../../../styles/img/heart_animation.png');
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+}
+
+.heart {
+  background-position: left;
+  color: #F44336;
+}
+
+.heart-out {
+  cursor: pointer;
+  height: 75px;
+  width: 75px;
+  background-image:url( '../../../styles/img/heart_animation_out.png');
+  background-position: left;
+  background-repeat:no-repeat;
+  background-size:2900%;
+}
+
+.selected-like {
+  background-position: right;
+}
+
+.selected-dislike {
+  background-position: left;
+}
+
+.is_animating-like {
+  animation: heart-burst-like .8s steps(28) 1;
+}
+
+.is_animating-dislike {
+  animation: heart-burst-dislike .8s steps(28) 1;
+}
+
+@keyframes heart-burst-like {
+  from {background-position:left;}
+  to { background-position:right;}
+}
+
+@keyframes heart-burst-dislike {
+  from {background-position:right;}
+  to { background-position:left;}
+}

@@ -1,36 +1,73 @@
 import React, { Component, ReactElement } from 'react';
-import { Row, Col, ProgressBar } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import { MaterialModel } from '../../../core/models/material.model';
 import { connect } from '../../../imports/react-redux.import';
-import { getMaterials, updateMaterials } from '../../../core/actions/material.actions';
+import { getMaterials, updateMaterials, selectMaterial } from '../../../core/actions/material.actions';
 import ItemMaterialComponent from './item-material/item-material.component';
 import TableEditMaterialComponent from './table-material/table-material.component';
-import { MaterialPropsInterface } from '../../../core/interfaces/inventory.interface';
+import { MaterialPropsInterface, MaterialStateInterface } from '../../../core/interfaces/inventory-materials.interface';
+import { UserDataModel } from '../../../core/models/user-data.model';
+import key from '../../../core/key/react-elements.key';
+import Select, { makeAnimated } from '../../../imports/react-select.import';
+import LoadingIndicatior from '../../../shared/loading-indicator.shared';
 
-class MaterialView extends Component<MaterialPropsInterface> {
+class MaterialView extends Component<MaterialPropsInterface,MaterialStateInterface> {
   
   private materials: Array<MaterialModel>;
 
   constructor(props: any) {
     super(props);
     this.materials = [];
+
+    this.state = {
+      selectedMaterials: []
+    };
+
   }
 
   componentDidMount() {
-    this.props.getMaterials();
+    const { userData, getMaterials } = this.props;
+    getMaterials(userData);
   }
 
-  private renderData(): Array<ReactElement> {
-    return this.materials.map((material: MaterialModel) => (
+  private renderData(materials: Array<MaterialModel>): Array<ReactElement> {
+    const { userData ,selectMaterial } = this.props;
+
+    return materials.map((material: MaterialModel) => (
       <ItemMaterialComponent 
-        key={ JSON.stringify(material) }
+        key={ key() }
         material={ material }
+        selectMaterial={ (material: MaterialModel) => selectMaterial(userData, material) }
       />
     ));
+  }
+
+  private createItems(): Array<MaterialModel> {
+    const optionsOut: Array<any> = [];
+
+    if (this.materials) {
+      this.materials.forEach(element => {
+        optionsOut.push({ value: element.id, label: element.name, material: element });
+      });
+    }
+    return optionsOut;
+  }
+
+  private selectedMaterials(data: Array<any>): void {
+    const materialsOut: Array<MaterialModel> = [];
+
+    if (data) {
+      data.forEach(element => {
+        materialsOut.push(element.material);
+      });
+    }
+    
+    this.setState({ selectedMaterials: materialsOut });
   }
   
   render() {
     const { materials, userData } = this.props;
+    const { selectedMaterials } = this.state;
     this.materials = materials;
 
     return (
@@ -42,19 +79,27 @@ class MaterialView extends Component<MaterialPropsInterface> {
               updateMaterials={ this.props.updateMaterials }
             />
           :
-            <>
-              { materials ? 
-                this.renderData() 
-              : 
-                <Col>
-                  <ProgressBar 
-                    animated 
-                    now={ 100 } 
-                    variant="warning" 
-                  />
-                </Col> 
-              }
-            </>
+            materials ?
+              <>
+                <Select
+                  className="basic-multi-select col-md-12"
+                  components={ makeAnimated() }
+                  options={ this.createItems() }
+                  onChange={(data: Array<any>) => this.selectedMaterials(data) }
+                  noOptionsMessage={ () => 'No se encontraron conicidencias con ese Material' }
+                  placeholder="Busca un Material"
+                  isMulti
+                />
+
+                {
+                  materials && (selectedMaterials.length === 0) ? 
+                    this.renderData(this.materials)
+                  :
+                    this.renderData(selectedMaterials)
+                }
+              </>
+            : 
+              <LoadingIndicatior />
         }
       </Row>
     );
@@ -62,8 +107,9 @@ class MaterialView extends Component<MaterialPropsInterface> {
 }
 
 const mapDispatchToProps = (dispatch: Function) => ({
-  getMaterials: () => dispatch(getMaterials()),
-  updateMaterials: (data: MaterialModel) => dispatch(updateMaterials(data))
+  getMaterials: (userData: UserDataModel) => dispatch(getMaterials(userData)),
+  updateMaterials: (data: MaterialModel) => dispatch(updateMaterials(data)),
+  selectMaterial: (userData: UserDataModel, data: MaterialModel) => dispatch(selectMaterial(userData ,data))
 });
 
 const mapStateToProps = (state: any) => ({ 

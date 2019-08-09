@@ -15,12 +15,16 @@
     "bootstrap": "^4.3.1",
     "firebase": "^6.2.3",
     "gh-pages": "^2.0.1",
+    "js-cookie": "^2.2.0",
+    "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-select": "^3.0.4",
+    "react-spinners": "^0.5.13",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.5",
     "redux-form": "^8.2.4",
@@ -28,7 +32,8 @@
     "sweetalert2": "^8.13.0",
     "sweetalert2-react-content": "^1.1.0",
     "typescript": "^3.4.5",
-    "uniqid": "^5.0.3"
+    "uniqid": "^5.0.3",
+    "video-react": "^0.14.1"
   },
   "scripts": {
     "start": "react-scripts start",
