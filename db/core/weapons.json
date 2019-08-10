@@ -1,0 +1,762 @@
+[ {
+  "attack" : "30, 40, 50, 60, 0",
+  "description" : "La espada legendaria que sella la oscuridad. Su hoja brilla con un brillo sagrado que puede oponerse a la calamidad. Sólo un héroe elegido por la espada misma puede empuñarla",
+  "durability" : "40, 188",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/0/05/BotW_Master_Sword_Icon.png?version=26bf023b97f5f966351641d9d0a54f7a",
+  "name" : "Master Sword"
+}, {
+  "attack" : "2",
+  "description" : "Wooden branches such as this are pretty common, but it's surprisingly well-balanced. It doesn't do much damage but can serve as a weapon in a pinch.",
+  "durability" : "4",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/e/ef/BotW_Tree_Branch_Icon.png?version=ac4bbd85cdc81f1f28f611b02cebf5ed",
+  "name" : "Tree Branch"
+}, {
+  "attack" : "2",
+  "description" : "This torch will stay lit once ignited. If you put it away, the flame will be extinguished until you light it again.",
+  "durability" : "8",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/6/60/BotW_Torch_Icon.png?version=53e4d68588587f207e928d8f69c3e392",
+  "name" : "Torch"
+}, {
+  "attack" : "4",
+  "description" : "A kitchen implement often used for serving delicious soups. It was carved from the wood of a sturdy tree, so it actually packs quite the wallop.",
+  "durability" : "5",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/0/0d/BotW_Soup_Ladle_Icon.png?version=bae74d56274ea89e3f87cb94e5277a95",
+  "name" : "Soup Ladle"
+}, {
+  "attack" : "8",
+  "description" : "This throwing weapon was originally used by the forest-dwelling Koroks. Its unique shape allows it to return after being thrown.",
+  "durability" : "18",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/b2/BotW_Boomerang_Icon.png?version=f8becd43d2aba7bdb0490487fbd982cb",
+  "name" : "Boomerang"
+}, {
+  "attack" : "1",
+  "description" : "This strange hammer is one of Kilton's specialties. Being struck by it doesn't hurt much, but the fourth swing in a string of attacks will send the victim flying.",
+  "durability" : "80",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/1/12/BotW_Spring-Loaded_Hammer_Icon.png?version=4c73da5f649593d77bf58e342de8aedb",
+  "name" : "Spring-Loaded Hammer"
+}, {
+  "attack" : "5",
+  "description" : "A very common sword often kept by travelers to fend off small beasts. It's fairly durable, but a bit unreliable against monsters.",
+  "durability" : "20",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/e/e4/BotW_Traveler%27s_Sword_Icon.png?version=f6579b91127639d49444b6dedd1f48d6",
+  "name" : "Traveler's Sword"
+}, {
+  "attack" : "14",
+  "description" : "A sword brandished by the soldiers who once protected Hyrule Castle. Its durable blade is well tuned for slaying monsters.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/28/BotW_Soldier%27s_Broadsword_Icon.png?version=4a6e0ee8ae1c01098dcf0f6cc840f2ee",
+  "name" : "Soldier's Broadsword"
+}, {
+  "attack" : "26",
+  "description" : "Knights of Hyrule once carried this sword. These days it's the weapon of choice for seasoned adventurers thanks to its ease of use and high attack power.",
+  "durability" : "27",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/9/9a/BotW_Knight%27s_Broadsword_Icon.png?version=901cde6c516e7706cb9da0f7d2afe202",
+  "name" : "Knight's Broadsword"
+}, {
+  "attack" : "36",
+  "description" : "The Hyrulean royal family would award this sword to knights who achieved remarkable feats. A sword that balances strength and beauty as elegantly as this one is a rare find.",
+  "durability" : "36",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/e/e6/BotW_Royal_Broadsword_Icon.png?version=380420d22a9e937659754387341bfeee",
+  "name" : "Royal Broadsword"
+}, {
+  "attack" : "22",
+  "description" : "Koroks made this sword for Hylians. It's made of wood, so it isn't the best choice for head-on attacks. Its original intent was likely clearing vines to forge paths through forests.",
+  "durability" : "27",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/23/BotW_Forest_Dweller%27s_Sword_Icon.png?version=eb5d132be18a862210ee9c9fceccbed2",
+  "name" : "Forest Dweller's Sword"
+}, {
+  "attack" : "15",
+  "description" : "The ornamentation that adorns this blade is a traditional Zora design. It's forged from a very durable and rust-proof metal.",
+  "durability" : "27",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/8/8e/BotW_Zora_Sword_Icon.png?version=e706e99d8b83338bf8cc5e5ecb0d1ab9",
+  "name" : "Zora Sword"
+}, {
+  "attack" : "15",
+  "description" : "Rito craftsmen forged this lightweight, double-edge sword so Rito warriors could soar into battle unhindered by its weight.",
+  "durability" : "27",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/fc/BotW_Feathered_Edge_Icon.png?version=bff8ffa14a04877c029d3334cc410384",
+  "name" : "Feathered Edge"
+}, {
+  "attack" : "16",
+  "description" : "This common sword is often carried by Gerudo women for self-defense. Its short, curved blade is easily recognized.",
+  "durability" : "23",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/0/01/BotW_Gerudo_Scimitar.png?version=0867a2d35b7ce936367db5f04e7b7bf4",
+  "name" : "Gerudo Scimitar"
+}, {
+  "attack" : "25",
+  "description" : "Delicate Gerudo carvings decorate this curved sword. The engraved blade is extremely sharp. Apparently it once served ceremonial purposes in festivals.",
+  "durability" : "32",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/b5/BotW_Moonlight_Scimitar_Icon.png?version=e7084a7f62a3ef7e18c63ea5ffea5a11",
+  "name" : "Moonlight Scimitar"
+}, {
+  "attack" : "32",
+  "description" : "A famous sword once beloved by the Gerudo Champion Urbosa. It is said that when Urbosa swung this sword in battle, her movements resembled a beautiful dance.",
+  "durability" : "60",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/a/a5/BotW_Scimitar_of_the_Seven_Icon.png?version=3ade31176fd3dd3d713597a99304fb7d",
+  "name" : "Scimitar of the Seven"
+}, {
+  "attack" : "15",
+  "description" : "A single-edged sword traditional to the Sheikah tribe. Forged using ancient technology it just may be among the sharpest conventional weapons ever made.",
+  "durability" : "26",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/1/10/BotW_Eightfold_Blade_Icon.png?version=1a8903d39ee9cea90aef1b1b951b6fcf",
+  "name" : "Eightfold Blade"
+}, {
+  "attack" : "40",
+  "description" : "The blade of this sword was made using an ancient power lost to this modern age. Its blade appears only when drawn, and its cutting power surpasses metal swords.",
+  "durability" : "54",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/6/65/BotW_Ancient_Short_Sword_Icon.png?version=8ec67e0eece0b2b5d0a8679c035f65be",
+  "name" : "Ancient Short Sword"
+}, {
+  "attack" : "6",
+  "description" : "A rusty sword used ages ago by a skilled swordsman. It can do some damage in the right hands but also breaks quickly.",
+  "durability" : "8",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/d/df/BotW_Rusty_Broadsword_Icon.png?version=cd0835d193ca6b3919093d890581a8b9",
+  "name" : "Rusty Broadsword"
+}, {
+  "attack" : "48",
+  "description" : "A Sheikah-made replica of the sword that seals the darkness. It was made with ancient technology to oppose the Great Calamity, but its low durability made it inefficient.",
+  "durability" : "14",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/f8/BotW_Royal_Guard%27s_Sword_Icon.png?version=c29b97b7aa24be9a2978470f49a0e3d3",
+  "name" : "Royal Guard's Sword"
+}, {
+  "attack" : "24",
+  "description" : "This magical sword was forged in the lava of Death Mountain. It leaves white-hot flames in its wake when the blade glows red.",
+  "durability" : "36",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/9/91/BotW_Flameblade_Icon.png?version=10d1ca8f48e311b5e69e269a8559294f",
+  "name" : "Flameblade"
+}, {
+  "attack" : "20",
+  "description" : "A magical sword forged in the frigid mountains of the Hebra region. When the blade glows blue, enemies struck by it will become frozen.",
+  "durability" : "30",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/4/43/BotW_Frostblade_Icon.png?version=93f9013e348d162849c69b26e4e0a71d",
+  "name" : "Frostblade"
+}, {
+  "attack" : "22",
+  "description" : "A magical sword forged and refined by lightning from the Hyrule Hills. When the blade shines with a golden light, it will electrocute enemies struck by it.",
+  "durability" : "36",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/38/BotW_Thunderblade_Icon.png?version=3838383bd313ad9f1be96470f2ba04bc",
+  "name" : "Thunderblade"
+}, {
+  "attack" : "28",
+  "description" : "A sword said to have once belonged to a hero from the sky. Its blade houses the fire of the Goddess. When wielded, a strange yet heavenly breeze kicks up around you.",
+  "durability" : "45",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/b6/BotW_Goddess_Sword_Icon.png?version=ecde00e0f2af332112b7173036ad600e",
+  "name" : "Goddess Sword"
+}, {
+  "attack" : "22",
+  "description" : "A sword once wielded by a hero in an ancient age. When grasped, a strange sense of nostalgia washes over you. Take it when going alone would otherwise be dangerous.",
+  "durability" : "27",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/bd/BotW_Sword_Icon.png?version=0c0f41973cd0c20908a05523e2648813",
+  "name" : "Sword"
+}, {
+  "attack" : "20",
+  "description" : "A boomerang said to have been used by a hero who traveled the Great Sea. It smells faintly of salt water.",
+  "durability" : "20",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/d/d9/BotW_Sea-Breeze_Boomerang_Icon.png?version=aca4f0de2afcc7792fedb67b4bdd18dc",
+  "name" : "Sea-Breeze Boomerang"
+}, {
+  "attack" : "4",
+  "description" : "A crude Bokoblin club made to clobber small prey. It's essentially a stick, so its durability is low.",
+  "durability" : "8",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/7/7f/BotW_Boko_Club_Icon.png?version=e47f53c272dad529966f44306f3c7fff",
+  "name" : "Boko Club"
+}, {
+  "attack" : "12",
+  "description" : "A reinforced Bokoblin club made to maximize damage. The sharpened bones jabbed into it make it a brutal weapon.",
+  "durability" : "14",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/3f/BotW_Spiked_Boko_Club_Icon.png?version=6d6d6aed729759dfec5748c07a4c8062",
+  "name" : "Spiked Boko Club"
+}, {
+  "attack" : "24",
+  "description" : "This Bokoblin club has been reinforced with fossilized bones to maximize clobbering potential. Only the brawniest of Bokoblins can manage its immense weight.",
+  "durability" : "18",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/6/6f/BotW_Dragonbone_Boko_Club_Icon.png?version=a726eec1acf5644971617ddb2171ebb8",
+  "name" : "Dragonbone Boko Club"
+}, {
+  "attack" : "14",
+  "description" : "A curved sword favored by the Lizalfos. It can be used to attack directly or can be thrown like a boomerang.",
+  "durability" : "17",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/28/BotW_Lizal_Boomerang_Icon.png?version=1f1f3b777e30b2741438518eb769699a",
+  "name" : "Lizal Boomerang"
+}, {
+  "attack" : "24",
+  "description" : "Blue Lizalfos in particular like this weapon. It has one more blade than the Lizal boomerang to give it additional cutting power, and it still returns when thrown.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/5/50/BotW_Lizal_Forked_Boomerang_Icon.png?version=e7f523c825c7094bc4489d2af1f55a0d",
+  "name" : "Lizal Forked Boomerang"
+}, {
+  "attack" : "36",
+  "description" : "More blades means more attack power! It can be used as a boomerang, but all those blades makes that a bit more dangerous. Carried by Black Lizalfos seasoned in battle.",
+  "durability" : "27",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/6/66/BotW_Lizal_Tri-Boomerang_Icon.png?version=d368e1c08f35bee5ffe1448424a5ce64",
+  "name" : "Lizal Tri-Boomerang"
+}, {
+  "attack" : "20",
+  "description" : "A sword often wielded by Guardian Scouts. Its blue energy blade is a product of ancient technology. It's not very durable.",
+  "durability" : "17",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/c/c5/BotW_Guardian_Sword_Icon.png?version=fad0d4939fb9d401572be393b874f70f",
+  "name" : "Guardian Sword"
+}, {
+  "attack" : "30",
+  "description" : "This Guardian sword has enhanced power over the standard model. Its cutting capabilities are improved, and its durability has seen a slight uptick.",
+  "durability" : "26",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/f3/BotW_Guardian_Sword%EF%BC%8B_Icon.png?version=4b3011fe36c98b12ca73c3671c208056",
+  "name" : "Guardian Sword+"
+}, {
+  "attack" : "40",
+  "description" : "The abilities of this Guardian sword have been boosted to the maximum, as evidenced by its increase in size. It slices through armor like a hot knife through butter!",
+  "durability" : "32",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/d/d5/BotW_Guardian_Sword%EF%BC%8B%EF%BC%8B_Icon.png?version=9c9867a324b1048d0a9838f8767ad4da",
+  "name" : "Guardian Sword++"
+}, {
+  "attack" : "24",
+  "description" : "This Lynel-made sword was designed with smashing in mind rather than slicing. It's on the heavy side compared to what Hylians are used to, but it's very strong.",
+  "durability" : "26",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/30/BotW_Lynel_Sword_Icon.png?version=f872467aa71670e00cb43478aa6b9a7e",
+  "name" : "Lynel Sword"
+}, {
+  "attack" : "36",
+  "description" : "This Lynel-made sword boasts more blades and more attack power. A skilled Lynel can draw this sword simply in passing and still cut a foe in two.",
+  "durability" : "32",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/6/61/BotW_Mighty_Lynel_Sword_Icon.png?version=760ec436f339d448423d6c81a0596e3b",
+  "name" : "Mighty Lynel Sword"
+}, {
+  "attack" : "58",
+  "description" : "A brutal sword carried by white-haired Lynels. The savage blades are strong enough to cut down any foe, no matter how strong.",
+  "durability" : "41",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/8/85/BotW_Savage_Lynel_Sword_Icon.png?version=fe793958528cc7c9cca75eacf29da7e2",
+  "name" : "Savage Lynel Sword"
+}, {
+  "attack" : "5",
+  "durability" : "14",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/b3/BotW_Fire_Rod_Icon.png?version=283c2653121cc9c3f8d0b4dfd1887bf1",
+  "name" : "Fire Rod"
+}, {
+  "attack" : "10",
+  "description" : "A magical rod that can cast three fireballs at once, crafted by an ancient magician. It will break upon running out of magical energy, so make it last!",
+  "durability" : "32",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/a/ae/BotW_Meteor_Rod_Icon.png?version=268d9c60f9f44ec28444bf8ba7a98881",
+  "name" : "Meteor Rod"
+}, {
+  "attack" : "5",
+  "description" : "A magical rod crafted from refined ice found in the Hebra Mountains. This rod can cast waves of freezing air. Great for magic—not so great for melee.",
+  "durability" : "14",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/e/e1/BotW_Ice_Rod_Icon.png?version=b58309e5238b93f58290ce127aca05c9",
+  "name" : "Ice Rod"
+}, {
+  "attack" : "10",
+  "description" : "A magical rod that can cast extreme cold in a wide range. These are crafted from refined ice found at the summit of Hebra Peak. It will break when depleted.",
+  "durability" : "32",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/4/42/BotW_Blizzard_Rod_Icon.png?version=34d38e82e8e9d9f19ad6d637e5fc6c32",
+  "name" : "Blizzard Rod"
+}, {
+  "attack" : "5",
+  "description" : "A magical rod that can shoot balls of electricity. Its gem contains lightning from the Hyrule Hills. It's not recommended to use as a melee weapon.",
+  "durability" : "14",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/39/BotW_Lightning_Rod_Icon.png?version=0f4463547ce14fd2e21c16e6ad03246c",
+  "name" : "Lightning Rod"
+}, {
+  "attack" : "10",
+  "description" : "A magical rod that can hurl three balls of electricity at once. Its gem contains electricity from the Hyrule Hills, and the rod will break when that electricity runs out.",
+  "durability" : "32",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/4/4e/BotW_Thunderstorm_Rod_Icon.png?version=ba7fee19fbdb6835a146c268da558aec",
+  "name" : "Thunderstorm Rod"
+}, {
+  "attack" : "16",
+  "description" : "A grim weapon favored by the Yiga. The half-moon shape of the blade allows for the rapid delivery of fatal wounds and serves as a symbol of their terror. Its durability is low.",
+  "durability" : "14",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/bf/BotW_Vicious_Sickle_Icon.png?version=97a68cf0e8faaeb89cda09e3178d112e",
+  "name" : "Vicious Sickle"
+}, {
+  "attack" : "40",
+  "description" : "This lethal weapon is forged by the Yiga. Its unique shape facilitates the sound dispatching of any target and strikes fear into the hearts of all who see it.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/9/90/BotW_Demon_Carver_Icon.png?version=e1ac0fd72843893aa476af0c5c793be0",
+  "name" : "Demon Carver"
+}, {
+  "attack" : "5",
+  "description" : "A skeletal arm that keeps moving even after it's severed from its body. It's kind of gross to strap it to your back, but it'll do in a pinch. It's old and fragile, so it's quick to break.",
+  "durability" : "5",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/a/a4/BotW_Bokoblin_Arm_Icon.png?version=48c604f25b7fb0e9e624fef9d49e386d",
+  "name" : "Bokoblin Arm"
+}, {
+  "attack" : "12",
+  "description" : "The arm of a Stalizalfos that continues to struggle even in death. It can be used as a weapon, but it's very brittle. You can feel it wiggling when you strap it to your back...",
+  "durability" : "8",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/e/e9/BotW_Lizalfos_Arm_Icon.png?version=a028210e1cbf8506f976fb6bfc24b88e",
+  "name" : "Lizalfos Arm"
+}, {
+  "attack" : "1",
+  "description" : "A single swing of this giant, sturdy leaf can create a gust of wind strong enough to blow away light objects.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/6/66/BotW_Korok_Leaf_Icon.png?version=7b7e45629361163ba81ea0229eba3020",
+  "name" : "Korok Leaf"
+}, {
+  "attack" : "16",
+  "description" : "A farming tool primarily used for tilling fields. Its fine craftsmanship is sturdy enough to withstand backbreaking fieldwork, but its battle applications are untested.",
+  "durability" : "6",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/8/82/BotW_Farming_Hoe_Icon.png?version=df134f2a439e06de17e9c94dc90f8b77",
+  "name" : "Farming Hoe"
+}, {
+  "attack" : "14",
+  "description" : "Made for paddling boats, but it was made sturdy enough to fight strong currents. Maybe it's useful for self-defense in a pinch.",
+  "durability" : "8",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/8/8b/BotW_Boat_Oar_Icon.png?version=75c1e9de75d8ccfc1cfbb03c7bc228fc",
+  "name" : "Boat Oar"
+}, {
+  "attack" : "3",
+  "description" : "A woodcutter's tool of choice for felling trees. Its formidable weight and uneven balancing make it a slow, inefficient weapon.",
+  "durability" : "47",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/c/c1/BotW_Woodcutter%27s_Axe_Icon.png?version=5c726017a6fde24f3a415f26eadd17a4",
+  "name" : "Woodcutter's Axe"
+}, {
+  "attack" : "18",
+  "description" : "This double-sided axe was designed with fighting in mind. It's a bit unwieldy, so it requires a well-practiced technique to use efficiently.",
+  "durability" : "52",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/b8/BotW_Double_Axe_Icon.png?version=f258dc1c52baeb5cfbdd6fb2a485cb94",
+  "name" : "Double Axe"
+}, {
+  "attack" : "12",
+  "description" : "This large iron sledgehammer was originally used for mining, but it works reasonably well as a weapon too.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/32/BotW_Iron_Sledgehammer_Icon.png?version=00a7822fa4655c5c758ac0c8f118a4f5",
+  "name" : "Iron Sledgehammer"
+}, {
+  "attack" : "25",
+  "description" : "This massive boomerang requires two hands. Originally used for hunting, it was modified for use as a weapon. The blades on the inner curves make it a bit tricky to wield.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/6/69/BotW_Giant_Boomerang_Icon.png?version=d293eef9705077a3393e545c0ad43a8d",
+  "name" : "Giant Boomerang"
+}, {
+  "attack" : "10",
+  "description" : "A basic two-handed sword often wielded by aspiring adventurers. Its immense weight can knock enemies' shields right out of their hands.",
+  "durability" : "20",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/9/99/BotW_Traveler%27s_Claymore_Icon.png?version=8e7ff8acc6bbddf0d54f124126a2078b",
+  "name" : "Traveler's Claymore"
+}, {
+  "attack" : "20",
+  "description" : "A two-handed sword designed for combat. It's heavy and hard to use but has decent build quality and durability.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/38/BotW_Soldier%27s_Claymore_Icon.png?version=dd881760cc736bd097cbc96bfd4bd6e9",
+  "name" : "Soldier's Claymore"
+}, {
+  "attack" : "38",
+  "description" : "Only the most confident of Hyrule Castle's knights carried this two-handed sword. Its cutting edge is finely honed.",
+  "durability" : "30",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/f4/BotW_Knight%27s_Claymore_Icon.png?version=757d750dc7f9c51ef1a5ef703f824fea",
+  "name" : "Knight's Claymore"
+}, {
+  "attack" : "52",
+  "description" : "A two-handed sword issued to the Hyrulean royal family's immediate guard detail. Its powerful strikes are said to crush an opponent's body and resolve alike.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/23/BotW_Royal_Claymore_Icon.png?version=e8e20338503b986761abe5e3f3de1158",
+  "name" : "Royal Claymore"
+}, {
+  "attack" : "22",
+  "description" : "Although the Zora prefer spears to swords, they made this two-handed weapon using a special metal. It found popularity among Hylians for its unique design.",
+  "durability" : "30",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/f6/BotW_Silver_Longsword_Icon.png?version=d1851ca20c8ac61ba70cdad18341daff",
+  "name" : "Silver Longsword"
+}, {
+  "attack" : "15",
+  "description" : "A Goron-made two-handed weapon. It's made from thick, hard metal and has no cutting edge, so it relies on its sheer weight to crush all opponents.",
+  "durability" : "30",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/b7/BotW_Cobble_Crusher_Icon.png?version=fe35e1819bada1de7f1f2ecf683b63fe",
+  "name" : "Cobble Crusher"
+}, {
+  "attack" : "42",
+  "description" : "A two-handed weapon forged from a rare metal mined in Goron City. Its center of gravity is at its tip, so it uses centrifugal force and its sheer weight to smash opponents flat.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/c/cf/BotW_Stone_Smasher_Icon.png?version=15e75c635c0abea58ce3399fd351f46e",
+  "name" : "Stone Smasher"
+}, {
+  "attack" : "60",
+  "description" : "This two-handed weapon was once wielded by the Goron Champion Daruk. Daruk made swinging it around look easy, but a Hylian would need an immense amount of strength.",
+  "durability" : "60",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/2a/BotW_Boulder_Breaker_Icon.png?version=a5efeb7de1551696e3e47780ce4c47b8",
+  "name" : "Boulder Breaker"
+}, {
+  "attack" : "28",
+  "description" : "Only the most talented Gerudo sword fighters carry this two-handed sword. It's actually much lighter than it appears and is surprisingly easy to wield.",
+  "durability" : "30",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/b6/BotW_Golden_Claymore_Icon.png?version=b0854b8c6d8d031077d5261a1a89e605",
+  "name" : "Golden Claymore"
+}, {
+  "attack" : "32",
+  "description" : "A single-edged sword seldom seen in Hyrule. This weapon is passed down through the Sheikah tribe and has an astonishingly sharp edge ideal for slicing.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/c/ce/BotW_Eightfold_Longblade_Icon.png?version=4d5717805deac51ed5078944da6c4ec3",
+  "name" : "Eightfold Longblade"
+}, {
+  "attack" : "50",
+  "description" : "A curious double-edged sword crafted using Sheikah technology. It was originally made for Hyrulean knights unfamiliar with single-edged blades.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/0/0c/BotW_Edge_of_Duality_Icon.png?version=57187f3c058bb810ca34a4c5df83ea48",
+  "name" : "Edge of Duality"
+}, {
+  "attack" : "55",
+  "description" : "This two-handed sword was forged using ancient Sheikah technology. Its unique rotating blades give it impressive cutting power that will slice enemies to shreds.",
+  "durability" : "50",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/c/ce/BotW_Ancient_Bladesaw_Icon.png?version=c6cc462869ee457c47372baa829c6c3a",
+  "name" : "Ancient Bladesaw"
+}, {
+  "attack" : "12",
+  "description" : "A two-handed sword not properly cared for. Although it can be used as a weapon, its durability is very low. Don't expect it to last for more than a few strikes.",
+  "durability" : "10",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/24/BotW_Rusty_Claymore_Icon.png?version=9974cfb194012f30f409f5e4a553b6a3",
+  "name" : "Rusty Claymore"
+}, {
+  "attack" : "72",
+  "description" : "The Sheikah used the very essence of ancient technology to forge this greatsword. It was designed to oppose the Calamity, but its low durability made it impractical in battle.",
+  "durability" : "15",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/2d/BotW_Royal_Guard%27s_Claymore_Icon.png?version=6ec44e8ee5d1ba0bd7c91a21fb77a0bb",
+  "name" : "Royal Guard's Claymore"
+}, {
+  "attack" : "34",
+  "description" : "This magic-infused greatsword was forged in the fires of Death Mountain by Goron smiths in an ancient age. Attack when the blade glows red to expel flames.",
+  "durability" : "50",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/7/7d/BotW_Great_Flameblade_Icon.png?version=6cb5751fb8b51ca7877a70d2c56e0dea",
+  "name" : "Great Flameblade"
+}, {
+  "attack" : "30",
+  "description" : "This magic-infused greatsword was forged by smelting ore found in the Hebra Mountains' permafrost. Attack when the blade glows blue to expel freezing air.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/0/07/BotW_Great_Frostblade_Icon.png?version=778933b984317bbce67c5da7165a89f6",
+  "name" : "Great Frostblade"
+}, {
+  "attack" : "32",
+  "description" : "This magic-infused greatsword was forged by the Hyrulean royal family using lightning from the Hyrule Hills. Attack when the blade glows golden to expel lightning.",
+  "durability" : "50",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/a/a4/BotW_Great_Thunderblade_Icon.png?version=165746e3691e250f7422f806aeda69ad",
+  "name" : "Great Thunderblade"
+}, {
+  "attack" : "48",
+  "description" : "The Six Sages are said to have forged this longsword to seal a demon king in the world where the hero fought against the beasts of twilight. The blade shines with a holy luster.",
+  "durability" : "50",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/8/8a/BotW_Sword_of_the_Six_Sages_Icon.png?version=1bb5da5fe772dab474bdd693c03785d0",
+  "name" : "Sword of the Six Sages"
+}, {
+  "attack" : "50",
+  "description" : "A legendary greatsword forged by a Goron craftsman for a hero who traveled through time. The exceptionally sharp cutting edge is a testament to the craftsman's mastery.",
+  "durability" : "60",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/d/d3/BotW_Biggoron%27s_Sword_Icon.png?version=b8691210059ea30d8eadcf50eb692400",
+  "name" : "Biggoron's Sword"
+}, {
+  "attack" : "60",
+  "description" : "A peculiar greatsword allegedly used by a hero from a world in which the moon threatened to fall. It slashes wildly in battle as if possessed by a fierce deity.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/4/4e/BotW_Fierce_Deity_Sword_Icon.png?version=c4e3213ed956ae75d5d6ade67070668f",
+  "name" : "Fierce Deity Sword"
+}, {
+  "attack" : "6",
+  "description" : "A clunky club made by a Bokoblin. If you swing it at an enemy's shield, it may be able to knock the shield out of your foe's hand.",
+  "durability" : "12",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/8/8e/BotW_Boko_Bat_Icon.png?version=ad99d1004d95f6e053468a8027cb3dd8",
+  "name" : "Boko Bat"
+}, {
+  "attack" : "18",
+  "description" : "After much consideration by Bokoblins on how to improve the Boko bat, they simply attached sharp spikes to it. A skilled fighter can cause immense damage with this.",
+  "durability" : "12",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/d/dd/BotW_Spiked_Boko_Bat_Icon.png?version=beb3bf94bf7ffd6b13a3825346ae536d",
+  "name" : "Spiked Boko Bat"
+}, {
+  "attack" : "36",
+  "description" : "Used by only the toughest Bokoblin warriors, this Boko bat has been fortified by fossilized bone. It boasts a high durability and is strong enough to beat down powerful foes.",
+  "durability" : "16",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/6/61/BotW_Dragonbone_Boko_Bat_Icon.png?version=d70b299d6b5a4d506475023514e73550",
+  "name" : "Dragonbone Boko Bat"
+}, {
+  "attack" : "9",
+  "description" : "A crudely fashioned club favored by Moblins. It's carved from a sturdy tree but is sloppily made, so it breaks easily.",
+  "durability" : "12",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/9/9a/BotW_Moblin_Club_Icon.png?version=d2605865045e50d5cf1fc9f0a3bf1f02",
+  "name" : "Moblin Club"
+}, {
+  "attack" : "27",
+  "description" : "Animal bone has been affixed to this Moblin club to greatly improve its damage.",
+  "durability" : "18",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/9/98/BotW_Spiked_Moblin_Club_Icon.png?version=980b01c39dd5f825e80fdfc7a76b022a",
+  "name" : "Spiked Moblin Club"
+}, {
+  "attack" : "45",
+  "description" : "The bone of an ancient beast has been affixed to this Moblin club, further increasing its damage. Moblins carrying these in battle are particularly dangerous.",
+  "durability" : "24",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/e/e5/BotW_Dragonbone_Moblin_Club_Icon.png?version=edff6b3bff1749bcdcdc6f2704f5ec6b",
+  "name" : "Dragonbone Moblin Club"
+}, {
+  "attack" : "30",
+  "description" : "A weapon used by Guardian Scouts. Its unique blade was forged using ancient technology. Although powerful, its unusual shape causes it to break easily.",
+  "durability" : "15",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/1/19/BotW_Ancient_Battle_Axe_Icon.png?version=4d968130e79def38edd950e4710f21ee",
+  "name" : "Ancient Battle Axe"
+}, {
+  "attack" : "45",
+  "description" : "This ancient battle axe's damage output has been increased to maximum. It's sharp enough to cut through almost anything, so it may have been used to forge new routes.",
+  "durability" : "20",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/b1/BotW_Ancient_Battle_Axe%EF%BC%8B_Icon.png?version=8b2c9b7593ad89e1c2fb528cc694311f",
+  "name" : "Ancient Battle Axe+"
+}, {
+  "attack" : "60",
+  "description" : "This ancient battle axe's damage output is scaled up to peak performance. Ancient technology makes it possible to enhance cutting power beyond metal weapons' limits.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/2e/BotW_Ancient_Battle_Axe%EF%BC%8B%EF%BC%8B_Icon.png?version=83e3512d130c1b68ce31b84839f0aedc",
+  "name" : "Ancient Battle Axe++"
+}, {
+  "attack" : "36",
+  "description" : "This two-handed weapon is favored by the Lynels. It may be more accurate to call it a lump of metal than a weapon, but if wielded by a Lynel, it can pound you into a fine dust.",
+  "durability" : "20",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/c/c9/BotW_Lynel_Crusher_Icon.png?version=25b429cf9f6ac785134e7b183a916b32",
+  "name" : "Lynel Crusher"
+}, {
+  "attack" : "54",
+  "description" : "This Lynel-made two-handed weapon has been reinforced to increase its durability and striking power. Its overwhelming heft will crush your foe, shield and all.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/d/df/BotW_Mighty_Lynel_Crusher_Icon.png?version=08679757fccbcbab8b359039b50b9a95",
+  "name" : "Mighty Lynel Crusher"
+}, {
+  "attack" : "78",
+  "description" : "This Lynel-made two-handed weapon is immensely heavy thanks to a rare metal from Death Mountain's peak. The power of its downward swing is in a class all its own.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/f4/BotW_Savage_Lynel_Crusher_Icon.png?version=6ecaf55221ff1890d39a76de59316f78",
+  "name" : "Savage Lynel Crusher"
+}, {
+  "attack" : "40",
+  "description" : "This sword is favored by high-ranking members of the Yiga. When wielded by a proficient fighter, its unique shape cleaves the very wind and creates a vacuum.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/3a/BotW_Windcleaver_Icon.png?version=d79a688518e82184a834f13cadac790c",
+  "name" : "Windcleaver"
+}, {
+  "attack" : "15",
+  "description" : "A Moblin bone that continues to move even after being detached from its body. The bone is thick enough to be used as a weapon but is extremely brittle and easily broken.",
+  "durability" : "5",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/32/BotW_Moblin_Arm_Icon.png?version=ae9a6f8b06a1ec26a44a7e394a78ed4d",
+  "name" : "Moblin Arm"
+}, {
+  "attack" : "5",
+  "description" : "Just a mop to the untrained eye, it excels at tidying up the place. But it owes its sturdy construction to a true craftsman, so it actually has some combat merit.",
+  "durability" : "8",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/9/92/BotW_Wooden_Mop_Icon.png?version=38855c11dac2a813aaec68f7d777cd58",
+  "name" : "Wooden Mop"
+}, {
+  "attack" : "7",
+  "description" : "A farming tool used to collect hay efficiently. It's light enough to be used by anyone. The four prongs are very sharp.",
+  "durability" : "12",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/0/07/BotW_Farmer%27s_Pitchfork_Icon.png?version=608f2c15d1b09709f7d48b3a465f81d7",
+  "name" : "Farmer's Pitchfork"
+}, {
+  "attack" : "8",
+  "description" : "A fisherman's tool that excels at catching large fish. Its particularly sharp spearhead makes it valuable as a weapon as well.",
+  "durability" : "12",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/bc/BotW_Fishing_Harpoon_Icon.png?version=119b22d7eef0507e74784f5e868e7498",
+  "name" : "Fishing Harpoon"
+}, {
+  "attack" : "6",
+  "description" : "A specialized spear weighted to excel as a throwing weapon. It's perfectly balanced to be thrown farther than your average spear, able to pierce targets from a great distance.",
+  "durability" : "20",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/6/6b/BotW_Throwing_Spear_Icon.png?version=687df2605f5db7db663c7679b7034b14",
+  "name" : "Throwing Spear"
+}, {
+  "attack" : "3",
+  "description" : "A spear used mainly by travelers to fend off wolves and other beasts. It's easy to hold and simple to use.",
+  "durability" : "30",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/0/0c/BotW_Traveler%27s_Spear_Icon.png?version=50afa271290c7f040a6498df2b6c2629",
+  "name" : "Traveler's Spear"
+}, {
+  "attack" : "7",
+  "description" : "A long spear once used by the guards of Hyrule Castle. Easy to use but difficult to master. The iron tip is very sturdy and the shaft will not burn when exposed to flame.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/2c/BotW_Soldier%27s_Spear_Icon.png?version=79995f00f3621a8445c25214d7261f1a",
+  "name" : "Soldier's Spear"
+}, {
+  "attack" : "13",
+  "description" : "A spear used by knights adept in mounted combat. The spearhead is modeled after an axe.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/fa/BotW_Knight%27s_Halberd_Icon.png?version=097af74517596e2bcdb4f0016b765950",
+  "name" : "Knight's Halberd"
+}, {
+  "attack" : "26",
+  "description" : "This spear was issued to the knights who guarded Hyrule Castle's throne room. Its ornate design was applied by a craftsman in service to the royal family.",
+  "durability" : "50",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/d/de/BotW_Royal_Halberd_Icon.png?version=c9df35e100f777e136e360fc611a8891",
+  "name" : "Royal Halberd"
+}, {
+  "attack" : "11",
+  "description" : "The Koroks made this spear for Hylians. The shaft is made from a light, sturdy wood, offering ease of use. The spearhead is made from a much harder wood, offering strength.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/4/43/BotW_Forest_Dweller%27s_Spear_Icon.png?version=9470022963b30ff7310bcecc55a78891",
+  "name" : "Forest Dweller's Spear"
+}, {
+  "attack" : "9",
+  "description" : "This spear is a Zora's weapon of choice. It's lighter than it looks due to being made from a special metal and is used by the Zora for both fishing and protecting their domain.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/24/BotW_Zora_Spear_Icon.png?version=4f496d4f2b2a9fe0728d098e835b8c7c",
+  "name" : "Zora Spear"
+}, {
+  "attack" : "12",
+  "description" : "The most skilled Zora fighters wield this spear. Its beautiful fish-tail design belies its impressive strength; the spearhead can pierce even the toughest scales.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/25/BotW_Silverscale_Spear_Icon.png?version=1642bc8a2d669b12e23064569140fde6",
+  "name" : "Silverscale Spear"
+}, {
+  "attack" : "14",
+  "description" : "A spear modeled after the Lightscale Trident wielded by the Zora Champion Mipha. They may be identical in appearance, but this spear's strength and durability are inferior.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/38/BotW_Ceremonial_Trident_Icon.png?version=31be590221af789613a69b1dba991660",
+  "name" : "Ceremonial Trident"
+}, {
+  "attack" : "22",
+  "description" : "A spear of peerless grace cherished by the Zora Champion Mipha. Although Mipha specialized in healing abilities, her spearmanship was in a class all its own.",
+  "durability" : "70",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/5/5d/BotW_Lightscale_Trident_Icon.png?version=a016313457dd57f38d71c2d0b0a406da",
+  "name" : "Lightscale Trident"
+}, {
+  "attack" : "14",
+  "description" : "Goron artisans used recycled metal to forge this weapon. The tip is made from an old excavation bore, which affords it unmatched piercing capabilities.",
+  "durability" : "50",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/a/ac/BotW_Drillshaft_Icon.png?version=12a5ba4ce3afce6454a88c981c5dd65d",
+  "name" : "Drillshaft"
+}, {
+  "attack" : "10",
+  "description" : "Its lightweight design is a hallmark of Rito craftsmanship. It's made from light and sturdy materials, which afford Rito warriors ease of use during aerial combat.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/4/4b/BotW_Feathered_Spear_Icon.png?version=ed22d19619cffe32dd2327ce498f4014",
+  "name" : "Feathered Spear"
+}, {
+  "attack" : "16",
+  "description" : "This spear's center of gravity is in its tip, making it a bit unwieldy for the average fighter. But in the hands of a skilled Gerudo warrior, it's a weapon of reliable strength.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/ff/BotW_Gerudo_Spear_Icon.png?version=cf99cc7d4681df7c18fb067f137c0c3e",
+  "name" : "Gerudo Spear"
+}, {
+  "attack" : "12",
+  "description" : "The spearhead of this weapon is uniquely Sheikah in design. Spear masters of the Sheikah tribe can use the crescent shape to snag their opponents and deliver brutal cuts.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/39/BotW_Serpentine_Spear_Icon.png?version=d373b821a04ebb075e7f8b009449b6c7",
+  "name" : "Serpentine Spear"
+}, {
+  "attack" : "30",
+  "description" : "This spear is the result of countless hours of research into the ancient technology used by Guardians. The glowing spearhead has high piercing potential.",
+  "durability" : "50",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/f6/BotW_Ancient_Spear_Icon.png?version=0519d8b054d3f1e86a3b14a5437dae6c",
+  "name" : "Ancient Spear"
+}, {
+  "attack" : "5",
+  "description" : "A rusty polearm likely used by knights from an age past. The spearhead is in bad shape due to prolonged exposure to the elements, so its durability is low.",
+  "durability" : "15",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/5/55/BotW_Rusty_Halberd_Icon.png?version=7c706fa4e228d42709287362b1a0d3f5",
+  "name" : "Rusty Halberd"
+}, {
+  "attack" : "32",
+  "description" : "This Sheikah-made spear was created using ancient technology to combat the Calamity. Its attack power is very high, but a critical design flaw left it with poor durability.",
+  "durability" : "15",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/8/8d/BotW_Royal_Guard%27s_Spear_Icon.png?version=2376354ee6907314dbbef3255e1d9e3f",
+  "name" : "Royal Guard's Spear"
+}, {
+  "attack" : "24",
+  "description" : "A magical spear forged in the magma of Death Mountain. Attack when the blade glows to expel powerful flames.",
+  "durability" : "50",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/a/a5/BotW_Flamespear_Icon.png?version=afc5b579b2950957a14ed41bf98db3b5",
+  "name" : "Flamespear"
+}, {
+  "attack" : "20",
+  "description" : "A magical spear forged from ancient ice taken from the Hebra Mountains. Attack when the blade glows blue to chill the air and freeze your foe.",
+  "durability" : "40",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/36/BotW_Frostspear_Icon.png?version=d88285a5755e6120e656dd43cf7e61cf",
+  "name" : "Frostspear"
+}, {
+  "attack" : "22",
+  "description" : "A magical spear that contains thunder from Thundra Plateau in its tip. Attack when the blade glows with a golden light to unleash an electrical attack.",
+  "durability" : "50",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/f8/BotW_Thunderspear_Icon.png?version=f8735f1d6441764a0a83cfe720610efe",
+  "name" : "Thunderspear"
+}, {
+  "attack" : "2",
+  "description" : "A spear recklessly carved from a tree branch. Useful for skewering fish and meat, which can then be cooked over a flame. If it's close to breaking, consider throwing it.",
+  "durability" : "12",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/5/56/BotW_Boko_Spear_Icon.png?version=6587c2d5110e3d67754a22a3d08b334e",
+  "name" : "Boko Spear"
+}, {
+  "attack" : "6",
+  "description" : "A Boko spear enhanced with sharpened animal bones. It's light, easy to use, and deals a decent amount of damage.",
+  "durability" : "15",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/9/98/BotW_Spiked_Boko_Spear_Icon.png?version=479918eb5befe408f4cd0dc5ccc1d328",
+  "name" : "Spiked Boko Spear"
+}, {
+  "attack" : "12",
+  "description" : "This Boko spear has been strengthened with fossilized bones. The bones are positioned outward so the fangs bite at the opponent. Beware Bokoblins carrying this weapon.",
+  "durability" : "20",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/d/d0/BotW_Dragonbone_Boko_Spear_Icon.png?version=c99f157695cbba1f24901f3248a7c0b5",
+  "name" : "Dragonbone Boko Spear"
+}, {
+  "attack" : "4",
+  "description" : "This wooden spear is most often used by Moblins. It's made from a hastily whittled tree, so its stabbing power and durability are both pretty low.",
+  "durability" : "15",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/fe/BotW_Moblin_Spear_Icon.png?version=5698f8958bcb06dd59dc67e76875e10b",
+  "name" : "Moblin Spear"
+}, {
+  "attack" : "9",
+  "description" : "This Moblin-made spear uses a horned animal bone as the spearhead. Like many Moblin weapons it's sloppily made, but this one packs some respectable piercing power.",
+  "durability" : "20",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/b/b2/BotW_Spiked_Moblin_Spear_Icon.png?version=c3aa8220aef68da618d9e8497109faeb",
+  "name" : "Spiked Moblin Spear"
+}, {
+  "attack" : "15",
+  "description" : "This spear is a fan favorite among Moblins. The spearhead is made from fossilized bones adorned with spikes, which greatly increases its stabbing power.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/0/00/BotW_Dragonbone_Moblin_Spear_Icon.png?version=f28aa2e0bf2ae02a8389a31fe2ac564a",
+  "name" : "Dragonbone Moblin Spear"
+}, {
+  "attack" : "7",
+  "description" : "The brutal, ripping edge of this weapon’s spearhead is a distinctly Lizalfos design. Its low durability doesn’t lend itself to extended use.",
+  "durability" : "18",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/1/1d/BotW_Lizal_Spear_Icon.png?version=97393d71ded7ae9014932b065f98dd55",
+  "name" : "Lizal Spear"
+}, {
+  "attack" : "12",
+  "description" : "Judging by the harpoon-like spearhead of this Lizalfos-made spear, the Lizalfos use it for fishing as well as combat. Try not to get caught on the wrong end of its barbs.",
+  "durability" : "22",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/f/fd/BotW_Enhanced_Lizal_Spear_Icon.png?version=492bca0760147b67a1fa84ba0f85cd64",
+  "name" : "Enhanced Lizal Spear"
+}, {
+  "attack" : "18",
+  "description" : "Skilled Lizalfos warriors tend to favor this spear. What it lacks in piercing power, it makes up for with the brutal wounds its dual ripping blades will inflict.",
+  "durability" : "28",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/1/19/BotW_Forked_Lizal_Spear_Icon.png?version=217540dbdfaf8cffcae2433642fb0360",
+  "name" : "Forked Lizal Spear"
+}, {
+  "attack" : "10",
+  "description" : "Wielded by Guardian Scouts, this spear has a high piercing power and is a testament to the Sheikah's high level of technology. the spearhead appears only when brandished.",
+  "durability" : "20",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/7/7a/BotW_Guardian_Spear_Icon.png?version=ddc46f04bff19990b82b51e594194a4e",
+  "name" : "Guardian Spear"
+}, {
+  "attack" : "15",
+  "description" : "The tip of this Guardian spear has been enlarged and strengthened. It's a bit shorter than your average spear, perhaps to facilitate use in tight spaces.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/9/94/BotW_Guardian_Spear%EF%BC%8B_Icon.png?version=90aca809e629d6364af6eb3cc371c211",
+  "name" : "Guardian Spear+"
+}, {
+  "attack" : "20",
+  "description" : "This Guardian spear's output has been boosted to the maximum. The spearhead is designed for optimal stabbing, capable of easily piercing most armor.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/0/00/BotW_Guardian_Spear%EF%BC%8B%EF%BC%8B_Icon.png?version=47ceae63b089a4cd4e0a8db50e77c9cf",
+  "name" : "Guardian Spear++"
+}, {
+  "attack" : "14",
+  "description" : "The crescent-shaped spearhead of this Lynel-made weapon gives it poor balance, making it difficult to wield. Lynels, however, can swing it effectively with a single hand.",
+  "durability" : "25",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/2/29/BotW_Lynel_Spear_Icon.png?version=a582ae93f6ce45a3367bd7e6c69fae74",
+  "name" : "Lynel Spear"
+}, {
+  "attack" : "20",
+  "description" : "The weight and cutting edge of this Lynel-made spear have both been enhanced. It's immensely heavy for a Hylian, but a Lynel can cleave through rock with a single swing.",
+  "durability" : "35",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/7/79/BotW_Mighty_Lynel_Spear_Icon.png?version=b0ffef8f506059522a4cb87a80cfacf8",
+  "name" : "Mighty Lynel Spear"
+}, {
+  "attack" : "30",
+  "description" : "White-haired Lynels favor this brutal spear. Its axe-like spearhead and exceptional weight give it absolute destructive power.",
+  "durability" : "45",
+  "img" : "https://gamepedia.cursecdn.com/zelda_gamepedia_en/3/38/BotW_Savage_Lynel_Spear_Icon.png?version=fa64542f778e592eec4abed814584ef3",
+  "name" : "Savage Lynel Spear"
+} ]

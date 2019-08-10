@@ -1,4 +1,5 @@
 ADD TYPESCRIPT
+npx create-react-app my-app --typescript
 yarn add typescript @types/node @types/react @types/react-dom @types/jest
 yarn add typescript@4.0.x --save-dev --save-exact
 https://facebook.github.io/create-react-app/docs/adding-typescript
@@ -43,13 +44,17 @@ yarn add sweetalert2
 yarn add sweetalert2-react-content
 https://sweetalert2.github.io/
 
-ADD MOMENT JS
+ADD OPTIONAL MOMENT JS
 yarn add moment
 https://www.npmjs.com/package/moment
 
-ADD REACT SELECT
-yarn add react-selecy
+ADD OPTIONAL REACT SELECT
+yarn add react-select
 https://react-select.com/home
+
+ADD OPTIONAL REACT SPINNERS
+yarn add react-spinners
+https://www.react-spinners.com/
 
 ADD GITHUB PAGES DEPLOY
 yarn add gh-pages

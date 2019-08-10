@@ -6,6 +6,7 @@ import { Router } from './imports/react-router-dom.import';
 import './styles/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+import './styles/video-react.css';
 
 import App from './modules/app';
 import * as serviceWorker from './serviceWorker';
