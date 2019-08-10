@@ -14,7 +14,7 @@ class BowService {
 
   public getBows(userData: UserDataModel, on: Function): void {
     this.firebase.on(this.pathBase,(snapshot: any) => {
-      const data: any = [];
+      const data: any = [ ];
       const resp = snapshot.val();
 
       for (let key in resp) {
