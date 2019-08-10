@@ -7,7 +7,6 @@ import FormRegisterUserComponent from './form-register-user/form-register-user.c
 import { UserDataModel } from '../../core/models/user-data.model';
 import { LoginPropsInterface, LoginStateInterface } from '../../core/interfaces/login.interfaces';
 import LogoLoginComponent from './logo-login/logo-login.component';
-import DashboardExternalLoginComponent from './dashboard-external-login/dashboard-external-login.component';
 
 class LoginView extends Component<LoginPropsInterface,LoginStateInterface> {
   
@@ -26,7 +25,7 @@ class LoginView extends Component<LoginPropsInterface,LoginStateInterface> {
 
   render() {
     const { edit } = this.state;
-    const { login, loginWhitGoogle } = this.props;
+    const { login/*, loginWhitGoogle*/ } = this.props;
 
     return (
       <Container>
@@ -43,9 +42,12 @@ class LoginView extends Component<LoginPropsInterface,LoginStateInterface> {
                         cancel={ () => this.setState({ edit: true }) }
                       />
 
-                      <DashboardExternalLoginComponent 
-                        onLoginWhitGoogle={ () => loginWhitGoogle() }
-                      />                     
+                      {
+                        /*
+                        <DashboardExternalLoginComponent 
+                          onLoginWhitGoogle={ () => loginWhitGoogle() }
+                        />*/
+                      }                     
                     </>  
                   :
                     <FormRegisterUserComponent

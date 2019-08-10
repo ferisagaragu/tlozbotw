@@ -46,18 +46,70 @@ class LayoutView extends Component<LayoutPropsInterface> {
                 </NavText>
               </NavItem>
 
+              <NavItem eventKey="seed">
+                <NavIcon>
+                  <FontAwesomeIcon className="icon-awesome" icon="home" />
+                </NavIcon>
+
+                <NavText>
+                  Semillas
+                </NavText>
+              </NavItem>
+
               <NavItem eventKey="inventory">
                 <NavIcon>
-                  <img width="30px" height="30px"  src="https://gamepedia.cursecdn.com/zelda_gamepedia_en/thumb/a/ae/BotW_Materials_Icon.png/50px-BotW_Materials_Icon.png?version=3ff337cb5a7a7672c082c8115eaf3f82" ></img>
+                  <FontAwesomeIcon className="icon-awesome" icon="suitcase" />
                 </NavIcon>
 
                 <NavText>
                   Inventario
                 </NavText>
 
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Armas
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="inventory/bows" subnav={ true }>
+                  <NavText>
+                    Arcos
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Flechas
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Escudos
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Vestimenta
+                  </NavText>
+                </NavItem>
+
                 <NavItem eventKey="inventory/materials" subnav={ true }>
                   <NavText>
-                    Material
+                    Materiales
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Alimentos
+                  </NavText>
+                </NavItem>
+
+                <NavItem eventKey="" subnav={ true }>
+                  <NavText>
+                    Importante
                   </NavText>
                 </NavItem>
               </NavItem>

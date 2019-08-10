@@ -41,11 +41,6 @@ export interface FormMaterialStateInterface {
   lifeIndicator: number;
 }
 
-export interface IndicatorPhotoMaterialPropsInterface {
-  onCheck: Function;
-  check: boolean;
-}
-
-export interface IndicatorPhotoMaterialStateInterface {
-  selected: boolean;
+export interface ListUsesPropsInterface {
+  material: MaterialModel;
 }

@@ -1,0 +1,184 @@
+{
+  "jydi6yaw" : {
+    "damage" : "44",
+    "description" : "Arco elaborado con tecnología sheikah gracias a la investigación de Rotver. Dispara flechas que describen una trayectoria recta.",
+    "id" : "jydi6yaw",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/a/a6/Ancient-bow.png/revision/latest/scale-to-width-down/65?cb=20180705172306&path-prefix=es",
+    "name" : "Arco ancestral"
+  },
+  "jydi6yax" : {
+    "damage" : "20 x3",
+    "description" : "Arco de centaleón con estructura reforzada. La cuerda también es metálica, por lo que a los hylianos de a pie les cuesta utilizarlo.",
+    "id" : "jydi6yax",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/8/85/Arco_bestial.png/revision/latest/scale-to-width-down/65?cb=20180705175409&path-prefix=es",
+    "name" : "Arco bestial"
+  },
+  "jydi6yay" : {
+    "damage" : "4",
+    "description" : "Arco sencillo que emplean los bokoblin. Está elaborado con la primera rama y cuerda que tienen a la mano, por lo que no cabe esperar de él una gran potencia de disparo.",
+    "id" : "jydi6yay",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/1/1e/Arco_Boko_BotW.png/revision/latest/scale-to-width-down/65?cb=20170306134529&path-prefix=es",
+    "name" : "Arco boko"
+  },
+  "jydi6yaz" : {
+    "damage" : "24",
+    "description" : "Arco boko reforzado por medio de huesos de fósil. Elaborado con materiales elegidos cuidadosamente por los bokoblin, que le ofrecen gran potencia de disparo.",
+    "id" : "jydi6yaz",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/f/ff/Arco_boko_de_drag%C3%B3n.png/revision/latest/scale-to-width-down/65?cb=20180705173933&path-prefix=es",
+    "name" : "Arco boko de dragón"
+  },
+  "jydi6yb0" : {
+    "damage" : "12",
+    "description" : "Parece endeble, pero esta versión mejorada del arco boko incluye huesos de animales que aumentan la potencia de disparo y la resistencia. Es ligero y fácil de usar.",
+    "id" : "jydi6yb0",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/8/87/Arco_boko_punzante_BotW.png/revision/latest/scale-to-width-down/65?cb=20170327000800&path-prefix=es",
+    "name" : "Arco boko punzante"
+  },
+  "jydi6yb1" : {
+    "damage" : "32 x3",
+    "description" : "Arco de centaleón elaborado con un metal extraído de la Montaña de la Muerte. Su potencia de disparo es brutal; puede atravesar una armadura como si fuera papel.",
+    "id" : "jydi6yb1",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/5/5c/Arco_colosal.png/revision/latest/scale-to-width-down/65?cb=20180705192843&path-prefix=es",
+    "name" : "Arco colosal"
+  },
+  "jydi6yb2" : {
+    "damage" : "28 x3",
+    "description" : "Arco único que utilizaba Revali, el elegido orni. Se dice que disparaba a velocidad de vértigo, y que no tenía rival en combates aéreos.",
+    "id" : "jydi6yb2",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/e/e1/Arco_de_%C3%A1guila.png/revision/latest/scale-to-width-down/65?cb=20180705233604&path-prefix=es",
+    "name" : "Arco de águila"
+  },
+  "jydi6yb3" : {
+    "damage" : "26",
+    "description" : "Arco que utilizaban los caballeros del castillo de Hyrule. Su acabado metálico le otorga resistencia y precisión.",
+    "id" : "jydi6yb3",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/5/5f/Arco_de_caballero_BotW.png/revision/latest/scale-to-width-down/65?cb=20180417184617&path-prefix=es",
+    "name" : "Arco de caballero"
+  },
+  "jydi6yb4" : {
+    "damage" : "10 x3",
+    "description" : "Arco de centaleón elaborado a partir de metal sin refinar. Capaz de disparar varias flechas en abanico, su gran rango de alcance es útil frente a enemigos veloces.",
+    "id" : "jydi6yb4",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/0/0c/Arco_de_centale%C3%B3n.png/revision/latest/scale-to-width-down/65?cb=20180705235356&path-prefix=es",
+    "name" : "Arco de centaleón"
+  },
+  "jydi6yb5" : {
+    "damage" : "4",
+    "description" : "Sencillo arco de madera fabricado para cazar animales pequeños. No se considera apto para luchar contra monstruos.",
+    "id" : "jydi6yb5",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/0/07/Arco_de_madera_BotW.png/revision/latest/scale-to-width-down/65?cb=20170320144450&path-prefix=es",
+    "name" : "Arco de madera"
+  },
+  "jydi6yb6" : {
+    "damage" : "9",
+    "description" : "Arco muy común entre los orni. Su cuerda se ha diseñado especialmente para combates aéreos, por lo que resulta más fácil de sacar del carcaj que un arco normal.",
+    "id" : "jydi6yb6",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/5/5e/Arco_de_golondrina_BotW.png/revision/latest/scale-to-width-down/65?cb=20170621114336&path-prefix=es",
+    "name" : "Arco de golondrina"
+  },
+  "jydi6yb7" : {
+    "damage" : "20",
+    "description" : "Exquisito arco elaborado por un maestro arquero orni. Dispara más rapido que un arco normal, por lo que suelen usarlo los guerreros más diestros en combate aéreo.",
+    "id" : "jydi6yb7",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/c/ce/Arco_de_halc%C3%B3n.png/revision/latest/scale-to-width-down/65?cb=20180706001327&path-prefix=es",
+    "name" : "Arco de halcón"
+  },
+  "jydi6yb8" : {
+    "damage" : "5",
+    "description" : "Arco pequeño que los viajeros usan para defenderse. Las flechas ayudan a acertar a enemigos que se encuentran lejos.",
+    "id" : "jydi6yb8",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/f/fc/Arco_de_viajero_BotW.png/revision/latest/scale-to-width-down/65?cb=20170306134549&path-prefix=es",
+    "name" : "Arco de viajero"
+  },
+  "jydi6yb9" : {
+    "damage" : "14",
+    "description" : "Arco mejorado expresamente para el combate. Inflige más daño, pero arde si entra en contacto con el fuego.",
+    "id" : "jydi6yb9",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/1/10/Arco_de_soldado_BotW.png/revision/latest/scale-to-width-down/65?cb=20170325160642&path-prefix=es",
+    "name" : "Arco de soldado"
+  },
+  "jydi6yba" : {
+    "damage" : "15 x3",
+    "description" : "Arco kolog diseñado para hylianos, capaz de disparar varias flechas a la vez. La cuerda se ha elaborado con hierba, mientras que la estructura es de madera flexible.",
+    "id" : "jydi6yba",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/4/4d/Arco_del_bosque_BotW.png/revision/latest/scale-to-width-down/65?cb=20170320154826&path-prefix=es",
+    "name" : "Arco del bosque"
+  },
+  "jydi6ybb" : {
+    "damage" : "30",
+    "description" : "Arco que empleó la princesa que combatió junto al héroe los monstruos del crepúsculo. Dispara flechas rectas y certeras como rayos gracias al poder de luz que alberga.",
+    "id" : "jydi6ybb",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/7/7e/Sprite_Arco_del_crep%C3%BAsculo.png/revision/latest/scale-to-width-down/65?cb=20170326190651&path-prefix=es",
+    "name" : "Arco del Crepúsculo"
+  },
+  "jydi6ybc" : {
+    "damage" : "10",
+    "description" : "Arco que ha pasado de generación en generación entre los sheikah. Se dice que concentrarse antes de tensarlo sirve para alcanzar a enemigos lejanos con precisión.",
+    "id" : "jydi6ybc",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/9/9c/Arco_del_vigilante.png/revision/latest/scale-to-width-down/65?cb=20180706001750&path-prefix=es",
+    "name" : "Arco del vigilante"
+  },
+  "jydi6ybd" : {
+    "damage" : "50",
+    "description" : "Arco elaborado por los sheikah para acabar con el cataclismo. Destaca por su elevada potencia y cadencia de disparo, aunque en detrimento de la resistencia.",
+    "id" : "jydi6ybd",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/a/a2/Arco_de_la_guardia.png/revision/latest/scale-to-width-down/65?cb=20180706001935&path-prefix=es",
+    "name" : "Arco de la guardia"
+  },
+  "jydi6ybe" : {
+    "damage" : "100",
+    "description" : "Arma que te dio Zelda antes de la batalla decisiva contra Ganon. Cuando el héroe lo usa, acumula luz y dispara flechas capaces de acabar con el cataclismo.",
+    "id" : "jydi6ybe",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/b/bc/Arco_de_luz_BotW.png/revision/latest/scale-to-width-down/65?cb=20170325141335&path-prefix=es",
+    "name" : "Arco de Luz"
+  },
+  "jydi6ybf" : {
+    "damage" : "14 x2",
+    "description" : "Arco empleado por los arqueros más diestros del clan Yiga. Está diseñado para disparar dos flechas a la vez, lo que suele acabar con todo lo que se le pone por delante.",
+    "id" : "jydi6ybf",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/3/3a/Arco_doble.png/revision/latest/scale-to-width-down/65?cb=20180706002208&path-prefix=es",
+    "name" : "Arco doble"
+  },
+  "jydi6ybg" : {
+    "damage" : "14",
+    "description" : "Arco de la tribu gerudo que destaca por sus elaborados adornos. Su gran alcance lo convierte en el aliado perfecto tanto en el combate como para la caza en el desierto.",
+    "id" : "jydi6ybg",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/6/69/Arco_gerudo.png/revision/latest/scale-to-width-down/65?cb=20180706002301&path-prefix=es",
+    "name" : "Arco gerudo"
+  },
+  "jydi6ybh" : {
+    "damage" : "14",
+    "description" : "Arco de madera fabricado por lizalfos y reforzado con espinas de un gran pez. Su potencia de ataque es superior a la de un arco de madera sencillo.",
+    "id" : "jydi6ybh",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/3/30/Arco_lizal.png/revision/latest/scale-to-width-down/65?cb=20180706002426&path-prefix=es",
+    "name" : "Arco lizal"
+  },
+  "jydi6ybi" : {
+    "damage" : "36",
+    "description" : "Arco usado únicamente por los más diestros arqueros lizalfos. Su estructura reforzada con acero le confiere más peso, aunque al mismo tiempo lo hace más duradero.",
+    "id" : "jydi6ybi",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/4/47/Arco_lizal_de_acero.png/revision/latest/scale-to-width-down/65?cb=20180706002706&path-prefix=es",
+    "name" : "Arco lizal de acero"
+  },
+  "jydi6ybj" : {
+    "damage" : "25",
+    "description" : "Arco lizal reforzado con metal. La madera flexible de árboles ribereños con la que está elaborada su estructura le aporta una potencia de disparo nada desdeñable.",
+    "id" : "jydi6ybj",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/a/a3/Arco_lizal_reforzado.png/revision/latest/scale-to-width-down/65?cb=20180706002600&path-prefix=es",
+    "name" : "Arco lizal reforzado"
+  },
+  "jydi6ybk" : {
+    "damage" : "38",
+    "description" : "Arco que el rey de Hyrule entregaba a los caballeros más diestros con dicha arma. Destaca por su original diseño y por su excelente capacidad de disparo.",
+    "id" : "jydi6ybk",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/9/9a/Arco_real.png/revision/latest/scale-to-width-down/65?cb=20180706002855&path-prefix=es",
+    "name" : "Arco real"
+  },
+  "jydi6ybl" : {
+    "damage" : "15",
+    "description" : "Arco empleado por los zora para pescar, entre otros menesteres. No posee una gran potencia de disparo, pero el metal con el que esta fabricado lo hace muy resistente.",
+    "id" : "jydi6ybl",
+    "img" : "https://vignette.wikia.nocookie.net/zelda/images/f/fb/Arco_zora_BotW.png/revision/latest/scale-to-width-down/65?cb=20180423003947&path-prefix=es",
+    "name" : "Arco zora"
+  }
+}
